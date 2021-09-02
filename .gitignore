@@ -1,0 +1,11 @@
+dist/
+*~
+*.pyc
+\#*\#
+__pycache__
+eval_results
+results.json
+results.json.backup*
+.DS_Store
+.vscode/
+env/
