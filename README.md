@@ -1,3 +1,1 @@
-Source code for the paper:
-
-Finetuned Language Models are Zero-Shot Learners, Wei et. al., 2021.
+Following branch replicates FLAN dataset for finetuning and evaluation purposes
