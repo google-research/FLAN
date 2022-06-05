@@ -500,7 +500,7 @@ def _process_cnn_dailymail(example):
 
 TASK_CONFIGS['cnn_dailymail'] = _TaskConfig(
     source=seqio.TfdsDataSource(
-        tfds_name='cnn_dailymail:3.1.0', splits=SPLITS_DICT),
+        tfds_name='cnn_dailymail:3.3.0', splits=SPLITS_DICT),
     preprocessors=[
         _process_cnn_dailymail,
     ],
@@ -1114,7 +1114,7 @@ def _process_paws_wiki(example):
 
 TASK_CONFIGS['paws_wiki'] = _TaskConfig(
     source=seqio.TfdsDataSource(
-        tfds_name='paws_wiki:1.0.0', splits=SPLITS_DICT),
+        tfds_name='paws_wiki/labeled_final_tokenized:1.1.0', splits=SPLITS_DICT),
     preprocessors=[
         _process_paws_wiki,
         preprocessors.format_options,
@@ -1645,7 +1645,7 @@ def _process_web_nlg_en(example):
 
 TASK_CONFIGS['web_nlg_en'] = _TaskConfig(
     source=seqio.TfdsDataSource(
-        tfds_name='gem/web_nlg_en:1.0.0',
+        tfds_name='gem/web_nlg_en:1.1.0',
         splits={
             'train': f'train[:{NUM_TRAIN_EXAMPLES}]',
             'validation': f'train[-{NUM_VAL_EXAMPLES}:]',
@@ -2183,7 +2183,7 @@ def _filter_hellaswag(dataset):
 
 TASK_CONFIGS['hellaswag'] = _TaskConfig(
     source=seqio.TfdsDataSource(
-        tfds_name='hellaswag:0.0.1',
+        tfds_name='hellaswag:1.1.0',
         splits={
             'train': f'train[:{NUM_TRAIN_EXAMPLES}]',
             'validation': f'train[-{NUM_VAL_EXAMPLES}:]',
