@@ -9,3 +9,5 @@ results.json.backup*
 .DS_Store
 .vscode/
 env/
+
+FLANdata/
