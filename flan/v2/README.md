@@ -1,4 +1,4 @@
-# Flan v2 training data (writing in progress)
+# Flan v2 training data (working in progress)
 This repository contains seqio tasks and mixtures used in Flan v2.
 
 ## List of mixtures
