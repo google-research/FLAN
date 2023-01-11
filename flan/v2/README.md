@@ -1,5 +1,5 @@
 # Flan v2 training data (working in progress)
-This repository contains seqio tasks and mixtures used in Flan v2.
+This repository contains seqio tasks and mixtures used in [Flan 2022](https://arxiv.org/abs/2210.11416).
 
 ## List of mixtures
 mixtures.py contains the following mixture names:
