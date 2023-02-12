@@ -15,7 +15,6 @@
 """Utilities that help create mixtures."""
 
 import collections
-import functools
 import typing
 
 from flan.v2 import constants
