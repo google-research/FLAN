@@ -59,20 +59,20 @@ DEFAULT_MIXTURE_TASK_FILTERS = {
 DEFAULT_MIXTURE_TASK_FILTERS['CoT-II'] = DEFAULT_MIXTURE_TASK_FILTERS['CoT']
 # pylint: enable=g-long-lambda
 
-ZS_OPT_TEMPLATES = [
-    '{t_name}_template_0to10_non_deter_opt_zero_shot{suffix}',
-    '{t_name}_template_0to10_zero_shot{suffix}',
-]
-ZS_NOOPT_TEMPLATES = [
-    '{t_name}_template_0to10_no_opt_zero_shot{suffix}',
-]
-FS_OPT_TEMPLATES = [
-    '{t_name}_template_mix_five_shot{suffix}',
-    '{t_name}_template_0to10_x_shot{suffix}',
-]
-FS_NOOPT_TEMPLATES = [
-    '{t_name}_template_0to10_no_opt_x_shot{suffix}',
-]
+ZS_OPT_TEMPLATES = {
+    '{t_name}_template_0to10_non_deter_opt_zero_shot{suffix}': 'zero_shot',
+    '{t_name}_template_0to10_zero_shot{suffix}': 'zero_shot',
+}
+ZS_NOOPT_TEMPLATES = {
+    '{t_name}_template_0to10_no_opt_zero_shot{suffix}': 'zero_shot',
+}
+FS_OPT_TEMPLATES = {
+    '{t_name}_template_mix_five_shot{suffix}': 'five_shot',
+    '{t_name}_template_0to10_x_shot{suffix}': 'x_shot',
+}
+FS_NOOPT_TEMPLATES = {
+    '{t_name}_template_0to10_no_opt_x_shot{suffix}': 'x_shot',
+}
 
 
 def register_mixture(mix_prefix: str,
@@ -114,10 +114,11 @@ def register_mixture(mix_prefix: str,
 
     # pylint: disable=g-complex-comprehension
     formatted_templates = [
-        template.format(**{
-            't_name': task_name,
-            'suffix': task_suffix
-        }) for template in templates
+        (
+            template.format(**{'t_name': task_name, 'suffix': task_suffix}),
+            constants.T_NAME_TO_NUM_CASES[task_name][template_type],
+        )
+        for template, template_type in templates.items()
     ]
     # pylint: enable=g-complex-comprehension
 
@@ -129,11 +130,13 @@ def register_mixture(mix_prefix: str,
       else:
         task_template_ids.append(formatted_templates[1])
 
+  task_template_ids = [
+      (task_name_with_template, min(mix_ex_cap, mix_rate))
+      for task_name_with_template, mix_rate in task_template_ids
+  ]
   mix = seqio.MixtureRegistry.add(
       name=final_mix_name,
       tasks=task_template_ids,
-      default_rate=functools.partial(
-          seqio.mixing_rate_num_examples, maximum=mix_ex_cap),
   )
   return mix.name
 
