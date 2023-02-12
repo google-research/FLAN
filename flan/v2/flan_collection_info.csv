@@ -1,0 +1,1946 @@
+Source,Dataset,Specific Task Category,Generic Task Category,Languages
+CoT,cot_gsm8k,Grade School Math Word Problems,Grade School Math Word Problems,English
+CoT,cot_gsm8k,Question Generation,Question Generation,English
+CoT,cot_gsm8k,Explanation Generation,Explanation Generation,English
+CoT,cot_gsm8k,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,cot_strategyqa,Question Answering,Question Answering,English
+CoT,cot_strategyqa,Question Generation,Question Generation,English
+CoT,cot_strategyqa,Explanation Generation,Explanation Generation,English
+CoT,cot_strategyqa,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_aqua,Algebraic Question Answering,Algebraic Question Answering,English
+CoT,stream_aqua,Question Generation,Question Generation,English
+CoT,stream_aqua,Explanation Generation,Explanation Generation,English
+CoT,stream_aqua,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_creak,Common Sense Reasoning over Entity Knowledge,Common Sense Reasoning over Entity Knowledge,English
+CoT,stream_creak,Question Generation,Question Generation,English
+CoT,stream_creak,Explanation Generation,Explanation Generation,English
+CoT,stream_creak,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_ecqa,Common Sense Reasoning Question Answering,Common Sense Reasoning Question Answering,English
+CoT,stream_ecqa,Question Generation,Question Generation,English
+CoT,stream_ecqa,Explanation Generation,Explanation Generation,English
+CoT,stream_ecqa,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_esnli,Natural Language Inference,Natural Language Inference,English
+CoT,stream_esnli,Question Generation,Question Generation,English
+CoT,stream_esnli,Explanation Generation,Explanation Generation,English
+CoT,stream_esnli,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_qasc,Question Answering,Question Answering,English
+CoT,stream_qasc,Question Generation,Question Generation,English
+CoT,stream_qasc,Explanation Generation,Explanation Generation,English
+CoT,stream_qasc,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_qed,Passage-Based Question Answering / NLI,Passage-Based Question Answering / NLI,English
+CoT,stream_qed,Question Generation,Question Generation,English
+CoT,stream_qed,Explanation Generation,Explanation Generation,English
+CoT,stream_qed,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+CoT,stream_sensemaking,Sense Making and Explanation,Sense Making and Explanation,English
+CoT,stream_sensemaking,Question Generation,Question Generation,English
+CoT,stream_sensemaking,Explanation Generation,Explanation Generation,English
+CoT,stream_sensemaking,Generate Question and Answer from Explanation,Generate Question and Answer from Explanation,English
+Dialog,qrecc,Conversational Question Answering,Conversational Question Answering,English
+Dialog,qrecc,Dialog Context Generation,Dialog Context Generation,English
+Dialog,task_master,Dialog Next Turn Prediction,Dialog Next Turn Prediction,English
+Dialog,task_master,Dialog Context Generation,Dialog Context Generation,English
+Dialog,wiki_dialog,Conversational Question Answering,Conversational Question Answering,English
+Dialog,wiki_dialog,Dialog Context Generation,Dialog Context Generation,English
+Program Synthesis,dmcc_python,Code Generation,Code Generation,English
+Program Synthesis,dmcc_python,Coding Instruction Generation,Coding Instruction Generation,English
+Program Synthesis,dr_repair_error_comments,Code Repair,Code Repair,English
+Program Synthesis,dr_repair_error_comments,Code Error Generation,Code Error Generation,English
+Program Synthesis,dr_repair_line_numbers,Code Repair,Code Repair,English
+Program Synthesis,dr_repair_line_numbers,Code Error Generation,Code Error Generation,English
+Program Synthesis,dr_repair_no_errors,Code Repair,Code Repair,English
+Program Synthesis,dr_repair_no_errors,Code Error Generation,Code Error Generation,English
+Program Synthesis,dr_repair_plain_code,Code Repair,Code Repair,English
+Program Synthesis,dr_repair_plain_code,Code Error Generation,Code Error Generation,English
+FLAN,aeslc,Summarization,Summarization,English
+FLAN/T0,ag_news_subset,Topic Classification,Topic Classification,English
+FLAN/T0,anli_r1,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,anli_r2,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,anli_r3,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,arc_challenge,Closed-Book QA,Closed-Book QA,English
+FLAN/T0,arc_easy,Closed-Book QA,Closed-Book QA,English
+FLAN/T0,bool_q,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,cb,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,cnn_dailymail,Summarization,Summarization,English
+FLAN/T0,cola,Grammatical Acceptability,Grammatical Acceptability,English
+FLAN/T0,common_gen,Structured Data to Text,Structured Data to Text,English
+FLAN/T0,copa,Next Sentence Prediction,Next Sentence Prediction,English
+FLAN,coqa,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,cosmos_qa,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN,dart,Structured Data to Text,Structured Data to Text,English
+FLAN,definite_pronoun_resolution,Coreference Resolution,Coreference Resolution,English
+FLAN/T0,drop,Mathematical QA,Mathematical QA,English
+FLAN,e2e_nlg,Structured Data to Text,Structured Data to Text,English
+FLAN,fix_punct,Punctuation Fixing,Punctuation Fixing,English
+FLAN/T0,gigaword,Summarization,Summarization,English
+FLAN/T0,glue_mrpc,Paraphrasing Identification,Paraphrasing Identification,English
+FLAN/T0,glue_qqp,Paraphrasing Identification,Paraphrasing Identification,English
+FLAN/T0,hellaswag,Next Sentence Prediction,Next Sentence Prediction,English
+FLAN/T0,imdb_reviews,Sentiment Analysis,Sentiment Analysis,English
+FLAN/T0,lambada,Language Modeling,Language Modeling,English
+FLAN,math_dataset,Mathematical QA,Mathematical QA,English
+FLAN,mnli,Natural Language Inference,Natural Language Inference,English
+FLAN,mnli,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,multi_news,Summarization,Summarization,English
+FLAN/T0,multirc,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,natural_questions,Closed-Book QA,Closed-Book QA,English
+FLAN,newsroom,Summarization,Summarization,English
+FLAN/T0,openbookqa,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN,opinion_abstracts_idebate,Summarization,Summarization,English
+FLAN,opinion_abstracts_rotten_tomatoes,Summarization,Summarization,English
+FLAN,para_crawl_enes,Translation,Translation,English
+FLAN/T0,paws_wiki,Paraphrasing Identification,Paraphrasing Identification,English
+FLAN/T0,piqa,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,qnli,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,quac,Multiple-Choice QA (no trivia knowledge required),Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,record,Extractive QA,Extractive QA,English
+FLAN/T0,rte,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,samsum,Summarization,Summarization,English
+FLAN,sentiment140,Sentiment Analysis,Sentiment Analysis,English
+FLAN,snli,Natural Language Inference,Natural Language Inference,English
+FLAN/T0,squad_v1,Extractive QA,Extractive QA,English
+FLAN/T0,squad_v2,Extractive QA,Extractive QA,English
+FLAN/T0,sst2,Sentiment Analysis,Sentiment Analysis,English
+FLAN/T0,story_cloze,Next Sentence Prediction,Next Sentence Prediction,English
+FLAN/T0,stsb,Sentiment Analysis,Sentiment Analysis,English
+FLAN/T0,trec,Topic Classification,Topic Classification,English
+FLAN/T0,trivia_qa,Extractive QA,Extractive QA,English
+FLAN/T0,trivia_qa_wiki_missing,Extractive QA,Extractive QA,English
+FLAN,true_case,Casing Selection,Casing Selection,English
+FLAN,unified_qa_science_inst,Question Answering,Question Answering,English
+FLAN,web_nlg_en,Structured Data to Text,Structured Data to Text,English
+FLAN/T0,wic,Word Sense Disambiguation,Word Sense Disambiguation,English
+FLAN,wiki_lingua_english_en,Summarization,Summarization,English
+FLAN/T0,winogrande,Coreference Resolution,Coreference Resolution,English
+FLAN,wmt14_enfr,Translation,Translation,English
+FLAN,wmt16_translate_csen,Translation,Translation,English
+FLAN,wmt16_translate_deen,Translation,Translation,English
+FLAN,wmt16_translate_fien,Translation,Translation,English
+FLAN,wmt16_translate_roen,Translation,Translation,English
+FLAN,wmt16_translate_ruen,Translation,Translation,English
+FLAN,wmt16_translate_tren,Translation,Translation,English
+FLAN,wnli,Coreference Resolution,Coreference Resolution,English
+FLAN,word_segment,Word Segmentation,Word Segmentation,English
+FLAN/T0,wsc,Coreference Resolution,Coreference Resolution,English
+FLAN/T0,xsum,Summarization,Summarization,English
+FLAN/T0,yelp_polarity_reviews,Sentiment Analysis,Sentiment Analysis,English
+FLAN,aeslc,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,ag_news_subset,Inverted Topic Classification,Inverted Topic Classification,English
+FLAN/T0,anli_r1,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,anli_r2,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,anli_r3,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,arc_challenge,Inverted Closed-Book QA,Inverted Closed-Book QA,English
+FLAN/T0,arc_easy,Inverted Closed-Book QA,Inverted Closed-Book QA,English
+FLAN/T0,bool_q,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,cb,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,cnn_dailymail,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,cola,Inverted Grammatical Acceptability,Inverted Grammatical Acceptability,English
+FLAN/T0,common_gen,Inverted Structured Data to Text,Inverted Structured Data to Text,English
+FLAN/T0,copa,Inverted Next Sentence Prediction,Inverted Next Sentence Prediction,English
+FLAN,coqa,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,cosmos_qa,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN,dart,Inverted Structured Data to Text,Inverted Structured Data to Text,English
+FLAN,definite_pronoun_resolution,Inverted Coreference Resolution,Inverted Coreference Resolution,English
+FLAN/T0,drop,Inverted Mathematical QA,Inverted Mathematical QA,English
+FLAN,e2e_nlg,Inverted Structured Data to Text,Inverted Structured Data to Text,English
+FLAN,fix_punct,Inverted Punctuation Fixing,Inverted Punctuation Fixing,English
+FLAN/T0,gigaword,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,glue_mrpc,Inverted Paraphrasing Identification,Inverted Paraphrasing Identification,English
+FLAN/T0,glue_qqp,Inverted Paraphrasing Identification,Inverted Paraphrasing Identification,English
+FLAN/T0,hellaswag,Inverted Next Sentence Prediction,Inverted Next Sentence Prediction,English
+FLAN/T0,imdb_reviews,Inverted Sentiment Analysis,Inverted Sentiment Analysis,English
+FLAN/T0,lambada,Inverted Language Modeling,Inverted Language Modeling,English
+FLAN,math_dataset,Inverted Mathematical QA,Inverted Mathematical QA,English
+FLAN,mnli,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN,mnli,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,multi_news,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,multirc,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,natural_questions,Inverted Closed-Book QA,Inverted Closed-Book QA,English
+FLAN,newsroom,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,openbookqa,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN,opinion_abstracts_idebate,Inverted Summarization,Inverted Summarization,English
+FLAN,opinion_abstracts_rotten_tomatoes,Inverted Summarization,Inverted Summarization,English
+FLAN,para_crawl_enes,Inverted Translation,Inverted Translation,English
+FLAN/T0,paws_wiki,Inverted Paraphrasing Identification,Inverted Paraphrasing Identification,English
+FLAN/T0,piqa,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,qnli,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,quac,Inverted Multiple-Choice QA (no trivia knowledge required),Inverted Multiple-Choice QA (no trivia knowledge required),English
+FLAN/T0,record,Inverted Extractive QA,Inverted Extractive QA,English
+FLAN/T0,rte,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,samsum,Inverted Summarization,Inverted Summarization,English
+FLAN,sentiment140,Inverted Sentiment Analysis,Inverted Sentiment Analysis,English
+FLAN,snli,Inverted Natural Language Inference,Inverted Natural Language Inference,English
+FLAN/T0,squad_v1,Inverted Extractive QA,Inverted Extractive QA,English
+FLAN/T0,squad_v2,Inverted Extractive QA,Inverted Extractive QA,English
+FLAN/T0,sst2,Inverted Sentiment Analysis,Inverted Sentiment Analysis,English
+FLAN/T0,story_cloze,Inverted Next Sentence Prediction,Inverted Next Sentence Prediction,English
+FLAN/T0,stsb,Inverted Sentiment Analysis,Inverted Sentiment Analysis,English
+FLAN/T0,trec,Inverted Topic Classification,Inverted Topic Classification,English
+FLAN/T0,trivia_qa,Inverted Extractive QA,Inverted Extractive QA,English
+FLAN/T0,trivia_qa_wiki_missing,Inverted Extractive QA,Inverted Extractive QA,English
+FLAN,true_case,Inverted Casing Selection,Inverted Casing Selection,English
+FLAN,unified_qa_science_inst,Inverted Question Answering,Inverted Question Answering,English
+FLAN,web_nlg_en,Inverted Structured Data to Text,Inverted Structured Data to Text,English
+FLAN/T0,wic,Inverted Word Sense Disambiguation,Inverted Word Sense Disambiguation,English
+FLAN,wiki_lingua_english_en,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,winogrande,Inverted Coreference Resolution,Inverted Coreference Resolution,English
+FLAN,wmt14_enfr,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_csen,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_deen,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_fien,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_roen,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_ruen,Inverted Translation,Inverted Translation,English
+FLAN,wmt16_translate_tren,Inverted Translation,Inverted Translation,English
+FLAN,wnli,Inverted Coreference Resolution,Inverted Coreference Resolution,English
+FLAN,word_segment,Inverted Word Segmentation,Inverted Word Segmentation,English
+FLAN/T0,wsc,Inverted Coreference Resolution,Inverted Coreference Resolution,English
+FLAN/T0,xsum,Inverted Summarization,Inverted Summarization,English
+FLAN/T0,yelp_polarity_reviews,Inverted Sentiment Analysis,Inverted Sentiment Analysis,English
+T0,adversarial_qa,adversarial_qa_dbert_answer_the_following_q,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbert_based_on,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbert_generate_question,Question Generation,English
+T0,adversarial_qa,adversarial_qa_dbert_question_context_answer,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbert_tell_what_it_is,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbidaf_answer_the_following_q,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbidaf_based_on,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbidaf_generate_question,Question Generation,English
+T0,adversarial_qa,adversarial_qa_dbidaf_question_context_answer,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_dbidaf_tell_what_it_is,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_droberta_answer_the_following_q,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_droberta_based_on,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_droberta_generate_question,Question Generation,English
+T0,adversarial_qa,adversarial_qa_droberta_question_context_answer,Adversarial QA,English
+T0,adversarial_qa,adversarial_qa_droberta_tell_what_it_is,Adversarial QA,English
+T0,amazon_polarity,amazon_polarity_convey_negative_or_positive_sentiment,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_flattering_or_not,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_Is_this_product_review_positive,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_Is_this_review,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_Is_this_review_negative,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_negative_or_positive_tone,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_User_recommend_this_product,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_user_satisfied,Sentiment Analysis,English
+T0,amazon_polarity,amazon_polarity_would_you_buy,Sentiment Analysis,English
+T0,app_reviews,app_reviews_categorize_rating_using_review,Sentiment Analysis,English
+T0,app_reviews,app_reviews_convert_to_rating,Sentiment Analysis,English
+T0,app_reviews,app_reviews_convert_to_star_rating,Sentiment Analysis,English
+T0,app_reviews,app_reviews_generate_review,Context Generation,English
+T0,cos_e,cos_e_v1.11_aligned_with_common_sense,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_description_question_option_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_description_question_option_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_explain_why_human,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_generate_explanation_given_text,Explanation Generation,English
+T0,cos_e,cos_e_v1.11_i_think,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_question_description_option_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_question_description_option_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_question_option_description_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_question_option_description_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,cos_e,cos_e_v1.11_rationale,Multiple-Choice QA (no trivia knowledge required),English
+T0,dbpedia_14,dbpedia_14_given_a_choice_of_categories_,Topic Classification,English
+T0,dbpedia_14,dbpedia_14_given_a_list_of_category_what_does_the_title_belong_to,Topic Classification,English
+T0,dbpedia_14,dbpedia_14_given_list_what_category_does_the_paragraph_belong_to,Topic Classification,English
+T0,dbpedia_14,dbpedia_14_pick_one_category_for_the_following_text,Topic Classification,English
+T0,dream_answer,dream_answer_to_dialogue,Multiple-Choice QA (no trivia knowledge required),English
+T0,dream_baseline,dream_baseline,Multiple-Choice QA (no trivia knowledge required),English
+T0,dream_generate,dream_generate_first_utterance,Dialog Turn Prediction,English
+T0,dream_generate,dream_generate_last_utterance,Dialog Turn Prediction,English
+T0,dream_read,dream_read_the_following_conversation_and_answer_the_question,Multiple-Choice QA (no trivia knowledge required),English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_answer_question,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_build_story_around_qa,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_decide_worth_it,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_extract_answer,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_generate_question,Question Generation,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_generate_question_by_answer,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_movie_director,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_question_answering,Extractive QA,English
+T0,duorc_ParaphraseRC,duorc_ParaphraseRC_title_generation,Title Generation,English
+T0,duorc_SelfRC,duorc_SelfRC_answer_question,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_build_story_around_qa,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_decide_worth_it,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_extract_answer,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_generate_question,Question Generation,English
+T0,duorc_SelfRC,duorc_SelfRC_generate_question_by_answer,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_movie_director,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_question_answering,Extractive QA,English
+T0,duorc_SelfRC,duorc_SelfRC_title_generation,Title Generation,English
+T0,kilt_tasks,kilt_tasks_hotpotqa_combining_facts,Closed-Book QA,English
+T0,kilt_tasks,kilt_tasks_hotpotqa_complex_question,Closed-Book QA,English
+T0,kilt_tasks,kilt_tasks_hotpotqa_final_exam,Closed-Book QA,English
+T0,kilt_tasks,kilt_tasks_hotpotqa_formulate,Closed-Book QA,English
+T0,kilt_tasks,kilt_tasks_hotpotqa_straighforward_qa,Closed-Book QA,English
+T0,qasc_is,qasc_is_correct_1,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_is,qasc_is_correct_2,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_combined_facts_1,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_separated_facts_1,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_separated_facts_2,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_separated_facts_3,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_separated_facts_4,Multiple-Choice QA (no trivia knowledge required),English
+T0,qasc_qa,qasc_qa_with_separated_facts_5,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_description_question_answer_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_description_question_answer_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_description_question_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_question_answer_description_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_question_answer_description_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_question_description_answer_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_question_description_answer_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_context,quail_context_question_description_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_description,quail_description_context_question_answer_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_description,quail_description_context_question_answer_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_description,quail_description_context_question_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_no,quail_no_prompt_id,Multiple-Choice QA (no trivia knowledge required),English
+T0,quail_no,quail_no_prompt_text,Multiple-Choice QA (no trivia knowledge required),English
+T0,quarel_choose,quarel_choose_between,Multiple-Choice QA (no trivia knowledge required),English
+T0,quarel_do,quarel_do_not_use,Multiple-Choice QA (no trivia knowledge required),English
+T0,quarel_heres,quarel_heres_a_story,Multiple-Choice QA (no trivia knowledge required),English
+T0,quarel_logic,quarel_logic_test,Multiple-Choice QA (no trivia knowledge required),English
+T0,quarel_testing,quarel_testing_students,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_answer,quartz_answer_question_based_on,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_answer,quartz_answer_question_below,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_given,quartz_given_the_fact_answer_the_q,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_having,quartz_having_read_above_passage,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_paragraph,quartz_paragraph_question_plain_concat,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_read,quartz_read_passage_below_choose,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_use,quartz_use_info_from_paragraph_question,Multiple-Choice QA (no trivia knowledge required),English
+T0,quartz_use,quartz_use_info_from_question_paragraph,Multiple-Choice QA (no trivia knowledge required),English
+T0,quoref_Answer,quoref_Answer_Friend_Question,Extractive QA,English
+T0,quoref_Answer,quoref_Answer_Question_Given_Context,Extractive QA,English
+T0,quoref_Answer,quoref_Answer_Test,Extractive QA,English
+T0,quoref_Context,quoref_Context_Contains_Answer,Extractive QA,English
+T0,quoref_Find,quoref_Find_Answer,Extractive QA,English
+T0,quoref_Found,quoref_Found_Context_Online,Extractive QA,English
+T0,quoref_Given,quoref_Given_Context_Answer_Question,Extractive QA,English
+T0,quoref_Guess,quoref_Guess_Answer,Extractive QA,English
+T0,quoref_Guess,quoref_Guess_Title_For_Context,Extractive QA,English
+T0,quoref_Read,quoref_Read_And_Extract_,Extractive QA,English
+T0,quoref_What,quoref_What_Is_The_Answer,Extractive QA,English
+T0,race_high,race_high_Is_this_the_right_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Read_the_article_and_answer_the_question_no_option_,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Select_the_best_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Select_the_best_answer_generate_span_,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Select_the_best_answer_no_instructions_,Span Generation,English
+T0,race_high,race_high_Taking_a_test,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Write_a_multi_choice_question_for_the_following_article,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_high,race_high_Write_a_multi_choice_question_options_given_,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Is_this_the_right_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Read_the_article_and_answer_the_question_no_option_,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Select_the_best_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Select_the_best_answer_generate_span_,Span Generation,English
+T0,race_middle,race_middle_Select_the_best_answer_no_instructions_,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Taking_a_test,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Write_a_multi_choice_question_for_the_following_article,Multiple-Choice QA (no trivia knowledge required),English
+T0,race_middle,race_middle_Write_a_multi_choice_question_options_given_,Multiple-Choice QA (no trivia knowledge required),English
+T0,ropes_background,ropes_background_new_situation_answer,Extractive QA,English
+T0,ropes_background,ropes_background_situation_middle,Extractive QA,English
+T0,ropes_given,ropes_given_background_situation,Extractive QA,English
+T0,ropes_new,ropes_new_situation_background_answer,Extractive QA,English
+T0,ropes_plain,ropes_plain_background_situation,Extractive QA,English
+T0,ropes_plain,ropes_plain_bottom_hint,Extractive QA,English
+T0,ropes_plain,ropes_plain_no_background,Extractive QA,English
+T0,ropes_prompt,ropes_prompt_beginning,Extractive QA,English
+T0,ropes_prompt,ropes_prompt_bottom_hint_beginning,Extractive QA,English
+T0,ropes_prompt,ropes_prompt_bottom_no_hint,Extractive QA,English
+T0,ropes_prompt,ropes_prompt_mix,Extractive QA,English
+T0,ropes_read,ropes_read_background_situation,Extractive QA,English
+T0,sciq_Direct,sciq_Direct_Question,Multiple-Choice QA (no trivia knowledge required),English
+T0,sciq_Direct,sciq_Direct_Question_Closed_Book_,Multiple-Choice QA (no trivia knowledge required),English
+T0,sciq_Multiple,sciq_Multiple_Choice,Multiple-Choice QA (no trivia knowledge required),English
+T0,sciq_Multiple,sciq_Multiple_Choice_Closed_Book_,Multiple-Choice QA (no trivia knowledge required),English
+T0,sciq_Multiple,sciq_Multiple_Choice_Question_First,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_Check_if_a_random_answer_is_valid_or_not,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_Generate_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_Generate_the_question_from_the_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_I_was_wondering,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_Show_choices_and_generate_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,social_i,social_i_qa_Show_choices_and_generate_index,Multiple-Choice QA (no trivia knowledge required),English
+T0,web_questions,web_questions_get_the_answer,Closed-Book QA,English
+T0,web_questions,web_questions_potential_correct_answer,Closed-Book QA,English
+T0,web_questions,web_questions_question_answer,Closed-Book QA,English
+T0,web_questions,web_questions_short_general_knowledge_q,Closed-Book QA,English
+T0,web_questions,web_questions_whats_the_answer,Closed-Book QA,English
+T0,wiki_bio,wiki_bio_comprehension,Structured Data to Text,English
+T0,wiki_bio,wiki_bio_guess_person,Structured Data to Text,English
+T0,wiki_bio,wiki_bio_key_content,Structured Data to Text,English
+T0,wiki_bio,wiki_bio_what_content,Structured Data to Text,English
+T0,wiki_bio,wiki_bio_who,Structured Data to Text,English
+T0,wiki_hop,wiki_hop_original_choose_best_object_affirmative_1,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_choose_best_object_affirmative_2,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_choose_best_object_affirmative_3,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_choose_best_object_interrogative_1,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_choose_best_object_interrogative_2,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_explain_relation,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_generate_object,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_generate_subject,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_hop,wiki_hop_original_generate_subject_and_object,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiki_qa,wiki_qa_automatic_system,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Decide_good_answer,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Direct_Answer_to_Question,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_exercise,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_found_on_google,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Generate_Question_from_Topic,Question Generation,English
+T0,wiki_qa,wiki_qa_Is_This_True_,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Jeopardy_style,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Topic_Prediction_Answer_Only,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Topic_Prediction_Question_and_Answer_Pair,Closed-Book QA,English
+T0,wiki_qa,wiki_qa_Topic_Prediction_Question_Only,Closed-Book QA,English
+T0,wiqa_does,wiqa_does_the_supposed_perturbation_have_an_effect,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_effect,wiqa_effect_with_label_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_effect,wiqa_effect_with_string_answer,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_what,wiqa_what_is_the_final_step_of_the_following_process,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_what,wiqa_what_is_the_missing_first_step,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_what,wiqa_what_might_be_the_first_step_of_the_process,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_what,wiqa_what_might_be_the_last_step_of_the_process,Multiple-Choice QA (no trivia knowledge required),English
+T0,wiqa_which,wiqa_which_of_the_following_is_the_supposed_perturbation,Multiple-Choice QA (no trivia knowledge required),English
+NIv2,abductive_nli,task067_abductivenli_answer_generation,Story Composition,['English']
+NIv2,abductive_nli,task068_abductivenli_incorrect_answer_generation,Story Composition,['English']
+NIv2,abductive_nli,task069_abductivenli_classification,Coherence Classification,['English']
+NIv2,abductive_nli,task070_abductivenli_incorrect_classification,Coherence Classification,['English']
+NIv2,abductive_nli,task071_abductivenli_answer_generation,Story Composition,['English']
+NIv2,abductive_nli,task072_abductivenli_answer_generation,Story Composition,['English']
+NIv2,ade_corpus_v2,task1447_drug_extraction_ade,Named Entity Recognition,['English']
+NIv2,ade_corpus_v2,task1451_drug_dose_extraction,Information Extraction,['English']
+NIv2,ade_corpus_v2,task1495_adverse_drug_event_classification,Text Categorization,['English']
+NIv2,adversarial_qa,task1295_adversarial_qa_question_answering,Question Answering,['English']
+NIv2,adverserial_qa,task1640_aqa1,Answerability Classification,['English']
+NIv2,afs,task145_afs_argument_similarity_death_penalty,Text Matching,['English']
+NIv2,afs,task146_afs_argument_similarity_gun_control,Text Matching,['English']
+NIv2,afs,task147_afs_argument_similarity_gay_marriage,Text Matching,['English']
+NIv2,afs,task148_afs_argument_quality_gay_marriage,Text Matching,['English']
+NIv2,afs,task149_afs_argument_quality_death_penalty,Text Matching,['English']
+NIv2,afs,task150_afs_argument_quality_gun_control,Text Matching,['English']
+NIv2,ag_news,task1541_agnews_classification,Text Categorization,['English']
+NIv2,ag_news,task379_agnews_topic_classification,Text Categorization,['English']
+NIv2,ai2_arithmetic_questions,task745_ai2_arithmetic_questions_arithmetic,Question Answering,['English']
+NIv2,air_dialogue,task573_air_dialogue_classification,Intent Identification,['English']
+NIv2,air_dialogue,task574_air_dialogue_sentence_generation,Dialogue Generation,['English']
+NIv2,air_dialogue,task575_air_dialogue_classification,Speaker Identification,['English']
+NIv2,ajgt_twitter_ar,task1414_ajgt_twitter_ar_classification,Sentiment Analysis,"['English', 'Arabic']"
+NIv2,allegro_reviews,task634_allegro_reviews_classification,Sentiment Analysis,"['Polish', 'English']"
+NIv2,allegro_reviews,task635_allegro_reviews_answer_generation,Sentiment Analysis,"['Polish', 'English']"
+NIv2,allocine,task1591_allocine_classification,Sentiment Analysis,"['French', 'English']"
+NIv2,amazon_and_yelp_summarization_dataset,task672_amazon_and_yelp_summarization_dataset_summarization,Summarization,['English']
+NIv2,amazon_fine_food_reviews,task586_amazonfood_polarity_classification,Sentiment Analysis,['English']
+NIv2,amazon_fine_food_reviews,task587_amazonfood_polarity_correction_classification,Sentiment Analysis,['English']
+NIv2,amazon_fine_food_reviews,task588_amazonfood_rating_classification,Sentiment Analysis,['English']
+NIv2,amazon_fine_food_reviews,task589_amazonfood_summary_text_generation,Summarization,['English']
+NIv2,amazon_fine_food_reviews,task590_amazonfood_summary_correction_classification,Text Matching,['English']
+NIv2,amazon_polarity,task493_review_polarity_classification,Sentiment Analysis,['English']
+NIv2,amazon_polarity,task494_review_polarity_answer_generation,Sentiment Analysis,['English']
+NIv2,amazon_us_reviews,task1342_amazon_us_reviews_title,Title Generation,['English']
+NIv2,amazon_us_reviews,task1343_amazon_us_reviews_rating,Sentiment Analysis,['English']
+NIv2,ambigqa,task669_ambigqa_answer_generation,Question Answering,['English']
+NIv2,ambigqa,task670_ambigqa_question_generation,Question Rewriting,['English']
+NIv2,ambigqa,task671_ambigqa_text_generation,Question Rewriting,['English']
+NIv2,ancora_ca_ner,task960_ancora_ca_ner_named_entity_recognition,Named Entity Recognition,"['English', 'Catalan']"
+NIv2,ancora_ca_ner,task961_ancora_ca_ner_text_auto_completion,Text Completion,"['English', 'Catalan']"
+NIv2,ancora_ca_ner,task962_ancora_ca_ner_missing_word_prediction,Fill in The Blank,"['English', 'Catalan']"
+NIv2,anem,task1485_organ_extraction_anem_dataset,Named Entity Recognition,['English']
+NIv2,anem,task1486_cell_extraction_anem_dataset,Named Entity Recognition,['English']
+NIv2,anem,task1487_organism_substance_extraction_anem_dataset,Named Entity Recognition,['English']
+NIv2,anli,task1385_anli_r1_entailment,Textual Entailment,['English']
+NIv2,anli,task1386_anli_r2_entailment,Textual Entailment,['English']
+NIv2,anli,task1387_anli_r3_entailment,Textual Entailment,['English']
+NIv2,app_reviews,task761_app_review_classification,Sentiment Analysis,['English']
+NIv2,aqua,task750_aqua_multiple_choice_answering,Question Answering,['English']
+NIv2,aquamuse,task519_aquamuse_question_generation,Question Generation,['English']
+NIv2,aquamuse,task520_aquamuse_answer_given_in_passage,Answerability Classification,['English']
+NIv2,arc,task228_arc_answer_generation_easy,Question Answering,['English']
+NIv2,arc,task229_arc_answer_generation_hard,Question Answering,['English']
+NIv2,argkp,task1285_kpa_keypoint_matching,Text Matching,['English']
+NIv2,asian_language_treebank,task1115_alt_ja_id_translation,Translation,"['Japanese', 'Indonesian', 'English']"
+NIv2,asian_language_treebank,task1116_alt_id_ja_translation,Translation,"['Japanese', 'Indonesian', 'English']"
+NIv2,asian_language_treebank,task1117_alt_ja_id_answer_generation,Text Matching,"['Japanese', 'Indonesian', 'English']"
+NIv2,asian_language_treebank,task1118_alt_ja_fil_translation,Translation,"['Japanese', 'English', 'Filipino']"
+NIv2,asian_language_treebank,task1119_alt_fil_ja_translation,Translation,"['Japanese', 'English', 'Filipino']"
+NIv2,asian_language_treebank,task1120_alt_ja_fil_answer_generation,Text Matching,"['Japanese', 'English', 'Filipino']"
+NIv2,asian_language_treebank,task1121_alt_ja_khm_translation,Translation,"['Japanese', 'Central Khmer', 'English']"
+NIv2,asian_language_treebank,task1122_alt_khm_ja_translation,Translation,"['Japanese', 'Central Khmer', 'English']"
+NIv2,asian_language_treebank,task1123_alt_ja_khm_answer_generation,Text Matching,"['Japanese', 'Central Khmer', 'English']"
+NIv2,asian_language_treebank,task1124_alt_ja_lo_translation,Translation,"['Japanese', 'English', 'Lao']"
+NIv2,asian_language_treebank,task1125_alt_lo_ja_translation,Translation,"['Japanese', 'English', 'Lao']"
+NIv2,asian_language_treebank,task1126_alt_ja_lo_answer_generation,Text Matching,"['Japanese', 'English', 'Lao']"
+NIv2,asian_language_treebank,task1127_alt_ja_th_translation,Translation,"['Japanese', 'English', 'Thai']"
+NIv2,asian_language_treebank,task1128_alt_th_ja_translation,Translation,"['Japanese', 'English', 'Thai']"
+NIv2,asian_language_treebank,task1129_alt_ja_th_answer_generation,Text Matching,"['Japanese', 'English', 'Thai']"
+NIv2,asian_language_treebank,task432_alt_en_hi_translation,Translation,"['English', 'Hindi']"
+NIv2,asian_language_treebank,task433_alt_hi_en_translation,Translation,"['English', 'Hindi']"
+NIv2,asian_language_treebank,task434_alt_en_hi_answer_generation,Text Matching,"['English', 'Hindi']"
+NIv2,asian_language_treebank,task435_alt_en_ja_translation,Translation,"['Japanese', 'English']"
+NIv2,asian_language_treebank,task436_alt_ja_en_translation,Translation,"['Japanese', 'English']"
+NIv2,asian_language_treebank,task437_alt_en_ja_answer_generation,Text Matching,"['Japanese', 'English']"
+NIv2,asian_language_treebank,task535_alt_translation_ch_en,Translation,"['Chinese', 'English']"
+NIv2,asian_language_treebank,task536_alt_translation_vi_en,Translation,"['English', 'Vietnamese']"
+NIv2,asian_language_treebank,task537_alt_translation_th_en,Translation,"['English', 'Thai']"
+NIv2,asian_language_treebank,task538_alt_translation_bu_en,Translation,"['English', 'Burmese']"
+NIv2,asian_language_treebank,task539_alt_translation_ma_en,Translation,"['Malay', 'English']"
+NIv2,asian_language_treebank,task540_alt_translation_la_en,Translation,"['English', 'Lao']"
+NIv2,asian_language_treebank,task541_alt_translation_kh_en,Translation,"['Central Khmer', 'English']"
+NIv2,asian_language_treebank,task542_alt_translation_ja_en,Translation,"['Japanese', 'English']"
+NIv2,asian_language_treebank,task543_alt_translation_bh_en,Translation,"['Indonesian', 'English']"
+NIv2,asian_language_treebank,task544_alt_translation_hi_en,Translation,"['English', 'Hindi']"
+NIv2,asian_language_treebank,task545_alt_translation_fi_en,Translation,"['English', 'Filipino']"
+NIv2,asian_language_treebank,task546_alt_translation_bg_en,Translation,"['English', 'Bengali']"
+NIv2,asian_language_treebank,task547_alt_translation_entk_en,Translation,['English']
+NIv2,asian_language_treebank,task548_alt_translation_en_ch,Translation,"['Chinese', 'English']"
+NIv2,asian_language_treebank,task549_alt_translation_en_vi,Translation,"['English', 'Vietnamese']"
+NIv2,asian_language_treebank,task551_alt_translation_en_th,Translation,"['English', 'Thai']"
+NIv2,asian_language_treebank,task552_alt_translation_en_bu,Translation,"['English', 'Burmese']"
+NIv2,asian_language_treebank,task553_alt_translation_en_ma,Translation,"['Malay', 'English']"
+NIv2,asian_language_treebank,task554_alt_translation_en_la,Translation,"['English', 'Lao']"
+NIv2,asian_language_treebank,task555_alt_translation_en_kh,Translation,"['Central Khmer', 'English']"
+NIv2,asian_language_treebank,task556_alt_translation_en_ja,Translation,"['Japanese', 'English']"
+NIv2,asian_language_treebank,task557_alt_translation_en_ba,Translation,"['Indonesian', 'English']"
+NIv2,asian_language_treebank,task558_alt_translation_en_hi,Translation,"['English', 'Hindi']"
+NIv2,asian_language_treebank,task559_alt_translation_en_fi,Translation,"['English', 'Filipino']"
+NIv2,asian_language_treebank,task560_alt_translation_en_entk,Translation,['English']
+NIv2,asian_language_treebank,task561_alt_translation_en_bg,Translation,"['English', 'Bengali']"
+NIv2,asian_language_treebank,task562_alt_language_identification,Language Identification,"['Central Khmer', 'Chinese', 'English', 'Lao', 'Filipino', 'Hindi', 'Japanese', 'Burmese', 'Thai', 'Malay', 'Indonesian', 'Bengali', 'Vietnamese']"
+NIv2,asset,task111_asset_sentence_simplification,Text Simplification,['English']
+NIv2,asset,task112_asset_simple_sentence_identification,Text Simplification,['English']
+NIv2,atomic,task1196_atomic_classification_oeffect,Commonsense Classification,['English']
+NIv2,atomic,task1197_atomic_classification_oreact,Commonsense Classification,['English']
+NIv2,atomic,task1198_atomic_classification_owant,Commonsense Classification,['English']
+NIv2,atomic,task1199_atomic_classification_xattr,Commonsense Classification,['English']
+NIv2,atomic,task1200_atomic_classification_xeffect,Commonsense Classification,['English']
+NIv2,atomic,task1201_atomic_classification_xintent,Commonsense Classification,['English']
+NIv2,atomic,task1202_atomic_classification_xneed,Commonsense Classification,['English']
+NIv2,atomic,task1203_atomic_classification_xreact,Commonsense Classification,['English']
+NIv2,atomic,task1204_atomic_classification_hinderedby,Commonsense Classification,['English']
+NIv2,atomic,task1205_atomic_classification_isafter,Commonsense Classification,['English']
+NIv2,atomic,task1206_atomic_classification_isbefore,Commonsense Classification,['English']
+NIv2,atomic,task1207_atomic_classification_atlocation,Commonsense Classification,['English']
+NIv2,atomic,task1208_atomic_classification_xreason,Commonsense Classification,['English']
+NIv2,atomic,task1209_atomic_classification_objectuse,Commonsense Classification,['English']
+NIv2,atomic,task1210_atomic_classification_madeupof,Commonsense Classification,['English']
+NIv2,atomic,task1211_atomic_classification_hassubevent,Commonsense Classification,['English']
+NIv2,atomic,task1212_atomic_classification_hasproperty,Commonsense Classification,['English']
+NIv2,atomic,task1213_atomic_classification_desires,Commonsense Classification,['English']
+NIv2,atomic,task1214_atomic_classification_xwant,Commonsense Classification,['English']
+NIv2,atomic,task1215_atomic_classification_capableof,Commonsense Classification,['English']
+NIv2,atomic,task1216_atomic_classification_causes,Commonsense Classification,['English']
+NIv2,atomic,task1217_atomic_answer_generation,Fill in The Blank,['English']
+NIv2,babi,task082_babi_t1_single_supporting_fact_question_generation,Question Generation,['English']
+NIv2,babi,task083_babi_t1_single_supporting_fact_answer_generation,Question Answering,['English']
+NIv2,babi,task084_babi_t1_single_supporting_fact_identify_relevant_fact,Question Answering,['English']
+NIv2,bard,task1152_bard_analogical_reasoning_causation,Word Analogy,['English']
+NIv2,bard,task1153_bard_analogical_reasoning_affordance,Word Analogy,['English']
+NIv2,bard,task1154_bard_analogical_reasoning_travel,Word Analogy,['English']
+NIv2,bard,task1155_bard_analogical_reasoning_trash_or_treasure,Word Analogy,['English']
+NIv2,bard,task1156_bard_analogical_reasoning_tools,Word Analogy,['English']
+NIv2,bard,task1157_bard_analogical_reasoning_rooms_for_containers,Word Analogy,['English']
+NIv2,bard,task1158_bard_analogical_reasoning_manipulating_items,Word Analogy,['English']
+NIv2,bard,task1159_bard_analogical_reasoning_containers,Word Analogy,['English']
+NIv2,bc2gm_corpus,task1481_gene_extraction_bc2gm_dataset,Named Entity Recognition,['English']
+NIv2,bengali_hate_speech_dataset,task1490_bengali_personal_hate_speech_binary_classification,Text Categorization,"['English', 'Bengali']"
+NIv2,bengali_hate_speech_dataset,task1491_bengali_political_hate_speech_binary_classification,Text Categorization,"['English', 'Bengali']"
+NIv2,bengali_hate_speech_dataset,task1492_bengali_religious_hate_speech_binary_classification,Text Categorization,"['English', 'Bengali']"
+NIv2,bengali_hate_speech_dataset,task1493_bengali_geopolitical_hate_speech_binary_classification,Text Categorization,"['English', 'Bengali']"
+NIv2,bengali_hate_speech_dataset,task1494_bengali_hate_speech_classification,Text Categorization,"['English', 'Bengali']"
+NIv2,bengali_restaurant_reviews,task1496_bengali_reviews_sentiment_classification,Sentiment Analysis,"['English', 'Bengali']"
+NIv2,bengali_restaurant_reviews,task1497_bengali_book_reviews_sentiment_classification,Sentiment Analysis,"['English', 'Bengali']"
+NIv2,bianet,task910_bianet_classification,Text Matching,"['Kurdish', 'English']"
+NIv2,bianet,task911_bianet_translation,Translation,"['Kurdish', 'English']"
+NIv2,bianet,task912_bianet_classification,Language Identification,"['Kurdish', 'English']"
+NIv2,bianet,task913_bianet_translation,Translation,"['Turkish', 'English']"
+NIv2,bianet,task914_bianet_translation,Translation,"['Kurdish', 'English', 'Turkish']"
+NIv2,big_bench,task062_bigbench_repeat_copy_logic,Program Execution,['English']
+NIv2,billsum,task1658_billsum_summarization,Summarization,['English']
+NIv2,billsum,task1659_title_generation,Title Generation,['English']
+NIv2,biocreative_v,task1449_disease_entity_extraction_bc5cdr_dataset,Named Entity Recognition,['English']
+NIv2,bless,task1418_bless_semantic_relation_classification,Word Relation Classification,['English']
+NIv2,bless,task1582_bless_hypernym_generation,Word Semantics,['English']
+NIv2,bless,task1583_bless_meronym_classification,Word Relation Classification,['English']
+NIv2,blimp,task1559_blimp_binary_classification,Linguistic Probing,['English']
+NIv2,blimp,task1560_blimp_binary_classification,Linguistic Probing,['English']
+NIv2,boolq,task1660_super_glue_question_generation,Question Generation,['English']
+NIv2,boolq,task1661_super_glue_classification,Question Answering,['English']
+NIv2,boolq,task380_boolq_yes_no_question,Question Answering,['English']
+NIv2,boolq,task381_boolq_question_generation,Question Generation,['English']
+NIv2,break,task176_break_decompose_questions,Question Decomposition,['English']
+NIv2,break,task184_break_generate_question,Question Generation,['English']
+NIv2,broad_twitter_corpus,task1452_location_entity_extraction_btc_corpus,Named Entity Recognition,['English']
+NIv2,broad_twitter_corpus,task1453_person_entity_extraction_btc_corpus,Named Entity Recognition,['English']
+NIv2,broad_twitter_corpus,task1479_organization_entity_extraction_btc_corpus,Named Entity Recognition,['English']
+NIv2,brown_corpus,task1168_brown_coarse_pos_tagging,Pos Tagging,['English']
+NIv2,cad,task108_contextualabusedetection_classification,Toxic Language Detection,['English']
+NIv2,cail2018,task1666_cail2018_answer_generation,Information Extraction,"['Chinese', 'English']"
+NIv2,cail2018,task1667_cail2018_answer_generation,Information Extraction,"['Chinese', 'English']"
+NIv2,casehold,task268_casehold_legal_answer_generation,Text Completion,['English']
+NIv2,casehold,task287_casehold_legal_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,casino,task353_casino_classification_negotiation_elicit_pref,Negotiation Strategy Detection,['English']
+NIv2,casino,task354_casino_classification_negotiation_no_need,Negotiation Strategy Detection,['English']
+NIv2,casino,task355_casino_classification_negotiation_other_need,Negotiation Strategy Detection,['English']
+NIv2,casino,task356_casino_classification_negotiation_self_need,Negotiation Strategy Detection,['English']
+NIv2,casino,task357_casino_classification_negotiation_small_talk,Negotiation Strategy Detection,['English']
+NIv2,casino,task358_casino_classification_negotiation_uv_part,Negotiation Strategy Detection,['English']
+NIv2,casino,task359_casino_classification_negotiation_vouch_fair,Negotiation Strategy Detection,['English']
+NIv2,catalonia_independence_corpus,task1646_dataset_card_for_catalonia_independence_corpus_text_classification,Stance Detection,"['English', 'Catalan', 'Spanish']"
+NIv2,cb,task1388_cb_entailment,Textual Entailment,['English']
+NIv2,ccaligned_multilingual,task1616_cc_alligned_translate_eng_tel,Translation,"['English', 'Telugu']"
+NIv2,ccaligned_multilingual,task1617_cc_alligned_translate_tel_eng,Translation,"['English', 'Telugu']"
+NIv2,ccaligned_multilingual,task1618_cc_alligned_classify_tel_eng,Language Identification,"['English', 'Telugu']"
+NIv2,cdt,task838_cdt_classification,Toxic Language Detection,"['Polish', 'English']"
+NIv2,cdt,task839_cdt_classification,Toxic Language Detection,"['Polish', 'English']"
+NIv2,cedr,task1662_cedr_ru_classification,Sentiment Analysis,"['Russian', 'English']"
+NIv2,cedr,task1663_cedr_ru_incorrect_classification,Wrong Candidate Generation,"['Russian', 'English']"
+NIv2,cfq_mcd1,task868_cfq_mcd1_explanation_to_sql,Text to Code,['English']
+NIv2,cfq_mcd1,task869_cfq_mcd1_sql_to_explanation,Text to Code,['English']
+NIv2,chemprot_corpus,task1482_gene_extraction_chemprot_dataset,Named Entity Recognition,['English']
+NIv2,chemprot_corpus,task1483_chemical_extraction_chemprot_dataset,Named Entity Recognition,['English']
+NIv2,circa,task565_circa_answer_generation,Dialogue Generation,['English']
+NIv2,circa,task566_circa_classification,Text Matching,['English']
+NIv2,circa,task567_circa_text_generation,Question Context Generation,['English']
+NIv2,circa,task568_circa_question_generation,Question Generation,['English']
+NIv2,civil_comments,task1720_civil_comments_toxicity_classification,Toxic Language Detection,['English']
+NIv2,civil_comments,task1721_civil_comments_obscenity_classification,Toxic Language Detection,['English']
+NIv2,civil_comments,task1722_civil_comments_threat_classification,Toxic Language Detection,['English']
+NIv2,civil_comments,task1723_civil_comments_sexuallyexplicit_classification,Toxic Language Detection,['English']
+NIv2,civil_comments,task1724_civil_comments_insult_classification,Toxic Language Detection,['English']
+NIv2,civil_comments,task1725_civil_comments_severtoxicity_classification,Toxic Language Detection,['English']
+NIv2,clariq,task166_clariq_sentence_generation,Question Generation,['English']
+NIv2,clariq,task1713_convai3_sentence_generation,Intent Identification,['English']
+NIv2,clariq,task1714_convai3_sentence_generation,Dialogue Generation,['English']
+NIv2,clariq,task227_clariq_classification,Question Understanding,['English']
+NIv2,clickbait_news_bg,task1561_clickbait_new_bg_summarization,Title Generation,"['English', 'Bulgarian']"
+NIv2,cls,task476_cls_english_books_classification,Sentiment Analysis,['English']
+NIv2,cls,task477_cls_english_dvd_classification,Sentiment Analysis,['English']
+NIv2,cls,task478_cls_english_music_classification,Sentiment Analysis,['English']
+NIv2,cls,task479_cls_german_books_classification,Sentiment Analysis,"['German', 'English']"
+NIv2,cls,task480_cls_german_dvd_classification,Sentiment Analysis,"['German', 'English']"
+NIv2,cls,task481_cls_german_music_classification,Sentiment Analysis,"['German', 'English']"
+NIv2,cls,task482_cls_french_books_classification,Sentiment Analysis,"['French', 'English']"
+NIv2,cls,task483_cls_french_dvd_classification,Sentiment Analysis,"['French', 'English']"
+NIv2,cls,task484_cls_french_music_classification,Sentiment Analysis,"['French', 'English']"
+NIv2,cls,task485_cls_japanese_books_classification,Sentiment Analysis,"['Japanese', 'English']"
+NIv2,cls,task486_cls_japanese_dvd_classification,Sentiment Analysis,"['Japanese', 'English']"
+NIv2,cls,task487_cls_japanese_music_classification,Sentiment Analysis,"['Japanese', 'English']"
+NIv2,clue_cmrc2018,task1402_clue_question_generation,Question Generation,"['Chinese', 'English']"
+NIv2,cmrc2018,task1569_cmrc2018_question_generation,Question Generation,"['Chinese', 'English']"
+NIv2,cmrc2018,task1570_cmrc2018_answer_generation,Question Answering,"['Chinese', 'English']"
+NIv2,cmrc2018,task1571_cmrc2018_answer_generation_starting_index,Answer Index Prediction,"['Chinese', 'English']"
+NIv2,cnn_dailymail,task1553_cnn_dailymail_summarization,Summarization,['English']
+NIv2,coached_conv_pref,task925_coached_conv_pref_classifier,Speaker Identification,['English']
+NIv2,coached_conv_pref,task926_coached_conv_pref_word_generation,Information Extraction,['English']
+NIv2,cod3s,task391_causal_relationship,Cause Effect Classification,['English']
+NIv2,cod3s,task392_inverse_causal_relationship,Cause Effect Classification,['English']
+NIv2,cod3s,task393_plausible_result_generation,Cause Effect Classification,['English']
+NIv2,coda_19,task1161_coda19_title_generation,Title Generation,['English']
+NIv2,coda_19,task1162_coda19_title_classification,Text Matching,['English']
+NIv2,coda_19,task1163_coda19_section_classification,Section Classification,['English']
+NIv2,coda_19,task1164_coda19_section_correction_classification,Section Classification,['English']
+NIv2,coda_19,task352_coda_19_classification,Section Classification,['English']
+NIv2,codah,task156_codah_classification_adversarial,Text Completion,['English']
+NIv2,codexglue,task921_code_x_glue_information_retreival,Count For Loops,['English']
+NIv2,cola,task1346_glue_cola_grammatical_correctness_classification,Grammar Error Detection,['English']
+NIv2,cola,task616_cola_classification,Text Quality Evaluation,['English']
+NIv2,com_qa,task442_com_qa_paraphrase_question_generation,Question Rewriting,['English']
+NIv2,com_qa,task443_com_qa_ans_question_generation,Question Generation,['English']
+NIv2,com_qa,task444_com_qa_question_paraphrases_answer_generation,Question Answering,['English']
+NIv2,com2sense,task116_com2sense_commonsense_reasoning,Commonsense Classification,['English']
+NIv2,commongen,task102_commongen_sentence_generation,Data to Text,['English']
+NIv2,commonsenseqa,task073_commonsenseqa_answer_generation,Question Answering,['English']
+NIv2,conala,task079_conala_concat_strings,Program Execution,['English']
+NIv2,conala,task093_conala_normalize_lists,Program Execution,['English']
+NIv2,conala,task094_conala_calculate_mean,Program Execution,['English']
+NIv2,conala,task095_conala_max_absolute_value,Program Execution,['English']
+NIv2,conala,task096_conala_list_index_subtraction,Program Execution,['English']
+NIv2,conala,task097_conala_remove_duplicates,Program Execution,['English']
+NIv2,conala,task098_conala_list_intersection,Program Execution,['English']
+NIv2,conala,task122_conala_list_index_addition,Program Execution,['English']
+NIv2,conala,task123_conala_sort_dictionary,Program Execution,['English']
+NIv2,conala,task124_conala_pair_averages,Program Execution,['English']
+NIv2,conala,task125_conala_pair_differences,Program Execution,['English']
+NIv2,conll2022,task1543_conll2002_parts_of_speech_tagging_answer_generation,Pos Tagging,"['Dutch', 'English']"
+NIv2,conll2022,task1544_conll2002_named_entity_recognition_answer_generation,Named Entity Recognition,"['Dutch', 'English']"
+NIv2,conll2022,task1545_conll2002_person_name_extraction_answer_generation,Named Entity Recognition,"['Dutch', 'English']"
+NIv2,conll2022,task1546_conll2002_location_name_extraction_answer_generation,Named Entity Recognition,"['Dutch', 'English']"
+NIv2,conllpp,task610_conllpp_ner,Named Entity Recognition,['English']
+NIv2,conv_ai_2,task855_conv_ai_2_classification,Speaker Identification,['English']
+NIv2,conv_ai_2,task856_conv_ai_2_classification,Speaker Identification,['English']
+NIv2,copa,task1393_superglue_copa_text_completion,Cause Effect Classification,['English']
+NIv2,copa,task827_copa_commonsense_reasoning,Cause Effect Classification,['English']
+NIv2,copa,task828_copa_commonsense_cause_effect,Cause Effect Classification,['English']
+NIv2,copa_hr,task1626_copa_hr_question_answering,Cause Effect Classification,"['English', 'Croatian']"
+NIv2,copa_hr,task1627_copa_hr_classification,Cause Effect Classification,"['English', 'Croatian']"
+NIv2,copa_hr,task1628_copa_hr_question_answering,Cause Effect Classification,"['English', 'Croatian']"
+NIv2,copa_hr,task1629_copa_hr_classification,Cause Effect Classification,"['English', 'Croatian']"
+NIv2,coqa,task917_coqa_question_generation,Question Generation,['English']
+NIv2,coqa,task918_coqa_answer_generation,Question Answering,['English']
+NIv2,coqa,task919_coqa_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,cosmosqa,task022_cosmosqa_passage_inappropriate_binary,Toxic Language Detection,['English']
+NIv2,cosmosqa,task023_cosmosqa_question_generation,Question Generation,['English']
+NIv2,cosmosqa,task024_cosmosqa_answer_generation,Question Answering,['English']
+NIv2,cosmosqa,task025_cosmosqa_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,country_abbreviation_dataset,task1314_country_abbreviation,Country Abbreviation Prediction,['English']
+NIv2,country_barcode_prefix_dataset,task1319_country_by_barcode_prefix,Country Prefix Barcode Prediction,['English']
+NIv2,country_calling_code_dataset,task1317_country_calling_code,Country Call Code Prediction,['English']
+NIv2,country_capital_city_dataset,task1146_country_capital,Country Capital Prediction,['English']
+NIv2,country_continent_dataset,task1321_country_continent,Country Continent Prediction,['English']
+NIv2,country_currency_dataset,task1147_country_currency,Country Currency Prediction,['English']
+NIv2,country_domain_tld_dataset,task1320_country_domain_tld,Country Top Level Domain Prediction,['English']
+NIv2,country_government_type_dataset,task1322_country_government_type,Country Government Type Prediction,['English']
+NIv2,country_independence_year_dataset,task1426_country_independence_year,Country Independence Year Prediction,['English']
+NIv2,country_iso_numeric_dataset,task1425_country_iso_numeric,Country ISO Prediction,['English']
+NIv2,country_national_dish_dataset,task1318_country_national_dish,Country National Dish Prediction,['English']
+NIv2,country_region_in_world_dataset,task1427_country_region_in_world,Country Region Prediction,['English']
+NIv2,country_region_in_world_dataset,task1428_country_surface_area,Country Surface Area Prediction,['English']
+NIv2,craigslist_bargains,task766_craigslist_bargains_classification,Dialogue State Tracking,['English']
+NIv2,craigslist_bargains,task767_craigslist_bargains_classification,Text Categorization,['English']
+NIv2,creak_2018,task403_creak_commonsense_inference,Fact Verification,['English']
+NIv2,crows_pairs,task316_crows_pairs_classification_stereotype,Stereotype Detection,['English']
+NIv2,crows_pairs,task317_crows_pairs_classification_stereotype_type,Stereotype Detection,['English']
+NIv2,cuad,task597_cuad_answer_generation,Question Answering,['English']
+NIv2,cuad,task598_cuad_answer_generation,Question Answering,['English']
+NIv2,cuad,task599_cuad_question_generation,Question Generation,['English']
+NIv2,curated_from_stack_overflow___english.,task225_english_language_answer_generation,Question Answering,['English']
+NIv2,curated_from_stack_overflow___english.,task226_english_language_answer_relevance_classification,Answerability Classification,['English']
+NIv2,curiosity_dialogs,task576_curiosity_dialogs_answer_generation,Dialogue Generation,['English']
+NIv2,curiosity_dialogs,task577_curiosity_dialogs_classification,Speaker Identification,['English']
+NIv2,curiosity_dialogs,task578_curiosity_dialogs_answer_generation,Information Extraction,['English']
+NIv2,dailydialog,task1531_daily_dialog_type_classification,Dialogue Act Recognition,['English']
+NIv2,dailydialog,task1532_daily_dialog_emotion_classification,Sentiment Analysis,['English']
+NIv2,dailydialog,task1533_daily_dialog_formal_classification,Dialogue Act Recognition,['English']
+NIv2,dailydialog,task1534_daily_dialog_question_classification,Dialogue Act Recognition,['English']
+NIv2,dailydialog,task1535_daily_dialog_uniqueness_classification,Sentiment Analysis,['English']
+NIv2,dailydialog,task1536_daily_dialog_happiness_classification,Sentiment Analysis,['English']
+NIv2,dailydialog,task930_dailydialog_classification,Text Categorization,['English']
+NIv2,dailydialog,task931_dailydialog_classification,Sentiment Analysis,['English']
+NIv2,dailydialog,task932_dailydialog_classification,Intent Identification,['English']
+NIv2,dais,task132_dais_text_modification,Paraphrasing,['English']
+NIv2,dart,task1407_dart_question_generation,Data to Text,['English']
+NIv2,dart,task1408_dart_similarity_classification,Text Matching,['English']
+NIv2,dart,task1409_dart_text_generation,Data to Text,['English']
+NIv2,dart,task1410_dart_relationship_extraction,Information Extraction,['English']
+NIv2,dart,task1411_dart_subject_identification,Information Extraction,['English']
+NIv2,dart,task1413_dart_object_identification,Information Extraction,['English']
+NIv2,dbpedia_14,task629_dbpedia_14_classification,Text Categorization,['English']
+NIv2,dbpedia_14,task630_dbpedia_14_classification,Text Matching,['English']
+NIv2,dbpedia_14,task631_dbpedia_14_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,dbpedia_14,task632_dbpedia_14_classification,Text Categorization,['English']
+NIv2,dbpedia_14,task633_dbpedia_14_answer_generation,Text Categorization,['English']
+NIv2,ddo,task375_classify_type_of_sentence_in_debate,Text Categorization,['English']
+NIv2,deal_or_no_dialog,task1384_deal_or_no_dialog_classification,Dialogue State Tracking,['English']
+NIv2,deceptive_opinion_spam_dataset,task902_deceptive_opinion_spam_classification,Sentiment Analysis,['English']
+NIv2,deceptive_opinion_spam_dataset,task903_deceptive_opinion_spam_classification,Sentiment Analysis,['English']
+NIv2,defeasible_nli_atomic,task935_defeasible_nli_atomic_classification,Textual Entailment,['English']
+NIv2,defeasible_nli_atomic,task936_defeasible_nli_snli_classification,Textual Entailment,['English']
+NIv2,defeasible_nli_atomic,task937_defeasible_nli_social_classification,Textual Entailment,['English']
+NIv2,detoxifying_lms,task137_detoxifying_lms_classification_toxicity,Toxic Language Detection,['English']
+NIv2,detoxifying_lms,task138_detoxifying_lms_classification_fluency,Text Completion,['English']
+NIv2,detoxifying_lms,task139_detoxifying_lms_classification_topicality,Text Completion,['English']
+NIv2,detoxifying_lms,task140_detoxifying_lms_classification_style,Text Completion,['English']
+NIv2,dialogre,task906_dialogre_identify_names,Speaker Identification,['English']
+NIv2,dialogre,task907_dialogre_identify_relationships,Speaker Relation Classification,['English']
+NIv2,dialogre,task908_dialogre_identify_familial_relationships,Speaker Relation Classification,['English']
+NIv2,dialogre,task909_dialogre_prevalent_speakers,Speaker Identification,['English']
+NIv2,diplomacy_detection,task1590_diplomacy_text_generation,Dialogue Generation,['English']
+NIv2,discofuse,task550_discofuse_sentence_generation,Sentence Composition,['English']
+NIv2,discofuse,task563_discofuse_answer_generation,Discourse Connective Identification,['English']
+NIv2,discofuse,task564_discofuse_classification,Discourse Relation Classification,['English']
+NIv2,disfl_qa,task1195_disflqa_disfluent_to_fluent_conversion,Question Rewriting,['English']
+NIv2,disfl_qa,task1622_disfl_qa_text_modication,Question Rewriting,['English']
+NIv2,disfl_qa,task1623_disfl_qa_disfluent_question_classification,Text Quality Evaluation,['English']
+NIv2,disfl_qa,task1624_disfl_qa_question_yesno_classification,Answerability Classification,['English']
+NIv2,disfl_qa,task1625_disfl_qa_asnwer_generation,Question Answering,['English']
+NIv2,doqa,task1437_doqa_cooking_question_generation,Question Generation,['English']
+NIv2,doqa,task1438_doqa_cooking_answer_generation,Question Answering,['English']
+NIv2,doqa,task1439_doqa_cooking_isanswerable,Answerability Classification,['English']
+NIv2,doqa,task1440_doqa_movies_question_generation,Question Generation,['English']
+NIv2,doqa,task1441_doqa_movies_answer_generation,Question Answering,['English']
+NIv2,doqa,task1442_doqa_movies_isanswerable,Answerability Classification,['English']
+NIv2,doqa,task1637_doqa2,Question Generation,['English']
+NIv2,doqa,task1638_doqa2,Question Generation,['English']
+NIv2,doqa,task1639_doqa2,Question Generation,['English']
+NIv2,dream,task246_dream_question_generation,Question Generation,['English']
+NIv2,dream,task247_dream_answer_generation,Question Answering,['English']
+NIv2,dream,task248_dream_classification,Question Understanding,['English']
+NIv2,dream,task283_dream_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,drop,task026_drop_question_generation,Question Generation,['English']
+NIv2,drop,task027_drop_answer_type_generation,Question Understanding,['English']
+NIv2,drop,task028_drop_answer_generation,Question Answering,['English']
+NIv2,dstc3,task1499_dstc3_summarization,Summarization,['English']
+NIv2,dstc3,task1500_dstc3_classification,Dialogue State Tracking,['English']
+NIv2,dstc3,task1501_dstc3_answer_generation,Dialogue State Tracking,['English']
+NIv2,dualrl,task927_yelp_negative_to_positive_style_transfer,Style Transfer,['English']
+NIv2,dualrl,task928_yelp_positive_to_negative_style_transfer,Style Transfer,['English']
+NIv2,duorc,task182_duorc_question_generation,Question Generation,['English']
+NIv2,duorc,task193_duorc_question_generation,Question Generation,['English']
+NIv2,duorc,task194_duorc_answer_generation,Question Answering,['English']
+NIv2,e_snli,task640_esnli_classification,Textual Entailment,['English']
+NIv2,e_snli,task641_esnli_classification,Textual Entailment,['English']
+NIv2,e_snli,task642_esnli_classification,Textual Entailment,['English']
+NIv2,e2e,task957_e2e_nlg_text_generation_generate,Data to Text,['English']
+NIv2,e2e,task958_e2e_nlg_text_generation_parse,Information Extraction,['English']
+NIv2,e2e,task959_e2e_nlg_text_generation_identify,Named Entity Recognition,['English']
+NIv2,emea_fr_sk,task762_emea_fr_sk_translation,Translation,"['French', 'English', 'Slovak']"
+NIv2,emea_fr_sk,task763_emea_es_lt_translation,Translation,"['Lithuanian', 'English', 'Spanish']"
+NIv2,emea_fr_sk,task764_emea_bg_el_classification,Text Matching,"['English', 'Bulgarian']"
+NIv2,emea_fr_sk,task765_emea_bg_el_translation,Translation,"['Greek', 'English', 'Bulgarian']"
+NIv2,emo,task517_emo_classify_emotion_of_dialogue,Sentiment Analysis,['English']
+NIv2,emo,task518_emo_different_dialogue_emotions,Sentiment Analysis,['English']
+NIv2,emotion,task512_twitter_emotion_classification,Sentiment Analysis,['English']
+NIv2,emotion,task875_emotion_classification,Sentiment Analysis,['English']
+NIv2,eng_guj_parallel_corpus,task438_eng_guj_parallel_corpus_en_gu_translation,Translation,"['English', 'Gujarati']"
+NIv2,eng_guj_parallel_corpus,task439_eng_guj_parallel_corpus_gu_en_translation,Translation,"['English', 'Gujarati']"
+NIv2,eng_guj_parallel_corpus,task440_eng_guj_parallel_corpus_gu_en_classification,Text Matching,"['English', 'Gujarati']"
+NIv2,eng_guj_parallel_corpus,task441_eng_guj_parallel_corpus_gu_en_language_identification,Language Identification,"['English', 'Gujarati']"
+NIv2,enhanced_wsc,task249_enhanced_wsc_pronoun_disambiguation,Coreference Resolution,['English']
+NIv2,eqasc,task1580_eqasc_perturbed_question_generation,Question Generation,['English']
+NIv2,eqasc,task1581_eqasc_perturbed_answer_generation,Question Answering,['English']
+NIv2,equity_evaluation_corpus,task1336_peixian_equity_evaluation_corpus_gender_classifier,Gender Classification,['English']
+NIv2,equity_evaluation_corpus,task1338_peixian_equity_evaluation_corpus_sentiment_classifier,Sentiment Analysis,['English']
+NIv2,equity_evaluation_corpus,task1339_peixian_equity_evaluation_corpus_text_completion,Fill in The Blank,['English']
+NIv2,essential,task043_essential_terms_answering_incomplete_questions,Answer Incomplete Questions,['English']
+NIv2,essential,task044_essential_terms_identifying_essential_words,Question Understanding,['English']
+NIv2,ethos,task1604_ethos_text_classification,Toxic Language Detection,['English']
+NIv2,ethos,task1605_ethos_text_classification,Toxic Language Detection,['English']
+NIv2,ethos,task1606_ethos_text_classification,Toxic Language Detection,['English']
+NIv2,ethos,task1607_ethos_text_classification,Toxic Language Detection,['English']
+NIv2,eurlex,task743_eurlex_summarization,Title Generation,['English']
+NIv2,eurlex,task744_eurlex_classification,Text Categorization,['English']
+NIv2,europa_ecdc_tm,task1395_europa_ecdc_tm_en_sv_translation,Translation,"['English', 'Swedish']"
+NIv2,europa_ecdc_tm,task1396_europa_ecdc_tm_en_de_translation,Translation,"['German', 'English']"
+NIv2,europa_ecdc_tm,task1397_europa_ecdc_tm_fr_en_translation,Translation,"['French', 'English']"
+NIv2,europarl,task271_europarl_translation,Translation,"['English', 'Bulgarian']"
+NIv2,europarl,task272_europarl_translation,Translation,"['English', 'Bulgarian']"
+NIv2,europarl,task273_europarl_classification,Text Matching,"['English', 'Bulgarian']"
+NIv2,europarl,task312_europarl_sv_en_translation,Translation,"['English', 'Swedish']"
+NIv2,europarl,task313_europarl_en_sv_translation,Translation,"['English', 'Swedish']"
+NIv2,europarl,task314_europarl_sv_en_classification,Text Matching,"['English', 'Swedish']"
+NIv2,europarl,task315_europarl_sv_en_language_identification,Text Matching,"['English', 'Swedish']"
+NIv2,europarl,task530_europarl_en_es_translation,Translation,"['English', 'Spanish']"
+NIv2,europarl,task531_europarl_es_en_translation,Translation,"['English', 'Spanish']"
+NIv2,europarl,task532_europarl_en_es_classification,Text Matching,"['English', 'Spanish']"
+NIv2,europarl,task533_europarl_es_en_language_identification,Language Identification,"['English', 'Spanish']"
+NIv2,evalution,task1429_evalution_semantic_relation_classification,Word Relation Classification,['English']
+NIv2,evalution,task1509_evalution_antonyms,Word Semantics,['English']
+NIv2,evalution,task1510_evalution_relation_extraction,Information Extraction,['English']
+NIv2,evalution,task1584_evalution_meronym_classification,Word Relation Classification,['English']
+NIv2,event2mind,task1595_event2mind_text_generation_1,Emotional Reaction Generation,['English']
+NIv2,event2mind,task1596_event2mind_text_generation_2,Intent Generation,['English']
+NIv2,event2mind,task922_event2mind_word_generation,Emotion Word Generation,['English']
+NIv2,event2mind,task923_event2mind_classifier,Sentiment Analysis,['English']
+NIv2,event2mind,task924_event2mind_word_generation,Emotion Word Generation,['English']
+NIv2,facts2story,task103_facts2story_long_text_generation,Story Composition,['English']
+NIv2,farstail,task534_farstail_entailment,Textual Entailment,"['English', 'Persian']"
+NIv2,financial_phrasebank,task843_financial_phrasebank_classification,Sentiment Analysis,['English']
+NIv2,financial_phrasebank,task844_financial_phrasebank_classification,Sentiment Analysis,['English']
+NIv2,flores,task1514_flores_translation_entone,Translation,"['English', 'Nepali']"
+NIv2,flores,task601_flores_translation_sntoen,Translation,"['Sinhala', 'English']"
+NIv2,flores,task604_flores_translation_entosn,Translation,"['Sinhala', 'English']"
+NIv2,freebase_qa,task897_freebase_qa_topic_question_generation,Question Generation,['English']
+NIv2,freebase_qa,task898_freebase_qa_answer_generation,Question Answering,['English']
+NIv2,freebase_qa,task899_freebase_qa_topic_generation,Question Understanding,['English']
+NIv2,freebase_qa,task900_freebase_qa_category_classification,Question Understanding,['English']
+NIv2,freebase_qa,task901_freebase_qa_category_question_generation,Question Generation,['English']
+NIv2,gap,task329_gap_classification,Coreference Resolution,['English']
+NIv2,gap,task330_gap_answer_generation,Coreference Resolution,['English']
+NIv2,gap,task331_gap_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,gap,task891_gap_coreference_resolution,Coreference Resolution,['English']
+NIv2,gap,task892_gap_reverse_coreference_resolution,Coreference Resolution,['English']
+NIv2,gap,task893_gap_fill_the_blank_coreference_resolution,Coreference Resolution,['English']
+NIv2,generated_reviews_enth,task929_products_reviews_classification,Sentiment Analysis,['English']
+NIv2,giga_fren,task829_giga_fren_translation,Translation,"['French', 'English']"
+NIv2,giga_fren,task831_giga_fren_classification,Text Matching,"['French', 'English']"
+NIv2,gigaword,task1579_gigaword_incorrect_summarization,Summarization,['English']
+NIv2,gigaword,task288_gigaword_summarization,Title Generation,['English']
+NIv2,gigaword,task289_gigaword_summarization,Text Matching,['English']
+NIv2,glucose,task614_glucose_cause_event_detection,Cause Effect Classification,['English']
+NIv2,glucose,task747_glucose_cause_emotion_detection,Information Extraction,['English']
+NIv2,glucose,task748_glucose_reverse_cause_event_detection,Information Extraction,['English']
+NIv2,glucose,task749_glucose_reverse_cause_emotion_detection,Information Extraction,['English']
+NIv2,go_emotions,task889_goemotions_classification,Sentiment Analysis,['English']
+NIv2,gooaq,task1656_gooaq_answer_generation,Question Answering,['English']
+NIv2,gooaq,task1657_gooaq_question_generation,Question Generation,['English']
+NIv2,google_wellformed_query,task673_google_wellformed_query_classification,Question Understanding,['English']
+NIv2,google_wellformed_query,task674_google_wellformed_query_sentence_generation,Text Quality Evaluation,['English']
+NIv2,google_wellformed_query,task675_google_wellformed_query_sentence_generation,Text Quality Evaluation,['English']
+NIv2,grailqa,task402_grailqa_paraphrase_generation,Question Rewriting,['English']
+NIv2,grailqa,task404_grailqa_paraphrase_validation,Text Matching,['English']
+NIv2,gwsd,task890_gcwd_classification,Textual Entailment,['English']
+NIv2,hans,task1364_hans_answer_generation,Sentence Composition,['English']
+NIv2,haspart_kb,task471_haspart_answer_generation,Entity Generation,['English']
+NIv2,haspart_kb,task472_haspart_classification,Entity Relation Classification,['English']
+NIv2,hate_speech_offensive,task904_hate_speech_offensive_classification,Toxic Language Detection,['English']
+NIv2,hate_speech_offensive,task905_hate_speech_offensive_classification,Toxic Language Detection,['English']
+NIv2,hateeval,task333_hateeval_classification_hate_en,Toxic Language Detection,['English']
+NIv2,hateeval,task334_hateeval_classification_hate_es,Toxic Language Detection,"['English', 'Spanish']"
+NIv2,hateeval,task335_hateeval_classification_aggresive_en,Toxic Language Detection,['English']
+NIv2,hateeval,task336_hateeval_classification_aggresive_es,Toxic Language Detection,"['English', 'Spanish']"
+NIv2,hateeval,task337_hateeval_classification_individual_en,Toxic Language Detection,['English']
+NIv2,hateeval,task338_hateeval_classification_individual_es,Toxic Language Detection,"['English', 'Spanish']"
+NIv2,hatexplain,task1502_hatexplain_classification,Toxic Language Detection,['English']
+NIv2,hatexplain,task1503_hatexplain_classification,Toxic Language Detection,['English']
+NIv2,hatexplain,task1504_hatexplain_answer_generation,Toxic Language Detection,['English']
+NIv2,head_qa,task1431_head_qa_answer_generation,Question Answering,['English']
+NIv2,head_qa,task1432_head_qa_language_translation_en_to_es,Translation,"['English', 'Spanish']"
+NIv2,head_qa,task1433_head_qa_language_translation_es_to_en,Translation,"['English', 'Spanish']"
+NIv2,head_qa,task1434_head_qa_classification,Text Categorization,['English']
+NIv2,health_fact,task1366_healthfact_classification,Fact Verification,['English']
+NIv2,health_fact,task1368_healthfact_sentence_generation,Sentence Composition,['English']
+NIv2,health_fact,task1369_healthfact_sentence_generation,Explanation,['English']
+NIv2,hellaswag,task1389_hellaswag_completion,Text Completion,['English']
+NIv2,help!_need_advice_on_identifying_advice,task115_help_advice_classification,Text Categorization,['English']
+NIv2,hind_encorp,task1352_hind_encorp_translation_hi_en,Translation,"['English', 'Hindi']"
+NIv2,hind_encorp,task1353_hind_encorp_translation_en_hi,Translation,"['English', 'Hindi']"
+NIv2,hindienglish_corpora,task424_hindienglish_corpora_hi_en_translation,Translation,"['English', 'Hindi']"
+NIv2,hindienglish_corpora,task425_hindienglish_corpora_en_hi_translation,Translation,"['English', 'Hindi']"
+NIv2,hindienglish_corpora,task426_hindienglish_corpora_hi_en_classification,Text Matching,"['English', 'Hindi']"
+NIv2,hindienglish_corpora,task427_hindienglish_corpora_hi_en_language_identification,Language Identification,"['English', 'Hindi']"
+NIv2,hippocorpus,task853_hippocorpus_long_text_generation,Story Composition,['English']
+NIv2,hippocorpus,task854_hippocorpus_classification,Text Categorization,['English']
+NIv2,hope_edi,task679_hope_edi_english_text_classification,Text Categorization,['English']
+NIv2,hope_edi,task680_hope_edi_tamil_text_classification,Text Categorization,"['English', 'Tamil']"
+NIv2,hope_edi,task681_hope_edi_malayalam_text_classification,Text Categorization,['English']
+NIv2,hotpotqa,task1293_kilt_tasks_hotpotqa_question_answering,Question Answering,['English']
+NIv2,hotpotqa,task170_hotpotqa_answer_generation,Question Answering,['English']
+NIv2,hotpotqa,task191_hotpotqa_question_generation,Question Generation,['English']
+NIv2,hotpotqa,task192_hotpotqa_sentence_generation,Explanation,['English']
+NIv2,human_ratings_of_natural_language_generation_outputs,task1186_nne_hrngo_classification,Text Quality Evaluation,['English']
+NIv2,human_ratings_of_natural_language_generation_outputs,task1283_hrngo_quality_classification,Text Quality Evaluation,['English']
+NIv2,human_ratings_of_natural_language_generation_outputs,task1284_hrngo_informativeness_classification,Text Quality Evaluation,['English']
+NIv2,hybridqa,task344_hybridqa_answer_generation,Question Answering,['English']
+NIv2,hybridqa,task345_hybridqa_answer_generation,Pos Tagging,['English']
+NIv2,hybridqa,task346_hybridqa_classification,Pos Tagging,['English']
+NIv2,hybridqa,task347_hybridqa_incorrect_answer_generation,Pos Tagging,['English']
+NIv2,hybridqa,task382_hybridqa_answer_generation,Pos Tagging,['English']
+NIv2,iirc,task230_iirc_passage_classification,Question Answering,['English']
+NIv2,iirc,task231_iirc_link_classification,Question Answering,['English']
+NIv2,iirc,task232_iirc_link_number_classification,Answerability Classification,['English']
+NIv2,iirc,task233_iirc_link_exists_classification,Answerability Classification,['English']
+NIv2,iirc,task234_iirc_passage_line_answer_generation,Question Answering,['English']
+NIv2,iirc,task235_iirc_question_from_subtext_answer_generation,Question Generation,['English']
+NIv2,iirc,task236_iirc_question_from_passage_answer_generation,Question Generation,['English']
+NIv2,iirc,task237_iirc_answer_from_subtext_answer_generation,Question Answering,['English']
+NIv2,iirc,task238_iirc_answer_from_passage_answer_generation,Question Answering,['English']
+NIv2,imdb,task284_imdb_classification,Sentiment Analysis,['English']
+NIv2,imdb,task285_imdb_answer_generation,Sentiment Analysis,['English']
+NIv2,imppres,task1515_imppres_longtextgeneration,Sentence Composition,['English']
+NIv2,imppres,task1516_imppres_naturallanguageinference,Textual Entailment,['English']
+NIv2,indian_food_101,task1191_food_veg_nonveg,Food Classification,['English']
+NIv2,indian_food_101,task1192_food_flavor_profile,Food Classification,['English']
+NIv2,indian_food_101,task1193_food_course_classification,Food Classification,['English']
+NIv2,indicnlp,task938_copa_hi_commonsense_reasoning,Cause Effect Classification,"['English', 'Hindi']"
+NIv2,indicnlp,task939_copa_hi_commonsense_cause_effect,Cause Effect Classification,"['English', 'Hindi']"
+NIv2,indicnlp,task940_copa_gu_commonsense_reasoning,Cause Effect Classification,"['English', 'Gujarati']"
+NIv2,indicnlp,task941_copa_gu_commonsense_cause_effect,Cause Effect Classification,"['English', 'Gujarati']"
+NIv2,indicnlp,task942_copa_mr_commonsense_reasoning,Cause Effect Classification,"['English', 'Marathi']"
+NIv2,indicnlp,task943_copa_mr_commonsense_cause_effect,Cause Effect Classification,"['English', 'Marathi']"
+NIv2,indicnlp,task944_wiki_cloze_as_multiple_choice_question_answering,Fill in The Blank,"['English', 'Assamese']"
+NIv2,indicnlp,task945_wiki_cloze_bn_multiple_choice_question_answering,Fill in The Blank,"['English', 'Bengali']"
+NIv2,indicnlp,task946_wiki_cloze_gu_multiple_choice_question_answering,Fill in The Blank,"['English', 'Gujarati']"
+NIv2,indicnlp,task947_wiki_cloze_hi_multiple_choice_question_answering,Fill in The Blank,"['English', 'Hindi']"
+NIv2,indicnlp,task948_wiki_cloze_kn_multiple_choice_question_answering,Fill in The Blank,"['English', 'Kannada']"
+NIv2,indicnlp,task949_wiki_cloze_ml_multiple_choice_question_answering,Fill in The Blank,"['English', 'Malayalam']"
+NIv2,indicnlp,task950_wiki_cloze_mr_multiple_choice_question_answering,Fill in The Blank,"['English', 'Marathi']"
+NIv2,indicnlp,task951_wiki_cloze_or_multiple_choice_question_answering,Fill in The Blank,"['English', 'Oriya']"
+NIv2,indicnlp,task952_wiki_cloze_pa_multiple_choice_question_answering,Fill in The Blank,"['Panjabi', 'English']"
+NIv2,indicnlp,task953_wiki_cloze_ta_multiple_choice_question_answering,Fill in The Blank,"['English', 'Tamil']"
+NIv2,indicnlp,task954_wiki_cloze_te_multiple_choice_question_answering,Fill in The Blank,"['English', 'Telugu']"
+NIv2,inquisitive,task857_inquisitive_question_generation,Question Generation,['English']
+NIv2,inquisitive,task858_inquisitive_span_detection,Question Answering,['English']
+NIv2,jeopardy,task305_jeopardy_answer_generation_normal,Answer Generation -- Jeopardy Difficulty Normal,['English']
+NIv2,jeopardy,task306_jeopardy_answer_generation_double,Answer Generation -- Jeopardy Difficulty Double,['English']
+NIv2,jeopardy,task307_jeopardy_answer_generation_final,Answer Generation -- Jeopardy Difficulty Final,['English']
+NIv2,jeopardy,task308_jeopardy_answer_generation_all,Answer Generation -- Jeopardy Difficulty All,['English']
+NIv2,jfleg,task1557_jfleg_answer_generation,Grammar Error Correction,['English']
+NIv2,jfleg,task1558_jfleg_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,jigsaw,task322_jigsaw_classification_threat,Toxic Language Detection,['English']
+NIv2,jigsaw,task323_jigsaw_classification_sexually_explicit,Toxic Language Detection,['English']
+NIv2,jigsaw,task324_jigsaw_classification_disagree,Toxic Language Detection,['English']
+NIv2,jigsaw,task325_jigsaw_classification_identity_attack,Toxic Language Detection,['English']
+NIv2,jigsaw,task326_jigsaw_classification_obscene,Toxic Language Detection,['English']
+NIv2,jigsaw,task327_jigsaw_classification_toxic,Toxic Language Detection,['English']
+NIv2,jigsaw,task328_jigsaw_classification_insult,Toxic Language Detection,['English']
+NIv2,jnlpba_corpus,task1480_gene_extraction_jnlpba_dataset,Named Entity Recognition,['English']
+NIv2,kde4,task877_kde4_translation,Translation,"['English', 'Hindi']"
+NIv2,kde4,task878_kde4_translation,Translation,"['English', 'Telugu']"
+NIv2,leetcode,task956_leetcode_420_strong_password_check,Text to Code,['English']
+NIv2,liar,task1187_politifact_classification,Text Categorization,['English']
+NIv2,liar,task613_politifact_text_generation,Keyword Tagging,['English']
+NIv2,"librispeech_asr,",task963_librispeech_asr_next_word_prediction,Text Completion,['English']
+NIv2,"librispeech_asr,",task964_librispeech_asr_text_auto_completion,Text Completion,['English']
+NIv2,"librispeech_asr,",task965_librispeech_asr_missing_word_prediction,Fill in The Blank,['English']
+NIv2,limit,task1517_limit_classfication,Information Extraction,['English']
+NIv2,limit,task1518_limit_answer_generation,Information Extraction,['English']
+NIv2,linnaeus_corpus,task1484_gene_extraction_linnaeus_dataset,Named Entity Recognition,['English']
+NIv2,lj_speec,task1703_ljspeech_textmodification,Number Conversion,['English']
+NIv2,lj_speec,task1704_ljspeech_textmodification,Number Conversion,['English']
+NIv2,lj_speec,task1705_ljspeech_classification,Named Entity Recognition,['English']
+NIv2,lj_speec,task1706_ljspeech_classification,Punctuation Error Detection,['English']
+NIv2,logic2text,task210_logic2text_structured_text_generation,Text to Code,['English']
+NIv2,logic2text,task211_logic2text_classification,Text to Code,['English']
+NIv2,logic2text,task212_logic2text_classification,Text to Code,['English']
+NIv2,math_qa,task1678_mathqa_answer_selection,Question Answering,['English']
+NIv2,math_qa,task1726_mathqa_correct_answer_generation,Question Answering,['English']
+NIv2,mathmatics_dataset,task834_mathdataset_classification,Question Understanding,['English']
+NIv2,mathmatics_dataset,task835_mathdataset_answer_generation,Question Answering,['English']
+NIv2,mathqa,task1419_mathqa_gain,Question Answering,['English']
+NIv2,mathqa,task1420_mathqa_general,Question Answering,['English']
+NIv2,mathqa,task1421_mathqa_other,Question Answering,['English']
+NIv2,mathqa,task1422_mathqa_physics,Question Answering,['English']
+NIv2,mathqa,task1423_mathqa_geometry,Question Answering,['English']
+NIv2,mathqa,task1424_mathqa_probability,Question Answering,['English']
+NIv2,matres,task383_matres_classification,Context Verb Time Anchoring,['English']
+NIv2,matres,task456_matres_intention_classification,Information Extraction,['English']
+NIv2,matres,task457_matres_conditional_classification,Word Semantics,['English']
+NIv2,matres,task458_matres_negation_classification,Word Semantics,['English']
+NIv2,matres,task459_matres_static_classification,Word Semantics,['English']
+NIv2,mcscript,task164_mcscript_question_answering_text,Question Answering,['English']
+NIv2,mcscript,task165_mcscript_question_answering_commonsense,Question Answering,['English']
+NIv2,mctaco,task003_mctaco_question_generation_event_duration,Question Generation,['English']
+NIv2,mctaco,task004_mctaco_answer_generation_event_duration,Question Answering,['English']
+NIv2,mctaco,task005_mctaco_wrong_answer_generation_event_duration,Wrong Candidate Generation,['English']
+NIv2,mctaco,task006_mctaco_question_generation_transient_stationary,Question Generation,['English']
+NIv2,mctaco,task007_mctaco_answer_generation_transient_stationary,Question Answering,['English']
+NIv2,mctaco,task008_mctaco_wrong_answer_generation_transient_stationary,Wrong Candidate Generation,['English']
+NIv2,mctaco,task009_mctaco_question_generation_event_ordering,Question Generation,['English']
+NIv2,mctaco,task010_mctaco_answer_generation_event_ordering,Question Answering,['English']
+NIv2,mctaco,task011_mctaco_wrong_answer_generation_event_ordering,Wrong Candidate Generation,['English']
+NIv2,mctaco,task012_mctaco_question_generation_absolute_timepoint,Question Generation,['English']
+NIv2,mctaco,task013_mctaco_answer_generation_absolute_timepoint,Question Answering,['English']
+NIv2,mctaco,task014_mctaco_wrong_answer_generation_absolute_timepoint,Wrong Candidate Generation,['English']
+NIv2,mctaco,task015_mctaco_question_generation_frequency,Question Generation,['English']
+NIv2,mctaco,task016_mctaco_answer_generation_frequency,Question Answering,['English']
+NIv2,mctaco,task017_mctaco_wrong_answer_generation_frequency,Wrong Candidate Generation,['English']
+NIv2,mctaco,task018_mctaco_temporal_reasoning_presence,Question Understanding,['English']
+NIv2,mctaco,task019_mctaco_temporal_reasoning_category,Question Understanding,['English']
+NIv2,mctaco,task020_mctaco_span_based_question,Answerability Classification,['English']
+NIv2,mctaco,task021_mctaco_grammatical_logical,Text Quality Evaluation,['English']
+NIv2,md_gender_bias,task1669_md_gender_bias_text_modification,Sentence Perturbation,['English']
+NIv2,md_gender_bias,task1670_md_gender_bias_text_modification,Sentence Perturbation,['English']
+NIv2,medical_question_pair_dataset,task1645_medical_question_pair_dataset_text_classification,Text Matching,['English']
+NIv2,menyo20k_mt,task1619_menyo20k_mt_en_yo_translation,Translation,"['English', 'Yoruba']"
+NIv2,menyo20k_mt,task1620_menyo20k_mt_yo_en_translation,Translation,"['English', 'Yoruba']"
+NIv2,menyo20k_mt,task1621_menyo20k_mt_en_yo_language_identification,Language Identification,"['English', 'Yoruba']"
+NIv2,menyo20k_mt,task1685_menyo20k_translation,Translation,"['English', 'Yoruba']"
+NIv2,menyo20k_mt,task1686_menyo20k_translation,Translation,"['English', 'Yoruba']"
+NIv2,meta_woz,task1394_meta_woz_task_classification,Dialogue Act Recognition,['English']
+NIv2,miam,task896_miam_language_classification,Language Identification,"['English', 'Spanish', 'German', 'French', 'Italian']"
+NIv2,miscellaneous,task045_miscellaneous_sentence_paraphrasing,Paraphrasing,['English']
+NIv2,miscellaneous,task046_miscellaneous_question_typing,Question Understanding,['English']
+NIv2,miscellaneous,task047_miscellaneous_answering_science_questions,Question Answering,['English']
+NIv2,missing,task739_lhoestq_question_generation,Question Generation,['English']
+NIv2,missing,task740_lhoestq_answer_generation_quantity,Question Answering,['English']
+NIv2,missing,task741_lhoestq_answer_generation_place,Question Answering,['English']
+NIv2,missing,task742_lhoestq_answer_generation_frequency,Question Answering,['English']
+NIv2,mkb,task1654_mkb_translation,Translation,"['English', 'Hindi']"
+NIv2,mkb,task1655_mkb_translation,Translation,"['English', 'Hindi']"
+NIv2,mocha,task595_mocha_answer_generation,Question Answering,['English']
+NIv2,mocha,task596_mocha_question_generation,Question Answering,['English']
+NIv2,movie_rationales,task1361_movierationales_classification,Sentiment Analysis,['English']
+NIv2,mrpc,task1288_glue_mrpc_paraphrasing,Text Matching,['English']
+NIv2,mrqa,task469_mrqa_answer_generation,Question Answering,['English']
+NIv2,mrqa,task470_mrqa_question_generation,Question Generation,['English']
+NIv2,ms_marco,task870_msmarco_answer_generation,Question Answering,['English']
+NIv2,ms_marco,task871_msmarco_question_generation,Question Generation,['English']
+NIv2,msr_sqa,task757_msr_sqa_question_generation,Question Generation,['English']
+NIv2,msr_sqa,task758_msr_sqa_question_answer_generation,Question Answering,['English']
+NIv2,msr_sqa,task759_msr_sqa_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,msr_sqa,task760_msr_sqa_long_text_generation,Data to Text,['English']
+NIv2,msr_text_compression,task1340_msr_text_compression_compression,Sentence Compression,['English']
+NIv2,msr_text_compression,task1341_msr_text_classification,Text Quality Evaluation,['English']
+NIv2,multi_news,task1291_multi_news_summarization,Summarization,['English']
+NIv2,multi_woz_v22,task638_multi_woz_classification,Speaker Identification,['English']
+NIv2,multi_woz_v22,task639_multi_woz_user_utterance_generation,Dialogue Generation,['English']
+NIv2,multilingual_amazon_reviews,task1308_amazonreview_category_classification,Text Categorization,['English']
+NIv2,multilingual_amazon_reviews,task1309_amazonreview_summary_classification,Summarization,['English']
+NIv2,multilingual_amazon_reviews,task1310_amazonreview_rating_classification,Sentiment Analysis,['English']
+NIv2,multilingual_amazon_reviews,task1311_amazonreview_rating_classification,Sentiment Analysis,['English']
+NIv2,multilingual_amazon_reviews,task1312_amazonreview_polarity_classification,Sentiment Analysis,['English']
+NIv2,multilingual_amazon_reviews,task1313_amazonreview_polarity_classification,Sentiment Analysis,['English']
+NIv2,multilingual_amazon_reviews,task1574_amazon_reviews_multi_language_identification,Language Identification,"['Chinese', 'English', 'Spanish', 'Japanese', 'German', 'French']"
+NIv2,multilingual_amazon_reviews,task1575_amazon_reviews_multi_sentiment_classification,Sentiment Analysis,"['Chinese', 'English', 'Spanish', 'Japanese', 'German', 'French']"
+NIv2,multilingual_amazon_reviews,task1576_amazon_reviews_multi_english_language_classification,Language Identification,"['Chinese', 'English', 'Spanish', 'Japanese', 'German', 'French']"
+NIv2,multilingual_amazon_reviews,task1577_amazon_reviews_multi_japanese_language_classification,Language Identification,"['Chinese', 'English', 'Spanish', 'Japanese', 'German', 'French']"
+NIv2,multilingual_amazon_reviews,task617_amazonreview_category_text_generation,Text Categorization,['English']
+NIv2,multilingual_amazon_reviews,task618_amazonreview_summary_text_generation,Summarization,['English']
+NIv2,multilingual_ted,task1090_ted_translation_en_gl,Translation,"['English', 'Galician']"
+NIv2,multilingual_ted,task1091_ted_translation_en_it,Translation,"['English', 'Italian']"
+NIv2,multilingual_ted,task1092_ted_translation_en_pl,Translation,"['Polish', 'English']"
+NIv2,multilingual_ted,task1093_ted_translation_en_fa,Translation,"['English', 'Persian']"
+NIv2,multilingual_ted,task1094_ted_translation_en_pt,Translation,"['Portuguese', 'English']"
+NIv2,multilingual_ted,task1095_ted_translation_ja_gl,Translation,"['Japanese', 'English', 'Galician']"
+NIv2,multilingual_ted,task1096_ted_translation_ja_it,Translation,"['Japanese', 'English', 'Italian']"
+NIv2,multilingual_ted,task1097_ted_translation_ja_pl,Translation,"['Japanese', 'Polish', 'English']"
+NIv2,multilingual_ted,task1098_ted_translation_ja_fa,Translation,"['Japanese', 'English', 'Persian']"
+NIv2,multilingual_ted,task1099_ted_translation_ja_pt,Translation,"['Japanese', 'Portuguese', 'English']"
+NIv2,multilingual_ted,task110_logic2text_sentence_generation,Code to Text,['English']
+NIv2,multilingual_ted,task1100_ted_translation_es_gl,Translation,"['English', 'Galician', 'Spanish']"
+NIv2,multilingual_ted,task1101_ted_translation_es_it,Translation,"['English', 'Italian', 'Spanish']"
+NIv2,multilingual_ted,task1102_ted_translation_es_pl,Translation,"['Polish', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1103_ted_translation_es_fa,Translation,"['English', 'Persian', 'Spanish']"
+NIv2,multilingual_ted,task1104_ted_translation_es_pt,Translation,"['Portuguese', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1105_ted_translation_ar_gl,Translation,"['English', 'Galician', 'Arabic']"
+NIv2,multilingual_ted,task1106_ted_translation_ar_it,Translation,"['English', 'Italian', 'Arabic']"
+NIv2,multilingual_ted,task1107_ted_translation_ar_pl,Translation,"['Polish', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1108_ted_translation_ar_fa,Translation,"['English', 'Persian', 'Arabic']"
+NIv2,multilingual_ted,task1109_ted_translation_ar_pt,Translation,"['Portuguese', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1110_ted_translation_he_gl,Translation,"['Hebrew', 'English', 'Galician']"
+NIv2,multilingual_ted,task1111_ted_translation_he_it,Translation,"['Hebrew', 'English', 'Italian']"
+NIv2,multilingual_ted,task1112_ted_translation_he_pl,Translation,"['Hebrew', 'English', 'Polish']"
+NIv2,multilingual_ted,task1113_ted_translation_he_fa,Translation,"['Hebrew', 'English', 'Persian']"
+NIv2,multilingual_ted,task1114_ted_translation_he_pt,Translation,"['Portuguese', 'Hebrew', 'English']"
+NIv2,multilingual_ted,task1218_ted_translation_en_ja,Translation,"['Japanese', 'English']"
+NIv2,multilingual_ted,task1219_ted_translation_en_es,Translation,"['English', 'Spanish']"
+NIv2,multilingual_ted,task1220_ted_translation_en_ar,Translation,"['English', 'Arabic']"
+NIv2,multilingual_ted,task1221_ted_translation_en_he,Translation,"['Hebrew', 'English']"
+NIv2,multilingual_ted,task1222_ted_translation_ja_en,Translation,"['Japanese', 'English']"
+NIv2,multilingual_ted,task1223_ted_translation_ja_es,Translation,"['Japanese', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1224_ted_translation_ja_ar,Translation,"['Japanese', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1225_ted_translation_ja_he,Translation,"['Japanese', 'Hebrew', 'English']"
+NIv2,multilingual_ted,task1226_ted_translation_es_en,Translation,"['English', 'Spanish']"
+NIv2,multilingual_ted,task1227_ted_translation_es_ja,Translation,"['Japanese', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1228_ted_translation_es_ar,Translation,"['English', 'Arabic', 'Spanish']"
+NIv2,multilingual_ted,task1229_ted_translation_es_he,Translation,"['Hebrew', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1230_ted_translation_ar_en,Translation,"['English', 'Arabic']"
+NIv2,multilingual_ted,task1231_ted_translation_ar_ja,Translation,"['Japanese', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1232_ted_translation_ar_es,Translation,"['English', 'Spanish', 'Arabic']"
+NIv2,multilingual_ted,task1233_ted_translation_ar_he,Translation,"['Hebrew', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1234_ted_translation_he_en,Translation,"['Hebrew', 'English']"
+NIv2,multilingual_ted,task1235_ted_translation_he_ja,Translation,"['Japanese', 'Hebrew', 'English']"
+NIv2,multilingual_ted,task1236_ted_translation_he_es,Translation,"['Hebrew', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1237_ted_translation_he_ar,Translation,"['Hebrew', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1238_ted_translation_gl_en,Translation,"['English', 'Galician']"
+NIv2,multilingual_ted,task1239_ted_translation_gl_ja,Translation,"['Japanese', 'English', 'Galician']"
+NIv2,multilingual_ted,task1240_ted_translation_gl_es,Translation,"['English', 'Galician', 'Spanish']"
+NIv2,multilingual_ted,task1241_ted_translation_gl_ar,Translation,"['English', 'Galician', 'Arabic']"
+NIv2,multilingual_ted,task1242_ted_translation_gl_he,Translation,"['Hebrew', 'English', 'Galician']"
+NIv2,multilingual_ted,task1243_ted_translation_gl_it,Translation,"['English', 'Galician', 'Italian']"
+NIv2,multilingual_ted,task1244_ted_translation_gl_pl,Translation,"['Polish', 'English', 'Galician']"
+NIv2,multilingual_ted,task1245_ted_translation_gl_fa,Translation,"['English', 'Galician', 'Persian']"
+NIv2,multilingual_ted,task1246_ted_translation_gl_pt,Translation,"['Portuguese', 'English', 'Galician']"
+NIv2,multilingual_ted,task1247_ted_translation_it_en,Translation,"['English', 'Italian']"
+NIv2,multilingual_ted,task1248_ted_translation_it_ja,Translation,"['Japanese', 'English', 'Italian']"
+NIv2,multilingual_ted,task1249_ted_translation_it_es,Translation,"['English', 'Italian', 'Spanish']"
+NIv2,multilingual_ted,task1250_ted_translation_it_ar,Translation,"['English', 'Italian', 'Arabic']"
+NIv2,multilingual_ted,task1251_ted_translation_it_he,Translation,"['Hebrew', 'English', 'Italian']"
+NIv2,multilingual_ted,task1252_ted_translation_it_gl,Translation,"['English', 'Galician', 'Italian']"
+NIv2,multilingual_ted,task1253_ted_translation_it_pl,Translation,"['Polish', 'English', 'Italian']"
+NIv2,multilingual_ted,task1254_ted_translation_it_fa,Translation,"['English', 'Persian', 'Italian']"
+NIv2,multilingual_ted,task1255_ted_translation_it_pt,Translation,"['Portuguese', 'English', 'Italian']"
+NIv2,multilingual_ted,task1256_ted_translation_pl_en,Translation,"['Polish', 'English']"
+NIv2,multilingual_ted,task1257_ted_translation_pl_ja,Translation,"['Japanese', 'Polish', 'English']"
+NIv2,multilingual_ted,task1258_ted_translation_pl_es,Translation,"['Polish', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1259_ted_translation_pl_ar,Translation,"['Polish', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1260_ted_translation_pl_he,Translation,"['Polish', 'English', 'Hebrew']"
+NIv2,multilingual_ted,task1261_ted_translation_pl_gl,Translation,"['Polish', 'English', 'Galician']"
+NIv2,multilingual_ted,task1262_ted_translation_pl_it,Translation,"['Polish', 'English', 'Italian']"
+NIv2,multilingual_ted,task1263_ted_translation_pl_fa,Translation,"['Polish', 'English', 'Persian']"
+NIv2,multilingual_ted,task1264_ted_translation_pl_pt,Translation,"['Portuguese', 'Polish', 'English']"
+NIv2,multilingual_ted,task1265_ted_translation_fa_en,Translation,"['English', 'Persian']"
+NIv2,multilingual_ted,task1266_ted_translation_fa_ja,Translation,"['Japanese', 'English', 'Persian']"
+NIv2,multilingual_ted,task1267_ted_translation_fa_es,Translation,"['English', 'Persian', 'Spanish']"
+NIv2,multilingual_ted,task1268_ted_translation_fa_ar,Translation,"['English', 'Persian', 'Arabic']"
+NIv2,multilingual_ted,task1269_ted_translation_fa_he,Translation,"['Hebrew', 'English', 'Persian']"
+NIv2,multilingual_ted,task1270_ted_translation_fa_gl,Translation,"['English', 'Galician', 'Persian']"
+NIv2,multilingual_ted,task1271_ted_translation_fa_it,Translation,"['English', 'Persian', 'Italian']"
+NIv2,multilingual_ted,task1272_ted_translation_fa_pl,Translation,"['Polish', 'English', 'Persian']"
+NIv2,multilingual_ted,task1273_ted_translation_fa_pt,Translation,"['Portuguese', 'English', 'Persian']"
+NIv2,multilingual_ted,task1274_ted_translation_pt_en,Translation,"['Portuguese', 'English']"
+NIv2,multilingual_ted,task1275_ted_translation_pt_ja,Translation,"['Portuguese', 'Japanese', 'English']"
+NIv2,multilingual_ted,task1276_ted_translation_pt_es,Translation,"['Portuguese', 'English', 'Spanish']"
+NIv2,multilingual_ted,task1277_ted_translation_pt_ar,Translation,"['Portuguese', 'English', 'Arabic']"
+NIv2,multilingual_ted,task1278_ted_translation_pt_he,Translation,"['Portuguese', 'Hebrew', 'English']"
+NIv2,multilingual_ted,task1279_ted_translation_pt_gl,Translation,"['Portuguese', 'English', 'Galician']"
+NIv2,multilingual_ted,task1280_ted_translation_pt_it,Translation,"['Portuguese', 'English', 'Italian']"
+NIv2,multilingual_ted,task1281_ted_translation_pt_pl,Translation,"['Portuguese', 'Polish', 'English']"
+NIv2,multilingual_ted,task1282_ted_translation_pt_fa,Translation,"['Portuguese', 'English', 'Persian']"
+NIv2,multinli,task197_mnli_domain_answer_generation,Text Categorization,['English']
+NIv2,multinli,task198_mnli_domain_classification,Text Categorization,['English']
+NIv2,multinli,task199_mnli_classification,Textual Entailment,['English']
+NIv2,multinli,task200_mnli_entailment_classification,Textual Entailment,['English']
+NIv2,multinli,task201_mnli_neutral_classification,Textual Entailment,['English']
+NIv2,multinli,task202_mnli_contradiction_classification,Textual Entailment,['English']
+NIv2,multinli,task203_mnli_sentence_generation,Sentence Composition,['English']
+NIv2,multinli,task204_mnli_same_genre_classification,Text Categorization,['English']
+NIv2,multirc,task048_multirc_question_generation,Question Generation,['English']
+NIv2,multirc,task049_multirc_questions_needed_to_answer,Question Answering,['English']
+NIv2,multirc,task050_multirc_answerability,Answerability Classification,['English']
+NIv2,multirc,task051_multirc_correct_answer_single_sentence,Question Answering,['English']
+NIv2,multirc,task052_multirc_identify_bad_question,Text Quality Evaluation,['English']
+NIv2,multirc,task053_multirc_correct_bad_question,Text Quality Evaluation,['English']
+NIv2,multirc,task054_multirc_write_correct_answer,Question Answering,['English']
+NIv2,multirc,task055_multirc_write_incorrect_answer,Wrong Candidate Generation,['English']
+NIv2,multirc,task056_multirc_classify_correct_answer,Answer Verification,['English']
+NIv2,multirc,task057_multirc_classify_incorrect_answer,Answer Verification,['English']
+NIv2,multirc,task058_multirc_question_answering,Question Answering,['English']
+NIv2,multirc,task1392_superglue_multirc_answer_verification,Answer Verification,['English']
+NIv2,mutual,task611_mutual_multi_turn_dialogue,Dialogue Generation,['English']
+NIv2,mwsc,task489_mwsc_question_generation,Question Generation,['English']
+NIv2,mwsc,task490_mwsc_options_generation,Question Answering,['English']
+NIv2,mwsc,task491_mwsc_answer_generation,Question Answering,['English']
+NIv2,mwsc,task492_mwsc_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,narrativeqa,task405_narrativeqa_question_generation,Question Generation,['English']
+NIv2,natural_questions,task582_naturalquestion_answer_generation,Question Answering,['English']
+NIv2,ncbi_disease_corpus,task1448_disease_entity_extraction_ncbi_dataset,Named Entity Recognition,['English']
+NIv2,news_commentary,task1370_newscomm_classification,Language Identification,"['Dutch', 'English', 'Spanish', 'German', 'Japanese', 'French', 'Czech', 'Arabic', 'Italian', 'Portuguese', 'Zhuang', 'Russian']"
+NIv2,news_commentary,task1371_newscomm_translation,Translation,"['French', 'English']"
+NIv2,news_commentary,task1373_newscomm_translation,Translation,"['German', 'English', 'Spanish']"
+NIv2,news_commentary,task1374_newscomm_translation,Translation,"['Czech', 'English', 'Arabic']"
+NIv2,news_commentary,task1375_newscomm_translation,Translation,"['Dutch', 'Portuguese', 'English']"
+NIv2,news_commentary,task1376_newscomm_translation,Translation,"['Zhuang', 'English', 'Italian']"
+NIv2,news_commentary,task1377_newscomm_translation,Translation,"['Russian', 'French', 'English']"
+NIv2,news_editorials,task522_news_editorial_summary,Summarization,['English']
+NIv2,news_headlines_dataset_for_sarcasm_detection,task1488_sarcasmdetection_headline_classification,Text Categorization,['English']
+NIv2,nlg_bias,task364_regard_social_impact_classification,Text Categorization,['English']
+NIv2,nlu_asdiv_dataset,task861_asdiv_addsub_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task862_asdiv_multidiv_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task863_asdiv_multiop_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task864_asdiv_singleop_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task865_mawps_addsub_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task866_mawps_multidiv_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task867_mawps_multiop_question_answering,Question Answering,['English']
+NIv2,nlu_asdiv_dataset,task868_mawps_singleop_question_answering,Question Answering,['English']
+NIv2,numeric_fused_head,task304_numeric_fused_head_resolution,Coreference Resolution,['English']
+NIv2,numeric_fused_head,task401_numeric_fused_head_reference,Coreference Resolution,['English']
+NIv2,numersense,task1359_numer_sense_answer_generation,Fill in The Blank,['English']
+NIv2,numersense,task1360_numer_sense_multiple_choice_qa_generation,Fill in The Blank,['English']
+NIv2,numersense,task672_nummersense,Fill in The Blank,['English']
+NIv2,nyc,task1597_nyc_slot_filling,Information Extraction,['English']
+NIv2,nyc,task1598_nyc_long_text_generation,Data to Text,['English']
+NIv2,odd_man_out,task141_odd_man_out_classification_category,Word Semantics,['English']
+NIv2,odd_man_out,task142_odd_man_out_classification_no_category,Word Semantics,['English']
+NIv2,odd_man_out,task143_odd_man_out_classification_generate_category,Text Categorization,['English']
+NIv2,offenseval_dravidian,task1537_tamil_offenseval_dravidian_classification,Toxic Language Detection,"['English', 'Tamil']"
+NIv2,offenseval_dravidian,task1538_malayalam_offenseval_dravidian_classification,Toxic Language Detection,"['English', 'Malayalam']"
+NIv2,offenseval_dravidian,task1539_kannada_offenseval_dravidian_classification,Toxic Language Detection,"['English', 'Kannada']"
+NIv2,ohsumed,task619_ohsumed_abstract_title_generation,Title Generation,['English']
+NIv2,ohsumed,task620_ohsumed_medical_subject_headings_answer_generation,Keyword Tagging,['English']
+NIv2,ohsumed,task621_ohsumed_yes_no_numerical_answer_generation,Information Extraction,['English']
+NIv2,ohsumed,task623_ohsumed_yes_no_answer_generation,Keyword Tagging,['English']
+NIv2,ohsumed,task624_ohsumed_question_answering,Text Matching,['English']
+NIv2,olid,task286_olid_offense_judgment,Toxic Language Detection,['English']
+NIv2,ollie,task676_ollie_relationship_answer_generation,Information Extraction,['English']
+NIv2,ollie,task677_ollie_sentence_answer_generation,Data to Text,['English']
+NIv2,ollie,task678_ollie_actual_relationship_answer_generation,Information Extraction,['English']
+NIv2,open_pi,task1630_openpi_classification,Text Categorization,['English']
+NIv2,open_pi,task1631_openpi_answer_generation,Data to Text,['English']
+NIv2,openbookqa,task1286_openbookqa_question_answering,Question Answering,['English']
+NIv2,openbookqa,task1398_obqa_question_generation,Question Generation,['English']
+NIv2,openbookqa,task1399_obqa_answer_generation,Question Answering,['English']
+NIv2,openbookqa,task1400_obqa_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,openbookqa,task1401_obqa_sentence_generation,Sentence Composition,['English']
+NIv2,opensubtitles,task1323_open_subtitles_hi_en_translation,Translation,"['English', 'Hindi']"
+NIv2,opensubtitles,task1324_open_subtitles_te_en_translation,Translation,"['English', 'Telugu']"
+NIv2,opensubtitles,task1329_open_subtitles_en_hi_translation,Translation,"['English', 'Hindi']"
+NIv2,opensubtitles,task1330_open_subtitles_en_te_translation,Translation,"['English', 'Telugu']"
+NIv2,opp_115,task682_online_privacy_policy_text_classification,Text Categorization,['English']
+NIv2,opp_115,task683_online_privacy_policy_text_purpose_answer_generation,Information Extraction,['English']
+NIv2,opp_115,task684_online_privacy_policy_text_information_type_generation,Information Extraction,['English']
+NIv2,opus_100,task1350_opus100_translation_en_gu,Translation,"['English', 'Gujarati']"
+NIv2,opus_100,task1351_opus100_translation_gu_en,Translation,"['English', 'Gujarati']"
+NIv2,opus_books,task1647_opus_books_en_pt_translation,Translation,"['Portuguese', 'English']"
+NIv2,opus_books,task1648_opus_books_en_sv_translation,Translation,"['English', 'Swedish']"
+NIv2,opus_books,task1649_opus_books_en_no_translation,Translation,"['English', 'Norwegian']"
+NIv2,opus_books,task1650_opus_books_en_fi_translation,Translation,"['English', 'Finnish']"
+NIv2,opus_books,task1651_opus_books_en_es__translation,Translation,"['English', 'Spanish']"
+NIv2,opus_books,task1652_opus_books_ca_en_translation,Translation,"['English', 'Catalan']"
+NIv2,opus_paracrawl,task446_opus_paracrawl_en_so_translation,Translation,"['Somali', 'English']"
+NIv2,opus_paracrawl,task447_opus_paracrawl_classification,Language Identification,"['Dutch', 'English', 'Tagalog', 'French', 'Somali']"
+NIv2,opus_paracrawl,task448_opus_paracrawl_en_tl_translation,Translation,"['Tagalog', 'English']"
+NIv2,opus_paracrawl,task449_opus_paracrawl_ig_en_translation,Translation,"['Igbo', 'English']"
+NIv2,opus_paracrawl,task450_opus_paracrawl_so_en_translation,Translation,"['Somali', 'English']"
+NIv2,opus_paracrawl,task451_opus_paracrawl_tl_en_translation,Translation,"['Tagalog', 'English']"
+NIv2,opus_paracrawl,task452_opus_paracrawl_en_ig_translation,Translation,"['Igbo', 'English']"
+NIv2,opus_ted_talks,task1365_opustedtalks_translation,Translation,"['English', 'Croatian']"
+NIv2,opus_ted_talks,task1367_opustedtalks_translation,Translation,"['English', 'Croatian']"
+NIv2,opus_xhosanavy,task872_opus_xhosanavy_translation_eng_xhosa,Translation,"['English', 'Xhosa']"
+NIv2,opus_xhosanavy,task873_opus_xhosanavy_translation_xhosa_eng,Translation,"['English', 'Xhosa']"
+NIv2,opus_xhosanavy,task874_opus_xhosanavy_sr,Information Extraction,['English']
+NIv2,overruling,task274_overruling_legal_classification,Text Categorization,['English']
+NIv2,paper_reviews_data_set,task264_paper_reviews_accept_or_reject_classification,Paper Review,"['English', 'Spanish']"
+NIv2,paper_reviews_data_set,task265_paper_reviews_language_identification,Language Identification,"['English', 'Spanish']"
+NIv2,paper_reviews_data_set,task266_paper_reviews_reviewer_perspective_classification,Sentiment Analysis,"['English', 'Spanish']"
+NIv2,para_nmt,task177_para_nmt_paraphrasing,Paraphrasing,['English']
+NIv2,para_pat,task840_para_pdt_en_es_translation,Translation,"['English', 'Spanish']"
+NIv2,para_pat,task841_para_pdt_de_en_translation,Translation,"['German', 'English']"
+NIv2,para_pat,task842_para_pdt_cs_en_translation,Translation,"['Czech', 'English']"
+NIv2,parsinlu,task650_opus100_ar_en_translation,Translation,"['English', 'Arabic']"
+NIv2,parsinlu,task651_opus100_en_ar_translation,Translation,"['English', 'Arabic']"
+NIv2,parsinlu,task652_parsinlu_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task653_parsinlu_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task654_bible_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task655_bible_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task656_quran_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task657_quran_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task658_tep_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task659_tep_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task660_mizan_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task661_mizan_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task662_global_voices_fa_en_translation,Translation,"['English', 'Persian']"
+NIv2,parsinlu,task663_global_voices_en_fa_translation,Translation,"['English', 'Persian']"
+NIv2,pasinlu,task463_parsinlu_entailment_classification,Textual Entailment,"['English', 'Persian']"
+NIv2,pasinlu,task464_parsinlu_entailment_sentence_generation,Textual Entailment,"['English', 'Persian']"
+NIv2,pasinlu,task465_parsinlu_qqp_classification,Text Matching,"['English', 'Persian']"
+NIv2,pasinlu,task466_parsinlu_qqp_text_modification,Paraphrasing,"['English', 'Persian']"
+NIv2,pasinlu,task467_parsinlu_rc_answer_generation,Question Answering,"['English', 'Persian']"
+NIv2,pasinlu,task468_parsinlu_rc_question_generation,Question Generation,"['English', 'Persian']"
+NIv2,pasinlu,task473_parsinlu_mc_classification,Question Answering,"['English', 'Persian']"
+NIv2,pasinlu,task474_parsinlu_mc_classification,Question Understanding,"['English', 'Persian']"
+NIv2,pasinlu,task524_parsinlu_food_aspect_classification,Sentiment Analysis,"['English', 'Persian']"
+NIv2,pasinlu,task525_parsinlu_movie_aspect_classification,Sentiment Analysis,"['English', 'Persian']"
+NIv2,pasinlu,task526_parsinlu_movie_overal_classification,Sentiment Analysis,"['English', 'Persian']"
+NIv2,pasinlu,task527_parsinlu_food_overal_classification,Sentiment Analysis,"['English', 'Persian']"
+NIv2,pasinlu,task528_parsinlu_movie_aspect_detection,Information Extraction,"['English', 'Persian']"
+NIv2,pasinlu,task529_parsinlu_food_aspect_detection,Information Extraction,"['English', 'Persian']"
+NIv2,paws,task400_paws_paraphrase_classification,Text Matching,['English']
+NIv2,paws_x,task770_pawsx_english_text_modification,Paraphrasing,['English']
+NIv2,paws_x,task771_pawsx_korean_text_modification,Paraphrasing,"['English', 'Korean']"
+NIv2,paws_x,task772_pawsx_french_text_modification,Paraphrasing,"['French', 'English']"
+NIv2,paws_x,task773_pawsx_spanish_text_modification,Paraphrasing,"['English', 'Spanish']"
+NIv2,paws_x,task774_pawsx_german_text_modification,Paraphrasing,"['German', 'English']"
+NIv2,paws_x,task775_pawsx_chinese_text_modification,Paraphrasing,"['Chinese', 'English']"
+NIv2,paws_x,task776_pawsx_japanese_text_modification,Paraphrasing,"['Japanese', 'English']"
+NIv2,paws_x,task777_pawsx_english_korean_translation,Translation,"['English', 'Korean']"
+NIv2,paws_x,task778_pawsx_english_french_translation,Translation,"['French', 'English']"
+NIv2,paws_x,task779_pawsx_english_spanish_translation,Translation,"['English', 'Spanish']"
+NIv2,paws_x,task780_pawsx_english_german_translation,Translation,"['German', 'English']"
+NIv2,paws_x,task781_pawsx_english_chinese_translation,Translation,"['Chinese', 'English']"
+NIv2,paws_x,task782_pawsx_english_japanese_translation,Translation,"['Japanese', 'English']"
+NIv2,paws_x,task783_pawsx_korean_english_translation,Translation,"['English', 'Korean']"
+NIv2,paws_x,task784_pawsx_korean_french_translation,Translation,"['French', 'English', 'Korean']"
+NIv2,paws_x,task785_pawsx_korean_spanish_translation,Translation,"['English', 'Korean', 'Spanish']"
+NIv2,paws_x,task786_pawsx_korean_german_translation,Translation,"['German', 'English', 'Korean']"
+NIv2,paws_x,task787_pawsx_korean_chinese_translation,Translation,"['Chinese', 'English', 'Korean']"
+NIv2,paws_x,task788_pawsx_korean_japanese_translation,Translation,"['Japanese', 'English', 'Korean']"
+NIv2,paws_x,task789_pawsx_french_english_translation,Translation,"['French', 'English']"
+NIv2,paws_x,task790_pawsx_french_korean_translation,Translation,"['French', 'English', 'Korean']"
+NIv2,paws_x,task791_pawsx_french_spanish_translation,Translation,"['French', 'English', 'Spanish']"
+NIv2,paws_x,task792_pawsx_french_german_translation,Translation,"['German', 'French', 'English']"
+NIv2,paws_x,task793_pawsx_french_chinese_translation,Translation,"['French', 'Chinese', 'English']"
+NIv2,paws_x,task794_pawsx_french_japanese_translation,Translation,"['Japanese', 'French', 'English']"
+NIv2,paws_x,task795_pawsx_spanish_english_translation,Translation,"['English', 'Spanish']"
+NIv2,paws_x,task796_pawsx_spanish_korean_translation,Translation,"['English', 'Korean', 'Spanish']"
+NIv2,paws_x,task797_pawsx_spanish_french_translation,Translation,"['French', 'English', 'Spanish']"
+NIv2,paws_x,task798_pawsx_spanish_german_translation,Translation,"['German', 'English', 'Spanish']"
+NIv2,paws_x,task799_pawsx_spanish_chinese_translation,Translation,"['Chinese', 'English', 'Spanish']"
+NIv2,paws_x,task800_pawsx_spanish_japanese_translation,Translation,"['Japanese', 'English', 'Spanish']"
+NIv2,paws_x,task801_pawsx_german_english_translation,Translation,"['German', 'English']"
+NIv2,paws_x,task802_pawsx_german_korean_translation,Translation,"['German', 'English', 'Korean']"
+NIv2,paws_x,task803_pawsx_german_french_translation,Translation,"['German', 'French', 'English']"
+NIv2,paws_x,task804_pawsx_german_spanish_translation,Translation,"['German', 'English', 'Spanish']"
+NIv2,paws_x,task805_pawsx_german_chinese_translation,Translation,"['German', 'Chinese', 'English']"
+NIv2,paws_x,task806_pawsx_german_japanese_translation,Translation,"['German', 'Japanese', 'English']"
+NIv2,paws_x,task807_pawsx_chinese_english_translation,Translation,"['Chinese', 'English']"
+NIv2,paws_x,task808_pawsx_chinese_korean_translation,Translation,"['Chinese', 'English', 'Korean']"
+NIv2,paws_x,task809_pawsx_chinese_french_translation,Translation,"['Chinese', 'English', 'French']"
+NIv2,paws_x,task810_pawsx_chinese_spanish_translation,Translation,"['Chinese', 'English', 'Spanish']"
+NIv2,paws_x,task811_pawsx_chinese_german_translation,Translation,"['German', 'Chinese', 'English']"
+NIv2,paws_x,task812_pawsx_chinese_japanese_translation,Translation,"['Japanese', 'Chinese', 'English']"
+NIv2,paws_x,task813_pawsx_japanese_english_translation,Translation,"['Japanese', 'English']"
+NIv2,paws_x,task814_pawsx_japanese_korean_translation,Translation,"['Japanese', 'English', 'Korean']"
+NIv2,paws_x,task815_pawsx_japanese_french_translation,Translation,"['Japanese', 'French', 'English']"
+NIv2,paws_x,task816_pawsx_japanese_spanish_translation,Translation,"['Japanese', 'English', 'Spanish']"
+NIv2,paws_x,task817_pawsx_japanese_german_translation,Translation,"['Japanese', 'German', 'English']"
+NIv2,paws_x,task818_pawsx_japanese_chinese_translation,Translation,"['Japanese', 'Chinese', 'English']"
+NIv2,pec,task819_pec_sentiment_classification,Sentiment Analysis,['English']
+NIv2,peer_read,task1540_parsed_pdfs_summarization,Title Generation,['English']
+NIv2,penn_treebank,task1167_penn_treebank_coarse_pos_tagging,Pos Tagging,['English']
+NIv2,persent,task418_persent_title_generation,Title Generation,['English']
+NIv2,persent,task419_persent_answer_generation,Named Entity Recognition,['English']
+NIv2,persent,task420_persent_document_sentiment_classification,Sentiment Analysis,['English']
+NIv2,persent,task421_persent_sentence_sentiment_classification,Sentiment Analysis,['English']
+NIv2,persent,task422_persent_sentence_sentiment_verification,Sentiment Analysis,['English']
+NIv2,persent,task423_persent_document_sentiment_verification,Sentiment Analysis,['English']
+NIv2,persianqa,task394_persianqa_question_generation,Question Generation,"['English', 'Persian']"
+NIv2,persianqa,task395_persianqa_answer_generation,Question Answering,"['English', 'Persian']"
+NIv2,persianqa,task396_persianqa_classification,Answerability Classification,"['English', 'Persian']"
+NIv2,personachat,task1729_personachat_generate_next,Dialogue Generation,['English']
+NIv2,personachat,task1730_personachat_choose_next,Dialogue Generation,['English']
+NIv2,perspectrum,task738_perspectrum_classification,Textual Entailment,['English']
+NIv2,pib,task1000_pib_translation_tamil_malayalam,Translation,"['English', 'Tamil', 'Malayalam']"
+NIv2,pib,task1001_pib_translation_gujarati_urdu,Translation,"['Urdu', 'English', 'Gujarati']"
+NIv2,pib,task1002_pib_translation_urdu_gujarati,Translation,"['English', 'Gujarati', 'Urdu']"
+NIv2,pib,task1003_pib_translation_bengali_malayalam,Translation,"['English', 'Malayalam', 'Bengali']"
+NIv2,pib,task1004_pib_translation_malayalam_bengali,Translation,"['English', 'Malayalam', 'Bengali']"
+NIv2,pib,task1005_pib_translation_malayalam_punjabi,Translation,"['Panjabi', 'English', 'Malayalam']"
+NIv2,pib,task1006_pib_translation_punjabi_malayalam,Translation,"['Panjabi', 'English', 'Malayalam']"
+NIv2,pib,task1007_pib_translation_english_punjabi,Translation,"['Panjabi', 'English']"
+NIv2,pib,task1008_pib_translation_punjabi_english,Translation,"['Panjabi', 'English']"
+NIv2,pib,task1009_pib_translation_bengali_hindi,Translation,"['English', 'Hindi', 'Bengali']"
+NIv2,pib,task1010_pib_translation_hindi_bengali,Translation,"['Bengali', 'English', 'Hindi']"
+NIv2,pib,task1011_pib_translation_hindi_punjabi,Translation,"['Panjabi', 'English', 'Hindi']"
+NIv2,pib,task1012_pib_translation_punjabi_hindi,Translation,"['Panjabi', 'English', 'Hindi']"
+NIv2,pib,task1013_pib_translation_gujarati_telugu,Translation,"['English', 'Telugu', 'Gujarati']"
+NIv2,pib,task1014_pib_translation_telugu_gujarati,Translation,"['English', 'Telugu', 'Gujarati']"
+NIv2,pib,task1015_pib_translation_punjabi_tamil,Translation,"['Panjabi', 'English', 'Tamil']"
+NIv2,pib,task1016_pib_translation_tamil_punjabi,Translation,"['Panjabi', 'English', 'Tamil']"
+NIv2,pib,task1017_pib_translation_hindi_malayalam,Translation,"['English', 'Malayalam', 'Hindi']"
+NIv2,pib,task1018_pib_translation_malayalam_hindi,Translation,"['English', 'Malayalam', 'Hindi']"
+NIv2,pib,task1019_pib_translation_oriya_telugu,Translation,"['Telugu', 'English', 'Oriya']"
+NIv2,pib,task1020_pib_translation_telugu_oriya,Translation,"['Oriya', 'English', 'Telugu']"
+NIv2,pib,task1021_pib_translation_english_malayalam,Translation,"['English', 'Malayalam']"
+NIv2,pib,task1022_pib_translation_malayalam_english,Translation,"['English', 'Malayalam']"
+NIv2,pib,task1023_pib_translation_english_hindi,Translation,"['English', 'Hindi']"
+NIv2,pib,task1024_pib_translation_hindi_english,Translation,"['English', 'Hindi']"
+NIv2,pib,task1025_pib_translation_bengali_punjabi,Translation,"['Panjabi', 'English', 'Bengali']"
+NIv2,pib,task1026_pib_translation_punjabi_bengali,Translation,"['Panjabi', 'English', 'Bengali']"
+NIv2,pib,task1027_pib_translation_marathi_telugu,Translation,"['Telugu', 'English', 'Marathi']"
+NIv2,pib,task1028_pib_translation_telugu_marathi,Translation,"['English', 'Marathi', 'Telugu']"
+NIv2,pib,task1029_pib_translation_marathi_punjabi,Translation,"['Panjabi', 'English', 'Marathi']"
+NIv2,pib,task1030_pib_translation_punjabi_marathi,Translation,"['Panjabi', 'English', 'Marathi']"
+NIv2,pib,task1031_pib_translation_bengali_telugu,Translation,"['English', 'Telugu', 'Bengali']"
+NIv2,pib,task1032_pib_translation_telugu_bengali,Translation,"['English', 'Telugu', 'Bengali']"
+NIv2,pib,task1033_pib_translation_gujarati_hindi,Translation,"['English', 'Hindi', 'Gujarati']"
+NIv2,pib,task1034_pib_translation_hindi_gujarati,Translation,"['English', 'Gujarati', 'Hindi']"
+NIv2,pib,task1035_pib_translation_tamil_urdu,Translation,"['English', 'Tamil', 'Urdu']"
+NIv2,pib,task1036_pib_translation_urdu_tamil,Translation,"['English', 'Tamil', 'Urdu']"
+NIv2,pib,task1037_pib_translation_telugu_urdu,Translation,"['English', 'Telugu', 'Urdu']"
+NIv2,pib,task1038_pib_translation_urdu_telugu,Translation,"['English', 'Telugu', 'Urdu']"
+NIv2,pib,task1039_pib_translation_oriya_punjabi,Translation,"['Panjabi', 'English', 'Oriya']"
+NIv2,pib,task1040_pib_translation_punjabi_oriya,Translation,"['Panjabi', 'English', 'Oriya']"
+NIv2,pib,task1041_pib_translation_gujarati_malayalam,Translation,"['English', 'Malayalam', 'Gujarati']"
+NIv2,pib,task1042_pib_translation_malayalam_gujarati,Translation,"['English', 'Malayalam', 'Gujarati']"
+NIv2,pib,task1043_pib_translation_gujarati_punjabi,Translation,"['Panjabi', 'English', 'Gujarati']"
+NIv2,pib,task1044_pib_translation_punjabi_gujarati,Translation,"['Panjabi', 'English', 'Gujarati']"
+NIv2,pib,task1045_pib_translation_hindi_telugu,Translation,"['English', 'Telugu', 'Hindi']"
+NIv2,pib,task1046_pib_translation_telugu_hindi,Translation,"['English', 'Telugu', 'Hindi']"
+NIv2,pib,task1047_pib_translation_english_telugu,Translation,"['English', 'Telugu']"
+NIv2,pib,task1048_pib_translation_telugu_english,Translation,"['English', 'Telugu']"
+NIv2,pib,task1049_pib_translation_malayalam_telugu,Translation,"['Telugu', 'English', 'Malayalam']"
+NIv2,pib,task105_story_cloze_rocstories_sentence_generation,Text Completion,['English']
+NIv2,pib,task1050_pib_translation_telugu_malayalam,Translation,"['Malayalam', 'English', 'Telugu']"
+NIv2,pib,task1051_pib_translation_punjabi_urdu,Translation,"['Panjabi', 'English', 'Urdu']"
+NIv2,pib,task1052_pib_translation_urdu_punjabi,Translation,"['Panjabi', 'English', 'Urdu']"
+NIv2,pib,task1053_pib_translation_hindi_urdu,Translation,"['Urdu', 'English', 'Hindi']"
+NIv2,pib,task1054_pib_translation_urdu_hindi,Translation,"['English', 'Hindi', 'Urdu']"
+NIv2,pib,task1055_pib_translation_marathi_oriya,Translation,"['Oriya', 'English', 'Marathi']"
+NIv2,pib,task1056_pib_translation_oriya_marathi,Translation,"['English', 'Marathi', 'Oriya']"
+NIv2,pib,task1057_pib_translation_english_urdu,Translation,"['English', 'Urdu']"
+NIv2,pib,task1058_pib_translation_urdu_english,Translation,"['English', 'Urdu']"
+NIv2,pib,task1059_pib_translation_malayalam_urdu,Translation,"['English', 'Malayalam', 'Urdu']"
+NIv2,pib,task1060_pib_translation_urdu_malayalam,Translation,"['English', 'Malayalam', 'Urdu']"
+NIv2,pib,task1061_pib_translation_bengali_marathi,Translation,"['English', 'Marathi', 'Bengali']"
+NIv2,pib,task1062_pib_translation_marathi_bengali,Translation,"['English', 'Marathi', 'Bengali']"
+NIv2,pib,task1063_pib_translation_gujarati_tamil,Translation,"['English', 'Tamil', 'Gujarati']"
+NIv2,pib,task1064_pib_translation_tamil_gujarati,Translation,"['English', 'Tamil', 'Gujarati']"
+NIv2,pib,task1065_pib_translation_punjabi_telugu,Translation,"['Panjabi', 'English', 'Telugu']"
+NIv2,pib,task1066_pib_translation_telugu_punjabi,Translation,"['Panjabi', 'English', 'Telugu']"
+NIv2,pib,task1067_pib_translation_bengali_gujarati,Translation,"['English', 'Gujarati', 'Bengali']"
+NIv2,pib,task1068_pib_translation_gujarati_bengali,Translation,"['Bengali', 'English', 'Gujarati']"
+NIv2,pib,task1069_pib_translation_bengali_urdu,Translation,"['Urdu', 'English', 'Bengali']"
+NIv2,pib,task1070_pib_translation_urdu_bengali,Translation,"['Bengali', 'English', 'Urdu']"
+NIv2,pib,task1071_pib_translation_malayalam_marathi,Translation,"['English', 'Marathi', 'Malayalam']"
+NIv2,pib,task1072_pib_translation_marathi_malayalam,Translation,"['Malayalam', 'English', 'Marathi']"
+NIv2,pib,task1073_pib_translation_oriya_tamil,Translation,"['English', 'Tamil', 'Oriya']"
+NIv2,pib,task1074_pib_translation_tamil_oriya,Translation,"['English', 'Tamil', 'Oriya']"
+NIv2,pib,task1075_pib_translation_tamil_telugu,Translation,"['English', 'Tamil', 'Telugu']"
+NIv2,pib,task1076_pib_translation_telugu_tamil,Translation,"['English', 'Tamil', 'Telugu']"
+NIv2,pib,task1077_pib_translation_gujarati_oriya,Translation,"['English', 'Oriya', 'Gujarati']"
+NIv2,pib,task1078_pib_translation_oriya_gujarati,Translation,"['English', 'Oriya', 'Gujarati']"
+NIv2,pib,task1079_pib_translation_english_gujarati,Translation,"['English', 'Gujarati']"
+NIv2,pib,task1080_pib_translation_gujarati_english,Translation,"['English', 'Gujarati']"
+NIv2,pib,task1081_pib_translation_hindi_marathi,Translation,"['English', 'Marathi', 'Hindi']"
+NIv2,pib,task1082_pib_translation_marathi_hindi,Translation,"['English', 'Marathi', 'Hindi']"
+NIv2,pib,task1083_pib_translation_marathi_tamil,Translation,"['English', 'Tamil', 'Marathi']"
+NIv2,pib,task1084_pib_translation_tamil_marathi,Translation,"['English', 'Tamil', 'Marathi']"
+NIv2,pib,task1085_pib_translation_english_marathi,Translation,"['English', 'Marathi']"
+NIv2,pib,task1086_pib_translation_marathi_english,Translation,"['English', 'Marathi']"
+NIv2,pib,task976_pib_indian_language_identification,Language Identification,"['English', 'Oriya', 'Hindi', 'Urdu', 'Panjabi', 'Telugu', 'Tamil', 'Malayalam', 'Bengali', 'Marathi', 'Gujarati']"
+NIv2,pib,task977_pib_translation_oriya_urdu,Translation,"['English', 'Oriya', 'Urdu']"
+NIv2,pib,task978_pib_translation_urdu_oriya,Translation,"['English', 'Oriya', 'Urdu']"
+NIv2,pib,task979_pib_translation_malayalam_oriya,Translation,"['Oriya', 'English', 'Malayalam']"
+NIv2,pib,task980_pib_translation_oriya_malayalam,Translation,"['Malayalam', 'English', 'Oriya']"
+NIv2,pib,task981_pib_translation_bengali_tamil,Translation,"['English', 'Tamil', 'Bengali']"
+NIv2,pib,task982_pib_translation_tamil_bengali,Translation,"['English', 'Tamil', 'Bengali']"
+NIv2,pib,task983_pib_translation_gujarati_marathi,Translation,"['English', 'Marathi', 'Gujarati']"
+NIv2,pib,task984_pib_translation_marathi_gujarati,Translation,"['English', 'Marathi', 'Gujarati']"
+NIv2,pib,task985_pib_translation_hindi_oriya,Translation,"['English', 'Oriya', 'Hindi']"
+NIv2,pib,task986_pib_translation_oriya_hindi,Translation,"['English', 'Oriya', 'Hindi']"
+NIv2,pib,task987_pib_translation_english_oriya,Translation,"['English', 'Oriya']"
+NIv2,pib,task988_pib_translation_oriya_english,Translation,"['English', 'Oriya']"
+NIv2,pib,task989_pib_translation_marathi_urdu,Translation,"['English', 'Marathi', 'Urdu']"
+NIv2,pib,task990_pib_translation_urdu_marathi,Translation,"['English', 'Marathi', 'Urdu']"
+NIv2,pib,task991_pib_translation_english_tamil,Translation,"['English', 'Tamil']"
+NIv2,pib,task992_pib_translation_tamil_english,Translation,"['English', 'Tamil']"
+NIv2,pib,task993_pib_translation_hindi_tamil,Translation,"['English', 'Tamil', 'Hindi']"
+NIv2,pib,task994_pib_translation_tamil_hindi,Translation,"['English', 'Tamil', 'Hindi']"
+NIv2,pib,task995_pib_translation_bengali_english,Translation,"['English', 'Bengali']"
+NIv2,pib,task996_pib_translation_english_bengali,Translation,"['English', 'Bengali']"
+NIv2,pib,task997_pib_translation_bengali_oriya,Translation,"['English', 'Oriya', 'Bengali']"
+NIv2,pib,task998_pib_translation_oriya_bengali,Translation,"['English', 'Oriya', 'Bengali']"
+NIv2,pib,task999_pib_translation_malayalam_tamil,Translation,"['English', 'Tamil', 'Malayalam']"
+NIv2,pico,task179_participant_extraction,Information Extraction,['English']
+NIv2,pico,task180_intervention_extraction,Information Extraction,['English']
+NIv2,pico,task181_outcome_extraction,Information Extraction,['English']
+NIv2,piqa,task080_piqa_answer_generation,Question Answering,['English']
+NIv2,piqa,task081_piqa_wrong_answer_generation,Wrong Candidate Generation,['English']
+NIv2,poem_sentiment,task833_poem_sentiment_classification,Sentiment Analysis,['English']
+NIv2,points_of_correspondence,task281_points_of_correspondence,Overlap Extraction,['English']
+NIv2,poki,task1711_poki_text_generation,Poem Generation,['English']
+NIv2,poki,task1712_poki_classification,Text Categorization,['English']
+NIv2,poleval2019_mt,task830_poleval2019_mt_translation,Translation,"['Polish', 'English']"
+NIv2,poleval2019_mt,task832_poleval2019_mt_classification,Text Matching,"['Polish', 'English']"
+NIv2,prepositional_paraprasing,task585_preposition_classification,Preposition Prediction,['English']
+NIv2,propara,task1566_propara_structured_text_generation,Named Entity Recognition,['English']
+NIv2,propara,task1567_propara_question_generation,Question Generation,['English']
+NIv2,propara,task1568_propara_classification,Information Extraction,['English']
+NIv2,prost,task859_prost_question_generation,Question Generation,['English']
+NIv2,prost,task860_prost_mcq_generation,Question Generation,['English']
+NIv2,prost,task861_prost_mcq_answers_generation,Question Generation,['English']
+NIv2,proto_qa,task820_protoqa_answer_generation,Question Answering,['English']
+NIv2,proto_qa,task821_protoqa_question_generation,Question Generation,['English']
+NIv2,pubmed_qa,task845_pubmedqa_question_generation,Question Generation,['English']
+NIv2,pubmed_qa,task846_pubmedqa_classification,Answer Verification,['English']
+NIv2,pubmed_qa,task847_pubmedqa_question_generation,Question Generation,['English']
+NIv2,pubmed_qa,task848_pubmedqa_classification,Intent Identification,['English']
+NIv2,pubmed_qa,task849_pubmedqa_answer_generation,Question Answering,['English']
+NIv2,qa_srl,task1519_qa_srl_question_generation,Question Generation,['English']
+NIv2,qa_srl,task1520_qa_srl_answer_generation,Question Answering,['English']
+NIv2,qanta,task521_trivia_question_classification,Text Categorization,['English']
+NIv2,qasc,task036_qasc_topic_word_to_generate_related_fact,Keyword Tagging,['English']
+NIv2,qasc,task037_qasc_generate_related_fact,Sentence Composition,['English']
+NIv2,qasc,task038_qasc_combined_fact,Sentence Composition,['English']
+NIv2,qasc,task039_qasc_find_overlapping_words,Overlap Extraction,['English']
+NIv2,qasc,task040_qasc_question_generation,Question Generation,['English']
+NIv2,qasc,task041_qasc_answer_generation,Question Answering,['English']
+NIv2,qasc,task042_qasc_incorrect_option_generation,Wrong Candidate Generation,['English']
+NIv2,qasc,task1297_qasc_question_answering,Question Answering,['English']
+NIv2,qasper,task460_qasper_answer_generation,Question Answering,['English']
+NIv2,qasper,task461_qasper_question_generation,Question Generation,['English']
+NIv2,qasper,task462_qasper_classification,Question Understanding,['English']
+NIv2,qed,task768_qed_text_span_selection,Question Answering,['English']
+NIv2,qed,task769_qed_summarization,Title Generation,['English']
+NIv2,qed_amara,task1689_qed_amara_translation,Translation,"['French', 'English']"
+NIv2,qed_amara,task1690_qed_amara_translation,Translation,"['French', 'English']"
+NIv2,qed_amara,task1691_qed_amara_translation,Translation,"['English', 'Spanish']"
+NIv2,qed_amara,task1692_qed_amara_translation,Translation,"['English', 'Spanish']"
+NIv2,qqp,task1287_glue_qqp_paraphrasing,Text Matching,['English']
+NIv2,qqp,task1345_glue_qqp_question_paraprashing,Question Rewriting,['English']
+NIv2,quail,task886_quail_question_generation,Question Generation,['English']
+NIv2,quail,task887_quail_answer_generation,Question Answering,['English']
+NIv2,quarel,task1378_quarel_correct_answer_generation,Question Answering,['English']
+NIv2,quarel,task1379_quarel_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,quarel,task1380_quarel_correct_option_generation,Question Answering,['English']
+NIv2,quarel,task1381_quarel_incorrect_option_generation,Wrong Candidate Generation,['English']
+NIv2,quarel,task1382_quarel_write_correct_answer,Question Answering,['English']
+NIv2,quarel,task1383_quarel_write_incorrect_answer,Wrong Candidate Generation,['English']
+NIv2,quartz,task1731_quartz_question_answering,Question Answering,['English']
+NIv2,quartz,task178_quartz_question_answering,Question Answering,['English']
+NIv2,quartz,task223_quartz_explanation_generation,Explanation,['English']
+NIv2,question_&_answer_zre,task1325_qa_zre_question_generation_on_subject_relation,Question Generation,['English']
+NIv2,question_&_answer_zre,task1326_qa_zre_question_generation_from_answer,Question Generation,['English']
+NIv2,question_&_answer_zre,task1327_qa_zre_answer_generation_from_question,Question Answering,['English']
+NIv2,question_&_answer_zre,task1328_qa_zre_relation_generation_from_question,Question Understanding,['English']
+NIv2,quoref,task001_quoref_question_generation,Question Generation,['English']
+NIv2,quoref,task002_quoref_answer_generation,Question Answering,['English']
+NIv2,race,task309_race_answer_generation,Question Answering,['English']
+NIv2,race,task310_race_classification,Question Answering,['English']
+NIv2,race,task311_race_question_generation,Question Generation,['English']
+NIv2,race,task649_race_blank_question_generation,Question Generation,['English']
+NIv2,recipe_nlg,task569_recipe_nlg_text_generation,Title Generation,['English']
+NIv2,recipe_nlg,task570_recipe_nlg_ner_generation,Named Entity Recognition,['English']
+NIv2,recipe_nlg,task571_recipe_nlg_ner_generation,Named Entity Recognition,['English']
+NIv2,recipe_nlg,task572_recipe_nlg_text_generation,Fill in The Blank,['English']
+NIv2,record,task301_record_question_generation,Question Generation,['English']
+NIv2,record,task302_record_classification,Question Answering,['English']
+NIv2,record,task303_record_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,record,task339_record_answer_generation,Question Answering,['English']
+NIv2,reddit_tifu_dataset,task510_reddit_tifu_title_summarization,Title Generation,['English']
+NIv2,reddit_tifu_dataset,task511_reddit_tifu_long_text_summarization,Summarization,['English']
+NIv2,refresd,task643_refresd_classification,Text Matching,"['French', 'English']"
+NIv2,refresd,task644_refresd_translation,Translation,"['French', 'English']"
+NIv2,ro_sts_parallel,task1435_ro_sts_parallel_language_translation_ro_to_en,Translation,"['English', 'Romanian']"
+NIv2,ro_sts_parallel,task1436_ro_sts_parallel_language_translation_en_to_ro,Translation,"['English', 'Romanian']"
+NIv2,roc_stories,task296_storycloze_correct_end_classification,Text Completion,['English']
+NIv2,roc_stories,task297_storycloze_incorrect_end_classification,Text Completion,['English']
+NIv2,roc_stories,task298_storycloze_correct_end_classification,Coherence Classification,['English']
+NIv2,roc_stories,task299_storycloze_sentence_generation,Text Completion,['English']
+NIv2,roc_stories,task300_storycloze_order_generation,Sentence Ordering,['English']
+NIv2,rocstories,task213_rocstories_correct_ending_classification,Text Completion,['English']
+NIv2,rocstories,task214_rocstories_incorrect_ending_classification,Text Completion,['English']
+NIv2,rocstories,task215_rocstories_incorrect_answer_generation,Text Completion,['English']
+NIv2,rocstories,task216_rocstories_correct_answer_generation,Text Completion,['English']
+NIv2,rocstories,task217_rocstories_ordering_answer_generation,Sentence Ordering,['English']
+NIv2,rocstories,task218_rocstories_swap_order_answer_generation,Sentence Ordering,['English']
+NIv2,rocstories,task219_rocstories_title_answer_generation,Title Generation,['English']
+NIv2,rocstories,task220_rocstories_title_classification,Title Generation,['English']
+NIv2,rocstories,task221_rocstories_two_choice_classification,Text Completion,['English']
+NIv2,rocstories,task222_rocstories_two_chioce_slotting_classification,Text Completion,['English']
+NIv2,root09,task1505_root09_semantic_relation_classification,Word Relation Classification,['English']
+NIv2,root09,task1585_root09_hypernym_generation,Word Semantics,['English']
+NIv2,ropes,task059_ropes_story_generation,Story Composition,['English']
+NIv2,ropes,task060_ropes_question_generation,Question Generation,['English']
+NIv2,ropes,task061_ropes_answer_generation,Question Answering,['English']
+NIv2,rotten_tomatoe,task888_reviews_classification,Sentiment Analysis,['English']
+NIv2,rte,task1344_glue_entailment_classification,Textual Entailment,['English']
+NIv2,rtgender,task823_peixian_rtgender_sentiment_analysis,Sentiment Analysis,['English']
+NIv2,ruletaker,task966_ruletaker_fact_checking_based_on_given_context,Fact Verification,['English']
+NIv2,ruletaker,task967_ruletaker_incorrect_fact_generation_based_on_given_paragraph,Wrong Candidate Generation,['English']
+NIv2,samsum,task1572_samsum_summary,Summarization,['English']
+NIv2,samsum,task1573_samsum_classification,Coherence Classification,['English']
+NIv2,sarcasm_in_twitter,task1489_sarcasmdetection_tweet_classification,Text Categorization,['English']
+NIv2,sbic,task607_sbic_intentional_offense_binary_classification,Toxic Language Detection,['English']
+NIv2,sbic,task608_sbic_sexual_offense_binary_classification,Toxic Language Detection,['English']
+NIv2,sbic,task609_sbic_potentially_offense_binary_classification,Toxic Language Detection,['English']
+NIv2,scan,task126_scan_structured_text_generation_command_action_all,Text to Code,['English']
+NIv2,scan,task127_scan_long_text_generation_action_command_all,Code to Text,['English']
+NIv2,scan,task128_scan_structured_text_generation_command_action_short,Text to Code,['English']
+NIv2,scan,task129_scan_long_text_generation_action_command_short,Code to Text,['English']
+NIv2,scan,task130_scan_structured_text_generation_command_action_long,Text to Code,['English']
+NIv2,scan,task131_scan_long_text_generation_action_command_long,Code to Text,['English']
+NIv2,schema_guided_dstc8,task879_schema_guided_dstc8_classification,Dialogue Act Recognition,['English']
+NIv2,schema_guided_dstc8,task880_schema_guided_dstc8_classification,Dialogue Act Recognition,['English']
+NIv2,schema_guided_dstc8,task881_schema_guided_dstc8_classification,Text Categorization,['English']
+NIv2,scifact,task1586_scifact_title_generation,Title Generation,['English']
+NIv2,scifact,task1587_scifact_classification,Text Matching,['English']
+NIv2,scifact,task1589_scifact_classification,Text Quality Evaluation,['English']
+NIv2,sciq,task591_sciq_answer_generation,Question Answering,['English']
+NIv2,sciq,task592_sciq_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,sciq,task593_sciq_explanation_generation,Explanation,['English']
+NIv2,sciq,task594_sciq_question_generation,Question Generation,['English']
+NIv2,scitail,task1552_scitail_question_generation,Question Generation,['English']
+NIv2,scitail,task1554_scitail_classification,Textual Entailment,['English']
+NIv2,scitail,task1555_scitail_answer_generation,Question Answering,['English']
+NIv2,scitail,task1556_scitail_passage_generation,Sentence Composition,['English']
+NIv2,scitailv1.1,task1529_scitail1,Textual Entailment,['English']
+NIv2,scitailv1.1,task1530_scitail1,Sentence Composition,['English']
+NIv2,scitldr,task668_extreme_abstract_summarization,Summarization,['English']
+NIv2,scruples,task106_scruples_ethical_judgment,Ethics Classification,['English']
+NIv2,scruples,task224_scruples_anecdotes_ethical_judgment,Ethics Classification,['English']
+NIv2,scruples,task282_scruples_event_time,Text Categorization,['English']
+NIv2,scruples,task498_scruples_anecdotes_whoiswrong_classification,Ethics Classification,['English']
+NIv2,scruples,task500_scruples_anecdotes_title_generation,Title Generation,['English']
+NIv2,scruples,task501_scruples_anecdotes_post_type_verification,Text Categorization,['English']
+NIv2,scruples,task502_scruples_anecdotes_whoiswrong_verification,Ethics Classification,['English']
+NIv2,scruples,task503_scruples_anecdotes_isanswerable,Ethics Classification,['English']
+NIv2,scruples,task508_scruples_dilemmas_more_ethical_isidentifiable,Ethics Classification,['English']
+NIv2,semantic_parser_localizer,task117_spl_translation_en_de,Translation,"['German', 'English']"
+NIv2,semantic_parser_localizer,task171_spl_translation_en_es,Translation,"['English', 'Spanish']"
+NIv2,semantic_parser_localizer,task172_spl_translation_en_fa,Translation,"['English', 'Persian']"
+NIv2,semantic_parser_localizer,task173_spl_translation_en_it,Translation,"['English', 'Italian']"
+NIv2,semantic_parser_localizer,task174_spl_translation_en_ja,Translation,"['Japanese', 'English']"
+NIv2,semantic_parser_localizer,task175_spl_translation_en_pl,Translation,"['Polish', 'English']"
+NIv2,semantic_parser_localizer,task250_spl_translation_en_ar,Translation,"['English', 'Arabic']"
+NIv2,semantic_parser_localizer,task251_spl_translation_en_fi,Translation,"['English', 'Finnish']"
+NIv2,semantic_parser_localizer,task252_spl_translation_en_tr,Translation,"['Turkish', 'English']"
+NIv2,semantic_parser_localizer,task253_spl_translation_en_zh,Translation,"['Chinese', 'English']"
+NIv2,semantic_parser_localizer,task254_spl_translation_fi_en,Translation,"['English', 'Finnish']"
+NIv2,semantic_parser_localizer,task255_spl_translation_it_en,Translation,"['English', 'Italian']"
+NIv2,semantic_parser_localizer,task256_spl_translation_de_en,Translation,"['German', 'English']"
+NIv2,semantic_parser_localizer,task257_spl_translation_ar_en,Translation,"['English', 'Arabic']"
+NIv2,semantic_parser_localizer,task258_spl_translation_fa_en,Translation,"['English', 'Persian']"
+NIv2,semantic_parser_localizer,task259_spl_translation_tr_en,Translation,"['Turkish', 'English']"
+NIv2,semantic_parser_localizer,task260_spl_translation_zh_en,Translation,"['Chinese', 'English']"
+NIv2,semantic_parser_localizer,task261_spl_translation_es_en,Translation,"['English', 'Spanish']"
+NIv2,semantic_parser_localizer,task262_spl_translation_ja_en,Translation,"['Japanese', 'English']"
+NIv2,semantic_parser_localizer,task263_spl_translation_pl_en,Translation,"['Polish', 'English']"
+NIv2,semeval_2018_task1,task397_semeval_2018_task1_tweet_anger_detection,Sentiment Analysis,['English']
+NIv2,semeval_2018_task1,task398_semeval_2018_task1_tweet_joy_detection,Sentiment Analysis,['English']
+NIv2,semeval_2018_task1,task399_semeval_2018_task1_tweet_sadness_detection,Sentiment Analysis,['English']
+NIv2,semeval_2018_task3,task386_semeval_2018_task3_irony_detection,Irony Detection,['English']
+NIv2,semeval_2018_task3,task387_semeval_2018_task3_irony_classification,Irony Detection,['English']
+NIv2,semeval_2019_task_10,task104_semeval_2019_task10_closed_vocabulary_mathematical_answer_generation,Question Answering,['English']
+NIv2,semeval_2019_task_10,task118_semeval_2019_task10_open_vocabulary_mathematical_answer_generation,Question Answering,['English']
+NIv2,semeval_2019_task_10,task119_semeval_2019_task10_geometric_mathematical_answer_generation,Question Answering,['English']
+NIv2,semeval_2020_task_7,task495_semeval_headline_classification,Text Categorization,['English']
+NIv2,semeval_2020_task_7,task496_semeval_answer_generation,Text Categorization,['English']
+NIv2,semeval_2020_task4,task291_semeval_2020_task4_commonsense_validation,Commonsense Classification,['English']
+NIv2,semeval_2020_task4,task295_semeval_2020_task4_commonsense_reasoning,Explanation,['English']
+NIv2,sentence_compression,task1354_sent_comp_classification,Text Matching,['English']
+NIv2,sentence_compression,task1355_sent_comp_summarization,Summarization,['English']
+NIv2,senteval,task428_senteval_inversion,Linguistic Probing,['English']
+NIv2,senteval,task429_senteval_tense,Linguistic Probing,['English']
+NIv2,senteval,task430_senteval_subject_count,Linguistic Probing,['English']
+NIv2,senteval,task431_senteval_object_count,Linguistic Probing,['English']
+NIv2,senteval,task515_senteval_odd_word_out,Linguistic Probing,['English']
+NIv2,senteval,task516_senteval_conjoints_inversion,Linguistic Probing,['English']
+NIv2,sentiment140,task195_sentiment140_classification,Sentiment Analysis,['English']
+NIv2,sentiment140,task196_sentiment140_answer_generation,Sentiment Analysis,['English']
+NIv2,sherliic,task970_sherliic_causal_relationship,Textual Entailment,['English']
+NIv2,sherliic,task974_prachathai67k_sentiment_classification,Sentiment Analysis,"['English', 'Thai']"
+NIv2,sherliic,task975_prachathai67k_same_genre_classification,Sentiment Analysis,"['English', 'Thai']"
+NIv2,sick,task1612_sick_label_classification,Textual Entailment,['English']
+NIv2,sick,task1613_sick_given_category_generate_sentence,Sentence Composition,['English']
+NIv2,sick,task1614_sick_text_modify,Paraphrasing,['English']
+NIv2,sick,task1615_sick_tclassify_b_relation_a,Textual Entailment,['English']
+NIv2,smcalflow,task1599_smcalflow_classification,Speaker Identification,['English']
+NIv2,smcalflow,task1600_smcalflow_sentence_generation,Dialogue Generation,['English']
+NIv2,smcalflow,task1603_smcalflow_sentence_generation,Dialogue Generation,['English']
+NIv2,sms_spam_collection_v.1,task109_smsspamcollection_spamsmsdetection,Spam Classification,['English']
+NIv2,snli,task184_snli_entailment_to_neutral_text_modification,Sentence Composition,['English']
+NIv2,snli,task185_snli_contradiction_to_neutral_text_modification,Sentence Composition,['English']
+NIv2,snli,task186_snli_contradiction_to_entailment_text_modification,Sentence Composition,['English']
+NIv2,snli,task187_snli_entailment_to_contradiction_text_modification,Sentence Composition,['English']
+NIv2,snli,task188_snli_neutral_to_entailment_text_modification,Sentence Composition,['English']
+NIv2,snli,task189_snli_neutral_to_contradiction_text_modification,Sentence Composition,['English']
+NIv2,snli,task190_snli_classification,Textual Entailment,['English']
+NIv2,social_iqa,task384_socialiqa_question_classification,Question Understanding,['English']
+NIv2,social_iqa,task385_socialiqa_incorrect_answer_generation,Question Answering,['English']
+NIv2,social_iqa,task579_socialiqa_classification,Answer Verification,['English']
+NIv2,social_iqa,task580_socialiqa_answer_generation,Question Answering,['English']
+NIv2,social_iqa,task581_socialiqa_question_generation,Question Generation,['English']
+NIv2,splash,task076_splash_correcting_sql_mistake,Text to Code,['English']
+NIv2,splash,task077_splash_explanation_to_sql,Text to Code,['English']
+NIv2,splash,task107_splash_question_to_sql,Text to Code,['English']
+NIv2,spolin,task360_spolin_yesand_response_generation,Dialogue Generation,['English']
+NIv2,spolin,task361_spolin_yesand_prompt_response_classification,Dialogue Generation,['English']
+NIv2,spolin,task362_spolin_yesand_prompt_response_sub_classification,Dialogue Act Recognition,['English']
+NIv2,sqac,task1334_sqac_answer_generation,Question Answering,"['English', 'Spanish']"
+NIv2,sqac,task1335_sqac_question_generation,Question Generation,"['English', 'Spanish']"
+NIv2,squad_1.1,task074_squad1,Question Generation,['English']
+NIv2,squad_1.1,task075_squad1,Question Answering,['English']
+NIv2,squad2.0,task348_squad2,Question Generation,['English']
+NIv2,squad2.0,task349_squad2,Answerability Classification,['English']
+NIv2,sst2,task363_sst2_polarity_classification,Sentiment Analysis,['English']
+NIv2,starcon,task209_stancedetection_classification,Stance Detection,['English']
+NIv2,starcon,task513_argument_stance_classification,Stance Detection,['English']
+NIv2,starcon,task514_argument_consequence_classification,Text Matching,['English']
+NIv2,stereoset,task277_stereoset_sentence_generation_stereotype,Fill in The Blank,['English']
+NIv2,stereoset,task278_stereoset_sentence_generation_antistereotype,Fill in The Blank,['English']
+NIv2,stereoset,task279_stereoset_classification_stereotype,Stereotype Detection,['English']
+NIv2,stereoset,task280_stereoset_classification_stereotype_type,Text Categorization,['English']
+NIv2,stereoset,task318_stereoset_classification_gender,Stereotype Detection,['English']
+NIv2,stereoset,task319_stereoset_classification_profession,Stereotype Detection,['English']
+NIv2,stereoset,task320_stereoset_classification_race,Stereotype Detection,['English']
+NIv2,stereoset,task321_stereoset_classification_religion,Stereotype Detection,['English']
+NIv2,storycommonsense,task292_storycommonsense_character_text_generation,Information Extraction,['English']
+NIv2,storycommonsense,task293_storycommonsense_emotion_text_generation,Sentiment Analysis,['English']
+NIv2,storycommonsense,task294_storycommonsense_motiv_text_generation,Intent Identification,['English']
+NIv2,strategyqa,task167_strategyqa_question_generation,Question Generation,['English']
+NIv2,strategyqa,task168_strategyqa_question_decomposition,Question Decomposition,['English']
+NIv2,strategyqa,task169_strategyqa_sentence_generation,Sentence Generation,['English']
+NIv2,sts_b,task1347_glue_sts_b_similarity_classification,Text Matching,['English']
+NIv2,subjqa,task144_subjqa_question_answering,Question Answering,['English']
+NIv2,svamp,task751_svamp_subtraction_question_answering,Question Answering,['English']
+NIv2,svamp,task752_svamp_multiplication_question_answering,Question Answering,['English']
+NIv2,svamp,task753_svamp_addition_question_answering,Question Answering,['English']
+NIv2,svamp,task754_svamp_common_division_question_answering,Question Answering,['English']
+NIv2,swag,task453_swag_answer_generation,Text Completion,['English']
+NIv2,swag,task454_swag_incorrect_answer_generation,Wrong Candidate Generation,['English']
+NIv2,swag,task455_swag_context_generation,Text Completion,['English']
+NIv2,synthetic,task063_first_i_elements,Program Execution,['English']
+NIv2,synthetic,task064_all_elements_except_first_i,Program Execution,['English']
+NIv2,synthetic,task078_all_elements_except_last_i,Program Execution,['English']
+NIv2,synthetic,task085_unnatural_addsub_arithmetic,Mathematics,['English']
+NIv2,synthetic,task086_translated_symbol_arithmetic,Mathematics,"['English', 'Italian']"
+NIv2,synthetic,task087_new_operator_addsub_arithmetic,Mathematics,['English']
+NIv2,synthetic,task088_identify_typo_verification,Spelling Error Detection,['English']
+NIv2,synthetic,task089_swap_words_verification,Grammar Error Detection,['English']
+NIv2,synthetic,task090_equation_learner_algebra,Mathematics,['English']
+NIv2,synthetic,task091_all_elements_from_index_i_to_j,Program Execution,['English']
+NIv2,synthetic,task092_check_prime_classification,Mathematics,['English']
+NIv2,synthetic,task099_reverse_elements_between_index_i_and_j,Program Execution,['English']
+NIv2,synthetic,task100_concatenate_all_elements_from_index_i_to_j,Program Execution,['English']
+NIv2,synthetic,task101_reverse_and_concatenate_all_elements_from_index_i_to_j,Program Execution,['English']
+NIv2,synthetic,task1087_two_number_sum,Program Execution,['English']
+NIv2,synthetic,task1088_array_of_products,Program Execution,['English']
+NIv2,synthetic,task1089_check_monotonic_array,Program Execution,['English']
+NIv2,synthetic,task113_count_frequency_of_letter,Program Execution,['English']
+NIv2,synthetic,task1148_maximum_ascii_value,Program Execution,['English']
+NIv2,synthetic,task1149_item_check_edible,Edible Prediction,['English']
+NIv2,synthetic,task1150_delete_max_min,Program Execution,['English']
+NIv2,synthetic,task1151_swap_max_min,Program Execution,['English']
+NIv2,synthetic,task1188_count_max_freq_char,Program Execution,['English']
+NIv2,synthetic,task1189_check_char_in_string,Program Execution,['English']
+NIv2,synthetic,task1190_add_integer_to_list,Program Execution,['English']
+NIv2,synthetic,task1194_kth_largest_element,Program Execution,['English']
+NIv2,synthetic,task1315_find_range_array,Program Execution,['English']
+NIv2,synthetic,task1316_remove_duplicates_string,Program Execution,['English']
+NIv2,synthetic,task1331_reverse_array,Program Execution,['English']
+NIv2,synthetic,task1332_check_leap_year,Leap Year Prediction,['English']
+NIv2,synthetic,task1333_check_validity_date_ddmmyyyy,Date Validity Prediction,['English']
+NIv2,synthetic,task1403_check_validity_date_mmddyyyy,Date Validity Prediction,['English']
+NIv2,synthetic,task1404_date_conversion,Program Execution,['English']
+NIv2,synthetic,task1405_find_median,Program Execution,['English']
+NIv2,synthetic,task1406_kth_smallest_element,Program Execution,['English']
+NIv2,synthetic,task1443_string_to_number,Program Execution,['English']
+NIv2,synthetic,task1444_round_power_of_two,Program Execution,['English']
+NIv2,synthetic,task1445_closest_integers,Program Execution,['English']
+NIv2,synthetic,task1446_farthest_integers,Program Execution,['English']
+NIv2,synthetic,task1498_24hour_to_12hour_clock,Clock Format Conversion,['English']
+NIv2,synthetic,task1506_celebrity_minimal_dob_span,Information Extraction,['English']
+NIv2,synthetic,task1507_boolean_temporal_reasoning,Temporal Reasoning,['English']
+NIv2,synthetic,task1542_every_ith_element_from_starting,Program Execution,['English']
+NIv2,synthetic,task155_count_nouns_verbs,Pos Tagging,['English']
+NIv2,synthetic,task1551_every_ith_element_from_kth_element,Program Execution,['English']
+NIv2,synthetic,task157_count_vowels_and_consonants,Program Execution,['English']
+NIv2,synthetic,task158_count_frequency_of_words,Program Execution,['English']
+NIv2,synthetic,task159_check_frequency_of_words_in_sentence_pair,Program Execution,['English']
+NIv2,synthetic,task160_replace_letter_in_a_sentence,Program Execution,['English']
+NIv2,synthetic,task161_count_words_containing_letter,Program Execution,['English']
+NIv2,synthetic,task162_count_words_starting_with_letter,Program Execution,['English']
+NIv2,synthetic,task163_count_words_ending_with_letter,Program Execution,['English']
+NIv2,synthetic,task183_rhyme_generation,Rhyme Generation,['English']
+NIv2,synthetic,task205_remove_even_elements,Program Execution,['English']
+NIv2,synthetic,task206_collatz_conjecture,Program Execution,['English']
+NIv2,synthetic,task207_max_element_lists,Program Execution,['English']
+NIv2,synthetic,task208_combinations_of_list,Program Execution,['English']
+NIv2,synthetic,task243_count_elements_in_set_intersection,Program Execution,['English']
+NIv2,synthetic,task244_count_elements_in_set_union,Program Execution,['English']
+NIv2,synthetic,task245_check_presence_in_set_intersection,Program Execution,['English']
+NIv2,synthetic,task267_concatenate_and_reverse_all_elements_from_index_i_to_j,Program Execution,['English']
+NIv2,synthetic,task365_synthetic_remove_vowels,Program Execution,['English']
+NIv2,synthetic,task366_synthetic_return_primes,Program Execution,['English']
+NIv2,synthetic,task367_synthetic_remove_floats,Program Execution,['English']
+NIv2,synthetic,task368_synthetic_even_or_odd_calculation,Program Execution,['English']
+NIv2,synthetic,task369_synthetic_remove_odds,Program Execution,['English']
+NIv2,synthetic,task370_synthetic_remove_divisible_by_3,Program Execution,['English']
+NIv2,synthetic,task371_synthetic_product_of_list,Program Execution,['English']
+NIv2,synthetic,task372_synthetic_palindrome_numbers,Program Execution,['English']
+NIv2,synthetic,task373_synthetic_round_tens_place,Program Execution,['English']
+NIv2,synthetic,task374_synthetic_pos_or_neg_calculation,Program Execution,['English']
+NIv2,synthetic,task376_reverse_order_of_words,Program Execution,['English']
+NIv2,synthetic,task377_remove_words_of_given_length,Program Execution,['English']
+NIv2,synthetic,task378_reverse_words_of_given_length,Program Execution,['English']
+NIv2,synthetic,task488_extract_all_alphabetical_elements_from_list_in_order,Program Execution,['English']
+NIv2,synthetic,task497_extract_all_numbers_from_list_in_order,Program Execution,['English']
+NIv2,synthetic,task499_extract_and_add_all_numbers_from_list,Program Execution,['English']
+NIv2,synthetic,task504_count_all_alphabetical_elements_in_list,Program Execution,['English']
+NIv2,synthetic,task505_count_all_numerical_elements_in_list,Program Execution,['English']
+NIv2,synthetic,task506_position_of_all_alphabetical_elements_in_list,Program Execution,['English']
+NIv2,synthetic,task507_position_of_all_numerical_elements_in_list,Program Execution,['English']
+NIv2,synthetic,task509_collate_of_all_alphabetical_and_numerical_elements_in_list_separately,Program Execution,['English']
+NIv2,synthetic,task523_find_if_numbers_or_alphabets_are_more_in_list,Program Execution,['English']
+NIv2,synthetic,task600_find_the_longest_common_substring_in_two_strings,Program Execution,['English']
+NIv2,synthetic,task605_find_the_longest_common_subsequence_in_two_lists,Program Execution,['English']
+NIv2,synthetic,task606_sum_of_all_numbers_in_list_between_positions_i_and_j,Program Execution,['English']
+NIv2,synthetic,task622_replace_alphabets_in_a_list_by_their_position_in_english_alphabet,Program Execution,['English']
+NIv2,synthetic,task636_extract_and_sort_unique_alphabets_in_a_list,Program Execution,['English']
+NIv2,synthetic,task637_extract_and_sort_unique_digits_in_a_list,Program Execution,['English']
+NIv2,synthetic,task755_find_longest_substring_and_replace_its_sorted_lowercase_version_in_both_lists,Program Execution,['English']
+NIv2,synthetic,task756_find_longert_substring_and_return_all_unique_alphabets_in_it,Program Execution,['English']
+NIv2,synthetic,task850_synthetic_longest_palindrome,Program Execution,['English']
+NIv2,synthetic,task851_synthetic_multiply_evens,Program Execution,['English']
+NIv2,synthetic,task852_synthetic_multiply_odds,Program Execution,['English']
+NIv2,tecla,task1588_tecla_classification,Text Categorization,"['English', 'Catalan']"
+NIv2,tellmewhy,task290_tellmewhy_question_answerability,Answerability Classification,['English']
+NIv2,tellmewhy,task332_tellmewhy_answer_generation,Question Answering,['English']
+NIv2,timetravel,task065_timetravel_consistent_sentence_classification,Coherence Classification,['English']
+NIv2,timetravel,task066_timetravel_binary_consistency_classification,Coherence Classification,['English']
+NIv2,timetravel,task269_csrg_counterfactual_story_generation,Story Composition,['English']
+NIv2,timetravel,task270_csrg_counterfactual_context_generation,Story Composition,['English']
+NIv2,tom_qa,task151_tomqa_find_location_easy_clean,Question Answering,['English']
+NIv2,tom_qa,task152_tomqa_find_location_easy_noise,Question Answering,['English']
+NIv2,tom_qa,task153_tomqa_find_location_hard_clean,Question Answering,['English']
+NIv2,tom_qa,task154_tomqa_find_location_hard_noise,Question Answering,['English']
+NIv2,torque,task388_torque_token_classification,Information Extraction,['English']
+NIv2,torque,task389_torque_generate_temporal_question,Question Generation,['English']
+NIv2,torque,task390_torque_text_span_selection,Question Answering,['English']
+NIv2,trec,task1289_trec_classification,Question Understanding,['English']
+NIv2,trianglecopa,task1665_trainglecopa_question_generation,Question Generation,['English']
+NIv2,triviaqa,task1564_triviaqa_answer_generation,Question Answering,['English']
+NIv2,triviaqa,task1565_triviaqa_classification,Question Answering,['English']
+NIv2,turk,task934_turk_simplification,Text Simplification,['English']
+NIv2,tweetqa,task239_tweetqa_answer_generation,Question Answering,['English']
+NIv2,tweetqa,task240_tweetqa_question_generation,Question Generation,['English']
+NIv2,tweetqa,task241_tweetqa_classification,Answer Verification,['English']
+NIv2,tweetqa,task242_tweetqa_classification,Answerability Classification,['English']
+NIv2,universal_dependencies___english_dependency_treebank,task583_udeps_eng_coarse_pos_tagging,Pos Tagging,['English']
+NIv2,universal_dependencies___english_dependency_treebank,task584_udeps_eng_fine_pos_tagging,Pos Tagging,['English']
+NIv2,viquiquad,task836_viquiquad_question_generation,Question Generation,"['English', 'Catalan']"
+NIv2,viquiquad,task837_viquiquad_answer_generation,Question Answering,"['English', 'Catalan']"
+NIv2,web_nlg,task1728_web_nlg_data_to_text,Data to Text,['English']
+NIv2,web_questions,task1412_web_questions_question_answering,Question Answering,['English']
+NIv2,web_questions,task1601_webquestions_answer_generation,Question Answering,['English']
+NIv2,web_questions,task1602_webquestion_question_genreation,Question Generation,['English']
+NIv2,wiki_auto,task933_wiki_auto_style_transfer,Text Simplification,['English']
+NIv2,wiki_auto,task955_wiki_auto_style_transfer,Sentence Expansion,['English']
+NIv2,wiki_auto_all_data,task645_summarization,Keyword Tagging,['English']
+NIv2,wiki_hop,task1296_wiki_hop_question_answering,Question Answering,['English']
+NIv2,wiki_movies,task615_moviesqa_answer_generation,Question Answering,['English']
+NIv2,wiki_qa,task1294_wiki_qa_answer_verification,Answer Verification,['English']
+NIv2,wikitext,task602_wikitext_103_answer_generation,Title Generation,['English']
+NIv2,wikitext,task603_wikitext_103_fill_in_the_blank,Fill in The Blank,['English']
+NIv2,wino_bias,task1664_winobias_text_generation,Coreference Resolution,['English']
+NIv2,winograd_wsc,task646_answer_generation,Information Extraction,['English']
+NIv2,winograd_wsc,task647_answer_generation,Information Extraction,['English']
+NIv2,winograd_wsc,task648_answer_generation,Coreference Resolution,['English']
+NIv2,winogrande,task029_winogrande_full_object,Question Generation,['English']
+NIv2,winogrande,task030_winogrande_full_person,Question Generation,['English']
+NIv2,winogrande,task031_winogrande_question_generation_object,Question Generation,['English']
+NIv2,winogrande,task032_winogrande_question_generation_person,Question Generation,['English']
+NIv2,winogrande,task033_winogrande_answer_generation,Coreference Resolution,['English']
+NIv2,winogrande,task034_winogrande_question_modification_object,Question Rewriting,['English']
+NIv2,winogrande,task035_winogrande_question_modification_person,Question Rewriting,['English']
+NIv2,winogrande,task1391_winogrande_easy_answer_generation,Coreference Resolution,['English']
+NIv2,winomt,task340_winomt_classification_gender_pro,Gender Classification,['English']
+NIv2,winomt,task341_winomt_classification_gender_anti,Gender Classification,['English']
+NIv2,winomt,task342_winomt_classification_profession_pro,Gender Classification,['English']
+NIv2,winomt,task343_winomt_classification_profession_anti,Gender Classification,['English']
+NIv2,winomt,task350_winomt_classification_gender_identifiability_pro,Gender Classification,['English']
+NIv2,winomt,task351_winomt_classification_gender_identifiability_anti,Gender Classification,['English']
+NIv2,winowhy,task133_winowhy_reason_plausibility_detection,Coreference Resolution,['English']
+NIv2,winowhy,task134_winowhy_reason_generation,Explanation,['English']
+NIv2,winowhy,task135_winowhy_wrong_reason_generation,Wrong Candidate Generation,['English']
+NIv2,winowhy,task136_winowhy_knowledge_categorization,Commonsense Classification,['English']
+NIv2,wiqa,task1548_wiqa_binary_classification,Sentence Ordering,['English']
+NIv2,wiqa,task1549_wiqa_answer_generation_missing_step,Sentence Ordering,['English']
+NIv2,wiqa,task1727_wiqa_what_is_the_effect,Question Answering,['English']
+NIv2,wordnet,task1508_wordnet_antonyms,Word Semantics,['English']
+NIv2,wsc_fiexed,task1390_wscfixed_coreference,Coreference Resolution,['English']
+NIv2,wsc; enhanced_wsc,task275_enhanced_wsc_paraphrase_generation,Sentence Perturbation,['English']
+NIv2,wsc; enhanced_wsc,task276_enhanced_wsc_classification,Text Matching,['English']
+NIv2,x_csr,task1130_xcsr_vi_commonsense_mc_classification,Question Answering,"['English', 'Vietnamese']"
+NIv2,x_csr,task1131_xcsr_es_commonsense_mc_classification,Question Answering,"['English', 'Spanish']"
+NIv2,x_csr,task1132_xcsr_ur_commonsense_mc_classification,Question Answering,"['English', 'Urdu']"
+NIv2,x_csr,task1133_xcsr_nl_commonsense_mc_classification,Question Answering,"['Dutch', 'English']"
+NIv2,x_csr,task1134_xcsr_hi_commonsense_mc_classification,Question Answering,"['English', 'Hindi']"
+NIv2,x_csr,task1135_xcsr_en_commonsense_mc_classification,Question Answering,['English']
+NIv2,x_csr,task1136_xcsr_fr_commonsense_mc_classification,Question Answering,"['French', 'English']"
+NIv2,x_csr,task1137_xcsr_pt_commonsense_mc_classification,Question Answering,"['Portuguese', 'English']"
+NIv2,x_csr,task1138_xcsr_de_commonsense_mc_classification,Question Answering,"['German', 'English']"
+NIv2,x_csr,task1139_xcsr_ru_commonsense_mc_classification,Question Answering,"['Russian', 'English']"
+NIv2,x_csr,task114_is_the_given_word_longest,Linguistic Probing,['English']
+NIv2,x_csr,task1140_xcsr_pl_commonsense_mc_classification,Question Answering,"['Polish', 'English']"
+NIv2,x_csr,task1141_xcsr_zh_commonsense_mc_classification,Question Answering,"['Chinese', 'English']"
+NIv2,x_csr,task1142_xcsr_ar_commonsense_mc_classification,Question Answering,"['English', 'Arabic']"
+NIv2,x_csr,task1143_xcsr_it_commonsense_mc_classification,Question Answering,"['English', 'Italian']"
+NIv2,x_csr,task1144_xcsr_sw_commonsense_mc_classification,Question Answering,"['Swahili', 'English']"
+NIv2,x_csr,task1145_xcsr_jap_commonsense_mc_classification,Question Answering,"['Japanese', 'English']"
+NIv2,xcopa,task1168_xcopa_commonsense_reasoning_ht,Cause Effect Classification,"['Haitian', 'English']"
+NIv2,xcopa,task1169_xcopa_commonsense_cause_effect_ht,Cause Effect Classification,"['Haitian', 'English']"
+NIv2,xcopa,task1170_xcopa_commonsense_reasoning_id,Cause Effect Classification,"['Indonesian', 'English']"
+NIv2,xcopa,task1171_xcopa_commonsense_cause_effect_id,Cause Effect Classification,"['Indonesian', 'English']"
+NIv2,xcopa,task1172_xcopa_commonsense_reasoning_it,Cause Effect Classification,"['English', 'Italian']"
+NIv2,xcopa,task1173_xcopa_commonsense_cause_effect_it,Cause Effect Classification,"['English', 'Italian']"
+NIv2,xcopa,task1174_xcopa_commonsense_reasoning_sw,Cause Effect Classification,"['Swahili', 'English']"
+NIv2,xcopa,task1175_xcopa_commonsense_cause_effect_sw,Cause Effect Classification,"['Swahili', 'English']"
+NIv2,xcopa,task1176_xcopa_commonsense_reasoning_ta,Cause Effect Classification,"['English', 'Tamil']"
+NIv2,xcopa,task1177_xcopa_commonsense_cause_effect_ta,Cause Effect Classification,"['English', 'Tamil']"
+NIv2,xcopa,task1178_xcopa_commonsense_reasoning_th,Cause Effect Classification,"['English', 'Thai']"
+NIv2,xcopa,task1179_xcopa_commonsense_cause_effect_th,Cause Effect Classification,"['English', 'Thai']"
+NIv2,xcopa,task1180_xcopa_commonsense_reasoning_tr,Cause Effect Classification,"['Turkish', 'English']"
+NIv2,xcopa,task1181_xcopa_commonsense_cause_effect_tr,Cause Effect Classification,"['Turkish', 'English']"
+NIv2,xcopa,task1182_xcopa_commonsense_reasoning_vi,Cause Effect Classification,"['English', 'Vietnamese']"
+NIv2,xcopa,task1183_xcopa_commonsense_cause_effect_vi,Cause Effect Classification,"['English', 'Vietnamese']"
+NIv2,xcopa,task1184_xcopa_commonsense_reasoning_zh,Cause Effect Classification,"['Chinese', 'English']"
+NIv2,xcopa,task1185_xcopa_commonsense_cause_effect_zh,Cause Effect Classification,"['Chinese', 'English']"
+NIv2,xcopa,task968_xcopa_commonsense_reasoning_et,Cause Effect Classification,"['English', 'Estonian']"
+NIv2,xcopa,task969_xcopa_commonsense_cause_effect_et,Cause Effect Classification,"['English', 'Estonian']"
+NIv2,xcsr,task406_mickey_fr_sentence_perturbation_generation,Sentence Perturbation,"['French', 'English']"
+NIv2,xcsr,task407_mickey_hi_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Hindi']"
+NIv2,xcsr,task408_mickey_it_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Italian']"
+NIv2,xcsr,task409_mickey_nl_sentence_perturbation_generation,Sentence Perturbation,"['Dutch', 'English']"
+NIv2,xcsr,task410_mickey_ru_sentence_perturbation_generation,Sentence Perturbation,"['Russian', 'English']"
+NIv2,xcsr,task411_mickey_vi_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Vietnamese']"
+NIv2,xcsr,task412_mickey_zh_sentence_perturbation_generation,Sentence Perturbation,"['Chinese', 'English']"
+NIv2,xcsr,task413_mickey_en_sentence_perturbation_generation,Sentence Perturbation,['English']
+NIv2,xcsr,task414_mickey_ar_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Arabic']"
+NIv2,xcsr,task415_mickey_bg_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Bulgarian']"
+NIv2,xcsr,task416_mickey_de_sentence_perturbation_generation,Sentence Perturbation,"['German', 'English']"
+NIv2,xcsr,task417_mickey_es_sentence_perturbation_generation,Sentence Perturbation,"['English', 'Spanish']"
+NIv2,xl_wic,task625_xlwic_true_or_false_answer_generation,Word Semantics,['English']
+NIv2,xl_wic,task626_xlwic_sentence_based_on_given_word_sentence_generation,Sentence Composition,['English']
+NIv2,xl_wic,task627_xlwic_word_with_same_meaning_sentence_generation,Sentence Composition,['English']
+NIv2,xl_wic,task628_xlwic_word_with_different_meaning_sentence_generation,Sentence Composition,['English']
+NIv2,xlsum,task1356_xlsum_title_generation,Title Generation,['English']
+NIv2,xlsum,task1357_xlsum_summary_generation,Summarization,['English']
+NIv2,xlsum,task1358_xlsum_title_generation,Title Generation,['English']
+NIv2,xquad,task1608_xquad_en_answer_generation,Question Answering,['English']
+NIv2,xquad,task1609_xquad_en_question_generation,Question Generation,['English']
+NIv2,xquad,task1610_xquad_es_answer_generation,Question Answering,"['English', 'Spanish']"
+NIv2,xquad,task1611_xquad_es_question_generation,Question Generation,"['English', 'Spanish']"
+NIv2,xquad,task1676_xquad_ca_translation,Translation,"['English', 'Catalan']"
+NIv2,xquad,task1677_xquad_ca_translation,Translation,"['English', 'Catalan']"
+NIv2,xsum,task1290_xsum_summarization,Summarization,['English']
+NIv2,yahoo_answers_topics,task1592_yahoo_answers_topics_classfication,Text Categorization,['English']
+NIv2,yahoo_answers_topics,task1593_yahoo_answers_topics_classification,Text Categorization,['English']
+NIv2,yahoo_answers_topics,task1594_yahoo_answers_topics_question_generation,Question Generation,['English']
+NIv2,yelp_polarity,task475_yelp_polarity_classification,Sentiment Analysis,['English']
+NIv2,yelp_restaurant_review,task746_yelp_restaurant_review_classification,Sentiment Analysis,['English']
+NIv2,yelp_review_full,task1292_yelp_review_full_text_categorization,Sentiment Analysis,['English']
+NIv2,yoruba_bbc_topics,task612_yorubabbc_classification,Text Categorization,"['English', 'Yoruba']"
+NIv2,youtube_caption_corrections,task1415_youtube_caption_corrections_grammar_correction,Grammar Error Correction,['English']
+NIv2,youtube_caption_corrections,task1416_youtube_caption_corrections_incorrect_grammar_classification,Grammar Error Detection,['English']
+NIv2,zest,task120_zest_text_modification,Question Generation,['English']
+NIv2,zest,task121_zest_text_modification,Question Rewriting,['English']
+NIv2,zest,task1562_zest_text_modification,Question Rewriting,['English']
