@@ -713,7 +713,7 @@ def _process_xsum(example):
 
 
 TASK_CONFIGS['xsum'] = _TaskConfig(
-    source=seqio.TfdsDataSource(tfds_name='xsum:1.0.0', splits=SPLITS_DICT),
+    source=seqio.TfdsDataSource(tfds_name='huggingface:xsum', splits=SPLITS_DICT),
     preprocessors=[
         _process_xsum,
     ],
@@ -1828,7 +1828,7 @@ def _process_cola(example):
 
 TASK_CONFIGS['cola'] = _TaskConfig(
     source=seqio.TfdsDataSource(
-        tfds_name='glue/cola:2.0.0',
+        tfds_name='glue/cola',
         splits={
             'train': f'train[:-{NUM_VAL_EXAMPLES}]',
             'validation': f'train[-{NUM_VAL_EXAMPLES}:]',
