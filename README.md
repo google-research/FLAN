@@ -1,11 +1,8 @@
 # The FLAN Instruction Tuning Repository
 
-[**Original Flan (2021)**](#flan-2021) | [**The Flan Collection (2022)**](https://github.com/google-research/FLAN/tree/main/flan/v2) | 
-[**Tasks**](#task-description) | [**Flan 2021 Citation**](#flan-2021-citation) | [**License**](#license)
+[**Original Flan (2021)**](#flan-2021) | [**The Flan Collection (2022)**](https://github.com/google-research/FLAN/tree/main/flan/v2) | [**Flan 2021 Citation**](#flan-2021-citation) | [**License**](#license)
 
 This repository contains code to generate instruction tuning dataset collections. The first is the original Flan 2021, documented in [Finetuned Language Models are Zero-Shot Learners](https://arxiv.org/abs/2109.01652), and the second is the expanded version, called the Flan Collection, described in [The Flan Collection: Designing Data and Methods for Effective Instruction Tuning](https://arxiv.org/abs/2301.13688) and used to produce [Flan-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) and [Flan-PaLM](https://arxiv.org/abs/2210.11416).
-
-Finetuned Language Models are Zero-Shot Learners, Wei et. al., 2021.
 
 ## Flan 2021
 To generate the Flan 2021 data as Seqio mixtures, first install the relevant `requirements.txt` then use [mixtures.py](https://github.com/google-research/FLAN/blob/main/flan/mixtures.py).
