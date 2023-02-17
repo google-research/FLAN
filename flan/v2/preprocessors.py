@@ -1257,6 +1257,12 @@ def task_master(
   }
 
 
+def filter_qrecc(dataset):
+  def filter_func(example):
+    return example["turn_id"] > 6
+  return dataset.filter(filter_func)
+
+
 @seqio.map_over_dataset
 def qrecc(
     example: Mapping[str, tf.Tensor],
