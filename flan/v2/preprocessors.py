@@ -1302,7 +1302,7 @@ def qrecc(
     processed example dict
   """
   # pyformat: enable
-  dialog = example["history_with_truth_answer"]
+  dialog = example["context"]
   if random_turn:
     maxval = tf.math.minimum(tf.cast(len(dialog) / 2, tf.dtypes.int64), 20)
     idx = tf.random.uniform(
