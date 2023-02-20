@@ -128,7 +128,7 @@ DIALOG_II_TASK_CONFIGS["wiki_dialog" +
 # ================================== QReCC ====================================
 DIALOG_TASK_CONFIGS["qrecc"] = TaskConfig(
     source=seqio.TfdsDataSource(tfds_name="q_re_cc:1.0.0", splits=["train"]),
-    preprocessors=[prep.qrecc, prep.format_dialog],
+    preprocessors=[prep.filter_qrecc, prep.qrecc, prep.format_dialog],
     postprocess_fn=post.take_first_line,
     metric_fns=[t5_metrics.accuracy],
 )
