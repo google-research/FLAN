@@ -160,7 +160,7 @@ for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
     # Only include non-deterministic options if they aren't already hard-coded.
     if constants_t0.T0_TRAIN_TASK_METADATA[task_name][
         "task_type"] == "t0_multiple_choice_separated_options":
-      preprocessors.append(prep.format_options_non_deterministic)
+      preprocessors.append(prep.format_options)
 
   T0_TASK_CONFIGS[task_name] = TaskConfig(
       source=seqio.TfdsDataSource(
