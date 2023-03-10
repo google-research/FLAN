@@ -259,9 +259,9 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
   # This is not necessarily five shot. We name it five_shot so that it matches
   # other few-shot task names. This makes it easy to use.
   register_zero_shot_task(f"{t_name}_template_mix_five_shot", config,
-                          mixed_templates) # TODO.
+                          mixed_templates, "fs_opt")
   register_zero_shot_task(f"{t_name}_template_mix_no_opt_five_shot", config,
-                          mixed_templates)
+                          mixed_templates, "fs_noopt")
 
   # Build few-shot with non-deterministic templates.
   # The #. of shots is non-deterministic too.
