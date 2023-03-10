@@ -260,6 +260,7 @@ def reset_split_maxes_on_flan_v0_configs(
     new_flan_configs: A dict of task keys to their TaskConfigs without 30k limit
   """
   new_flan_configs = {}
+  counter = 0
   for key, tconfig in original_flan_configs.items():
     if key == "wsc273":
       # Remove wsc273 since it doesn't contain training data.
@@ -313,6 +314,9 @@ def reset_split_maxes_on_flan_v0_configs(
         postprocess_fn=tconfig.postprocess_fn,
         metric_fns=tconfig.metric_fns,
     )
+    counter += 1
+    if counter == 3:
+      break
   return new_flan_configs
 
 

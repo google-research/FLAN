@@ -75,15 +75,15 @@ FLAN_V0_TASK_CONFIGS["lambada"] = TaskConfig(
 # are low-quality.
 COT_DATA_PATH = os.path.join(os.path.dirname(__file__), "cot_data")
 for dataset_name, cot_type, nlines in [
-    ("gsm8k", "cot", 7473),
+    # ("gsm8k", "cot", 7473),
     ("strategyqa", "cot", 2061),
-    ("creak", "cot", 6915),
+    # ("creak", "cot", 6915),
     ("qasc", "cot", 1084),
-    ("esnli", "cot", 36174),
-    ("ecqa", "cot", 7112),
-    ("sensemaking", "cot", 6070),
-    ("aqua", "stream", 2728),
-    ("qed", "stream", 5154),
+    # ("esnli", "cot", 36174),
+    # ("ecqa", "cot", 7112),
+    # ("sensemaking", "cot", 6070),
+    # ("aqua", "stream", 2728),
+    # ("qed", "stream", 5154),
 ]:
   cot_prep_fn = functools.partial(prep.add_source_info,
       task_name=f"{cot_type}_{dataset_name}", task_source="CoT")
@@ -122,21 +122,21 @@ FLAN_V0_TASK_CONFIGS["unified_qa_science_inst"] = TaskConfig(
 )
 
 # ============================ Wiki Dialog ==============================
-wikidialog_prep_fn = functools.partial(prep.add_source_info,
-    task_name=f"wiki_dialog", task_source="Dialog")
-DIALOG_TASK_CONFIGS["wiki_dialog"] = TaskConfig(
-    source=seqio.TfdsDataSource(
-        tfds_name="wiki_dialog:1.0.0", splits=["train"]),
-    preprocessors=[prep.wiki_dialog, prep.format_dialog, wikidialog_prep_fn],
-    postprocess_fn=post.take_first_line,
-    metric_fns=[t5_metrics.accuracy],
-)
-# '_input_inversion' will get mapped to an inverted template
-wd_ii_tname = "wiki_dialog_input_inversion"
-DIALOG_II_TASK_CONFIGS[wd_ii_tname] = DIALOG_TASK_CONFIGS["wiki_dialog"]
-wikidialog_prep_fn = functools.partial(prep.add_source_info,
-    task_name=f"wiki_dialog_ii", task_source="Dialog")
-DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors[:-1] + [wikidialog_prep_fn]
+# wikidialog_prep_fn = functools.partial(prep.add_source_info,
+#     task_name=f"wiki_dialog", task_source="Dialog")
+# DIALOG_TASK_CONFIGS["wiki_dialog"] = TaskConfig(
+#     source=seqio.TfdsDataSource(
+#         tfds_name="wiki_dialog:1.0.0", splits=["train"]),
+#     preprocessors=[prep.wiki_dialog, prep.format_dialog, wikidialog_prep_fn],
+#     postprocess_fn=post.take_first_line,
+#     metric_fns=[t5_metrics.accuracy],
+# )
+# # '_input_inversion' will get mapped to an inverted template
+# wd_ii_tname = "wiki_dialog_input_inversion"
+# DIALOG_II_TASK_CONFIGS[wd_ii_tname] = DIALOG_TASK_CONFIGS["wiki_dialog"]
+# wikidialog_prep_fn = functools.partial(prep.add_source_info,
+#     task_name=f"wiki_dialog_ii", task_source="Dialog")
+# DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors[:-1] + [wikidialog_prep_fn]
 
 
 # ================================== QReCC ====================================
@@ -156,6 +156,7 @@ wikidialog_prep_fn = functools.partial(prep.add_source_info,
 DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors[:-1] + [qrecc_prep_fn]
 
 # ========================= T0 (P3) Training Sets ===========================
+counter = 0
 for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
   subtask_id = task_name.split(":")[-1]
   if constants_t0.T0_TRAIN_TASK_METADATA[task_name]["in_flan"]:
@@ -186,11 +187,15 @@ for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
   T0_TASK_CONFIGS[task_name] = TaskConfig(
       source=seqio.TfdsDataSource(
           tfds_name=f"huggingface:bigscience__p3/{subtask_id}",
+        #   tfds_name=f"bigscience__p3/{subtask_id}",
           splits=["train"]),
       preprocessors=preprocessors + [t0_metadata_prep],
       postprocess_fn=postprocessors,
       metric_fns=[t5_metrics.accuracy],
   )
+  counter += 1
+  if counter == 2:
+    break
 
 # ====================== Natural Instructions v2.5 ======================
 # Prepare lookup table for positive example info
