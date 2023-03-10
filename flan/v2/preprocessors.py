@@ -329,7 +329,7 @@ def remove_unbatchable_items_ds(ds, training_keys):
           remove_unbatchable_items_ex, training_keys=training_keys))
 
 
-def get_training_keys(patterns_list, add_keys: List[None]):
+def get_training_keys(patterns_list, add_keys: List[str]):
   """Get the feature keys that are actually needed for training."""
 
   def parse_brackets(format_string):

@@ -16,6 +16,7 @@
 
 import collections
 import copy
+import functools
 import re
 from typing import Any, Callable, Dict, List, Mapping
 

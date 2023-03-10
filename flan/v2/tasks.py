@@ -15,6 +15,7 @@
 """Register all tasks in task_configs.py."""
 import copy
 import random
+import functools
 from typing import List, Tuple
 
 from flan.v2 import constants
@@ -38,7 +39,7 @@ def register_zero_shot_task(zero_shot_name: str,
     formatter = prep.get_formatter(patterns[0][0], patterns[0][1])
   else:
     # This batch formatter applies many prompts to a single task.
-    formatter = prep.get_batch_formatter(patterns, shot_type)
+    formatter = prep.get_batch_formatter(patterns)
 
   add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
   for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:

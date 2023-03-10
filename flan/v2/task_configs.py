@@ -63,7 +63,7 @@ lambada_prep_fn = functools.partial(prep.add_source_info,
       task_name="Flan2021", task_source="lambada:1.0.0")
 FLAN_V0_TASK_CONFIGS["lambada"] = TaskConfig(
     source=seqio.TfdsDataSource(tfds_name="lambada:1.0.0", splits=["train"]),
-    preprocessors=[_process_lambada, flan_prep_fn],
+    preprocessors=[_process_lambada, lambada_prep_fn],
     postprocess_fn=post.take_first_word,
     metric_fns=[t5_metrics.accuracy],
 )
