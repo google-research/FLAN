@@ -260,7 +260,6 @@ def reset_split_maxes_on_flan_v0_configs(
     new_flan_configs: A dict of task keys to their TaskConfigs without 30k limit
   """
   new_flan_configs = {}
-  counter = 0
   for key, tconfig in original_flan_configs.items():
     if key == "wsc273":
       # Remove wsc273 since it doesn't contain training data.
@@ -304,7 +303,7 @@ def reset_split_maxes_on_flan_v0_configs(
       new_split_map["test"] = new_split_map["test"][:test_split_idx]
 
     new_prep_fn = functools.partial(prep.add_source_info,
-      task_name="Flan2021", task_source=tconfig.source._tfds_dataset.name)
+      task_name=tconfig.source._tfds_dataset.name, task_source="Flan2021")
     new_flan_configs[key] = TaskConfig(
         source=seqio.TfdsDataSource(
             tfds_name=tconfig.source._tfds_dataset.name,  # pylint: disable=protected-access
@@ -314,9 +313,6 @@ def reset_split_maxes_on_flan_v0_configs(
         postprocess_fn=tconfig.postprocess_fn,
         metric_fns=tconfig.metric_fns,
     )
-    counter += 1
-    if counter == 3:
-      break
   return new_flan_configs
 
 
