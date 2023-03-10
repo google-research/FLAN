@@ -106,7 +106,6 @@ def register_few_shot_version_of_task(
       eval_preprocessors=single_ex_preprocessors,
       train_split='train',
       train_feature_keys=('inputs', 'targets', '_template_idx'),
-                          # '_template_type', '_task_source', '_task_name'),
   )
   # These are the preprocessors we run *after* we have formed few-shot examples.
   # Note that we re-introduce the tokenization steps here.

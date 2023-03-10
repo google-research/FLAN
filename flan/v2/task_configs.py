@@ -16,6 +16,7 @@
 
 import functools
 import os
+import copy
 
 from flan.v2 import constants
 from flan.v2 import constants_niv2
@@ -97,7 +98,7 @@ for dataset_name, cot_type, nlines in [
   )
   # '_input_inversion' will get mapped to an inverted template
   cot_ii_tname = f"{cot_type}_input_inversion_{dataset_name}"
-  COT_II_TASK_CONFIGS[cot_ii_tname] = COT_TASK_CONFIGS[f"{cot_type}_{dataset_name}"]
+  COT_II_TASK_CONFIGS[cot_ii_tname] = copy.deepcopy(COT_TASK_CONFIGS[f"{cot_type}_{dataset_name}"])
   cot_ii_prep_fn = functools.partial(prep.add_source_info,
       task_name=f"{cot_type}_{dataset_name}_ii", task_source="CoT")
   COT_II_TASK_CONFIGS[cot_ii_tname].preprocessors = COT_II_TASK_CONFIGS[cot_ii_tname].preprocessors[:-1] + [cot_ii_prep_fn]
@@ -133,10 +134,10 @@ DIALOG_TASK_CONFIGS["wiki_dialog"] = TaskConfig(
 )
 # '_input_inversion' will get mapped to an inverted template
 wd_ii_tname = "wiki_dialog_input_inversion"
-DIALOG_II_TASK_CONFIGS[wd_ii_tname] = DIALOG_TASK_CONFIGS["wiki_dialog"]
-wikidialog_prep_fn = functools.partial(prep.add_source_info,
+DIALOG_II_TASK_CONFIGS[wd_ii_tname] = copy.deepcopy(DIALOG_TASK_CONFIGS["wiki_dialog"])
+wikidialog_ii_prep_fn = functools.partial(prep.add_source_info,
     task_name=f"wiki_dialog_ii", task_source="Dialog")
-DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors[:-1] + [wikidialog_prep_fn]
+DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors[:-1] + [wikidialog_ii_prep_fn]
 
 
 # ================================== QReCC ====================================
@@ -150,10 +151,10 @@ DIALOG_TASK_CONFIGS["qrecc"] = TaskConfig(
 )
 # '_input_inversion' will get mapped to an inverted template
 qrecc_ii_tname = "qrecc_input_inversion"
-DIALOG_II_TASK_CONFIGS[qrecc_ii_tname] = DIALOG_TASK_CONFIGS["qrecc"]
-wikidialog_prep_fn = functools.partial(prep.add_source_info,
+DIALOG_II_TASK_CONFIGS[qrecc_ii_tname] = copy.deepcopy(DIALOG_TASK_CONFIGS["qrecc"])
+qrecc_ii_prep_fn = functools.partial(prep.add_source_info,
     task_name=f"qrecc_ii", task_source="Dialog")
-DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors[:-1] + [qrecc_prep_fn]
+DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors[:-1] + [qrecc_ii_prep_fn]
 
 # ========================= T0 (P3) Training Sets ===========================
 for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
