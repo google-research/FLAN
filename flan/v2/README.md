@@ -1,38 +1,27 @@
 # The Flan Collection
 
-[**Setup**](#setup) | [**Mixtures**](list-of-mixtures) | [**Run**](how-to-use) | [**Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
+[**Setup**](#setup) | [**Mixtures**](list-of-mixtures) | [**Run**](how-to-use) | [**Flan Collection Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
 
-The Flan Collection of datasets and data augmentation methods for instruction tuning is generated using the code in this repository. The Flan Collection compiles datasets from Flan 2021, [P3](https://huggingface.co/datasets/bigscience/P3), [Super-Natural Instructions](https://arxiv.org/abs/2204.07705), along with dozens more datasets into one place, formats them into a mix of zero-shot, few-shot and chain-of-thought templates, then mixes these in proportions that are found to achieve strong results on held-out evaluation benchmarks, as reported for Flan-T5 and Flan-PaLM in the [Scaling Flan paper](https://arxiv.org/abs/2210.11416).
+The Flan Collection of datasets and data augmentation methods for instruction tuning is generated using the code in this repository. The Flan Collection compiles datasets from Flan 2021, [P3](https://huggingface.co/datasets/bigscience/P3), [Super-Natural Instructions](https://arxiv.org/abs/2204.07705), along with dozens more datasets into one place, formats them into a mix of zero-shot, few-shot and chain-of-thought templates, then mixes these in proportions that are found to achieve strong results on held-out evaluation benchmarks, as reported for Flan-T5 and Flan-PaLM in the [Scaling Flan paper](https://arxiv.org/abs/2210.11416) and [Flan Collection paper](https://arxiv.org/abs/2301.13688).
 
 ## Setup
 ```
+pip install --upgrade pip
 pip install -r flan/v2/requirements.txt
 ```
 
 ## List of Mixtures
 We've broken down the Flan Collection into several sub-mixtures. These are "flan" (Flan 2021), "t0" (P3 excluding Flan 2021), "niv2" (Super-Natural Instructions) "cot" (several Chain-of-Thought datasets), and "dialog" (a few new dialog datasets).
-Each of these come in 4 varieties of templates: zero-shot prompts with answer options (zsopt), zero-shot prompts with no answer options (zsnoopt), few-shot prompts with answer options (fsopt), and few-shot prompts with no answer options (fsnoopt). Answer options indicate whether for multiple choice classification tasks the set of answers are described in the instruction prompt or not.
-
-mixtures.py contains the following submixture combinations:
-```
-{flan,t0,cot,dialog,niv2}_{zsopt,zsnoopt,fsopt,fsnoopt}
-```
+Each of these come in multiple varieties of templates: zero-shot prompts with answer options (zsopt), zero-shot prompts with no answer options (zsnoopt), few-shot prompts with answer options (fsopt), and few-shot prompts with no answer options (fsnoopt). Answer options indicate whether for multiple choice classification tasks the set of answers are described in the instruction prompt or not. These submixtures are instantiated in `flan/v2/mixtures.py`.
 
 ## How to Use
-You can import mixtures.py and directly use the mixtures, or combine all the mixtures into a new mixture, for instance:
+You can import `flan/v2/mixtures.py` and directly use the mixtures, or combine all the mixtures into new mixtures. See `flan/v2/run_example.py` for examples of different mixtures you can create and run, as well as the mixture for the Flan 2022 Collection.
+
 ```
-seqio.MixtureRegistry.add(
-    'full_cot',
-    tasks=[
-        ('cot_zsopt', 25),    # mixing weight = 25
-        ('cot_fsopt', 25),    # mixing weight = 25
-        ('cot_zsnoopt', 25),  # mixing weight = 25
-        ('cot_fsnoopt', 25),  # mixing weight = 25
-    ])
+python flan/v2/run_example.py
 ```
 
-To create the full Flan Collection you will need to create an even mix of each template setting for each submixture, as shown for "cot" above. 
-Finally, you can combine the five submixtures into one final mixture, following mixture rates of your choice, or what is recommended in the paper.
+NB: Unfortunately a couple datasets from the Flan Collection, used to train Flan-T5 and Flan-PaLM, could not be included in these generation scripts due to legal constraints. Those are Dr Repair datasets (https://github.com/michiyasunaga/DrRepair), Deepmind Code Contests (https://github.com/deepmind/code_contests), and Task Master (https://github.com/google-research-datasets/Taskmaster). As a result, we have no Program Synthesis submixture, as described in the paper. However, these datasets comprise a small minority of overall training examples and their exclusion should have negligible effect on results reported in the paper.
 
 ## Citation
 Please cite the following if you found The Flan Collection, our [paper](https://arxiv.org/abs/2301.13688), or these resources useful.
