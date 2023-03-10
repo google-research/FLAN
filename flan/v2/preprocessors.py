@@ -15,7 +15,7 @@
 """Seqio preprocessors."""
 import functools
 import re
-from typing import Dict, Iterable, Mapping, Sequence
+from typing import Dict, Iterable, Mapping, Sequence, List
 
 from flan.v2 import templates
 import numpy as np
@@ -294,8 +294,9 @@ def batch_apply_template(dataset, patterns_list):
       reformat_batched_example, patterns_list=patterns_list)
 
   # First, strip the dataset of unbatchable features.
+  passthrough_keys = ["_template_idx", "_task_source", "_task_name"]
   dataset_batchable_features_only = remove_unbatchable_items_ds(
-      dataset, training_keys=get_training_keys(patterns_list))
+      dataset, training_keys=get_training_keys(patterns_list, passthrough_keys))
 
   # Batch the dataset, in preparation for applying apply_template_to_batch.
   dataset_batched = dataset_batchable_features_only.batch(
@@ -328,7 +329,7 @@ def remove_unbatchable_items_ds(ds, training_keys):
           remove_unbatchable_items_ex, training_keys=training_keys))
 
 
-def get_training_keys(patterns_list):
+def get_training_keys(patterns_list, add_keys: List[None]):
   """Get the feature keys that are actually needed for training."""
 
   def parse_brackets(format_string):
@@ -344,6 +345,9 @@ def get_training_keys(patterns_list):
         training_keys.add(key)
   if "options_" in training_keys:
     training_keys.add("options")
+  if add_keys is not None:
+    for k in add_keys:
+      training_keys.add(k)
   return training_keys
 
 
@@ -407,6 +411,23 @@ def rank_classification_from_options(
 
 GLM_RANK_CLASSIFICATION = functools.partial(
     rank_classification_from_options, glm_style=True)
+
+
+# Add template metadata
+@seqio.utils.map_over_dataset
+def add_template_info(ex, template_type):
+  new_ex = dict(ex)
+  new_ex['_template_type'] = template_type
+  return new_ex
+
+
+# Add source and dataset metadata
+@seqio.utils.map_over_dataset
+def add_source_info(ex, task_name, task_source):
+  new_ex = dict(ex)
+  new_ex['_task_name'] = task_name
+  new_ex['_task_source'] = task_source
+  return new_ex
 
 
 @seqio.utils.map_over_dataset

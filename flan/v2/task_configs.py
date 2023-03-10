@@ -59,9 +59,11 @@ def _process_lambada(example):
   }
 
 
+lambada_prep_fn = functools.partial(prep.add_source_info,
+      task_name="Flan2021", task_source="lambada:1.0.0")
 FLAN_V0_TASK_CONFIGS["lambada"] = TaskConfig(
     source=seqio.TfdsDataSource(tfds_name="lambada:1.0.0", splits=["train"]),
-    preprocessors=[_process_lambada],
+    preprocessors=[_process_lambada, flan_prep_fn],
     postprocess_fn=post.take_first_word,
     metric_fns=[t5_metrics.accuracy],
 )
@@ -83,20 +85,26 @@ for dataset_name, cot_type, nlines in [
     ("aqua", "stream", 2728),
     ("qed", "stream", 5154),
 ]:
+  cot_prep_fn = functools.partial(prep.add_source_info,
+      task_name=f"{cot_type}_{dataset_name}", task_source="CoT")
   COT_TASK_CONFIGS[f"{cot_type}_{dataset_name}"] = TaskConfig(
       source=seqio.TextLineDataSource(
           {"train": os.path.join(COT_DATA_PATH, f"{dataset_name}_train.tsv")},
           num_input_examples={"train": nlines}),
-      preprocessors=[prep.simple_cot_tsv],
+      preprocessors=[prep.simple_cot_tsv, cot_prep_fn],
       postprocess_fn=None,
       metric_fns=[],
   )
   # '_input_inversion' will get mapped to an inverted template
-  COT_II_TASK_CONFIGS[
-      f"{cot_type}_input_inversion_{dataset_name}"] = COT_TASK_CONFIGS[
-          f"{cot_type}_{dataset_name}"]
+  cot_ii_tname = f"{cot_type}_input_inversion_{dataset_name}"
+  COT_II_TASK_CONFIGS[cot_ii_tname] = COT_TASK_CONFIGS[f"{cot_type}_{dataset_name}"]
+  cot_ii_prep_fn = functools.partial(prep.add_source_info,
+      task_name=f"{cot_type}_{dataset_name}_ii", task_source="CoT")
+  COT_II_TASK_CONFIGS[cot_ii_tname].preprocessors = COT_II_TASK_CONFIGS[cot_ii_tname].preprocessors[:-1] + [cot_ii_prep_fn]
 
 # ============ unified_qa, ai2_science_middle with instructions ==============
+uqsi_prep_fn = functools.partial(prep.add_source_info,
+    task_name=f"unified_qa_science_inst", task_source="Flan2021")
 FLAN_V0_TASK_CONFIGS["unified_qa_science_inst"] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name="unified_qa/ai2_science_middle:1.0.0",
@@ -106,6 +114,7 @@ FLAN_V0_TASK_CONFIGS["unified_qa_science_inst"] = TaskConfig(
     preprocessors=[
         prep.filter_unified_qa_science_inst,
         prep.unified_qa_science_inst,
+        uqsi_prep_fn,
         prep.format_options,
     ],
     postprocess_fn=post.take_first_line,
@@ -113,28 +122,38 @@ FLAN_V0_TASK_CONFIGS["unified_qa_science_inst"] = TaskConfig(
 )
 
 # ============================ Wiki Dialog ==============================
+wikidialog_prep_fn = functools.partial(prep.add_source_info,
+    task_name=f"wiki_dialog", task_source="Dialog")
 DIALOG_TASK_CONFIGS["wiki_dialog"] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name="wiki_dialog:1.0.0", splits=["train"]),
-    preprocessors=[prep.wiki_dialog, prep.format_dialog],
+    preprocessors=[prep.wiki_dialog, prep.format_dialog, wikidialog_prep_fn],
     postprocess_fn=post.take_first_line,
     metric_fns=[t5_metrics.accuracy],
 )
 # '_input_inversion' will get mapped to an inverted template
-DIALOG_II_TASK_CONFIGS["wiki_dialog" +
-                       "_input_inversion"] = DIALOG_TASK_CONFIGS["wiki_dialog"]
+wd_ii_tname = "wiki_dialog_input_inversion"
+DIALOG_II_TASK_CONFIGS[wd_ii_tname] = DIALOG_TASK_CONFIGS["wiki_dialog"]
+wikidialog_prep_fn = functools.partial(prep.add_source_info,
+    task_name=f"wiki_dialog_ii", task_source="Dialog")
+DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[wd_ii_tname].preprocessors[:-1] + [wikidialog_prep_fn]
 
 
 # ================================== QReCC ====================================
+qrecc_prep_fn = functools.partial(prep.add_source_info,
+    task_name=f"qrecc", task_source="Dialog")
 DIALOG_TASK_CONFIGS["qrecc"] = TaskConfig(
     source=seqio.TfdsDataSource(tfds_name="q_re_cc:1.0.0", splits=["train"]),
-    preprocessors=[prep.filter_qrecc, prep.qrecc, prep.format_dialog],
+    preprocessors=[prep.filter_qrecc, prep.qrecc, prep.format_dialog, qrecc_prep_fn],
     postprocess_fn=post.take_first_line,
     metric_fns=[t5_metrics.accuracy],
 )
 # '_input_inversion' will get mapped to an inverted template
-DIALOG_II_TASK_CONFIGS["qrecc" +
-                       "_input_inversion"] = DIALOG_TASK_CONFIGS["qrecc"]
+qrecc_ii_tname = "qrecc_input_inversion"
+DIALOG_II_TASK_CONFIGS[qrecc_ii_tname] = DIALOG_TASK_CONFIGS["qrecc"]
+wikidialog_prep_fn = functools.partial(prep.add_source_info,
+    task_name=f"qrecc_ii", task_source="Dialog")
+DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors = DIALOG_II_TASK_CONFIGS[qrecc_ii_tname].preprocessors[:-1] + [qrecc_prep_fn]
 
 # ========================= T0 (P3) Training Sets ===========================
 for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
@@ -162,11 +181,13 @@ for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
         "task_type"] == "t0_multiple_choice_separated_options":
       preprocessors.append(prep.format_options)
 
+  t0_metadata_prep = functools.partial(prep.add_source_info,
+    task_name=subtask_id, task_source="P3")
   T0_TASK_CONFIGS[task_name] = TaskConfig(
       source=seqio.TfdsDataSource(
           tfds_name=f"huggingface:bigscience__p3/{subtask_id}",
           splits=["train"]),
-      preprocessors=preprocessors,
+      preprocessors=preprocessors + [t0_metadata_prep],
       postprocess_fn=postprocessors,
       metric_fns=[t5_metrics.accuracy],
   )
@@ -217,6 +238,8 @@ def lookup_posex_fn(example):
   example["ex_output"] = niv2_posex_output_lookup.lookup(task_key)
   example["ex_explanation"] = niv2_posex_exp_lookup.lookup(task_key)
   example["Definition"] = example["definition"]
+  example["_task_name"] = example["task_name"]
+  example["_task_source"] = "NIv2"
   return example
 
 

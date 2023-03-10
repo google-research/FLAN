@@ -32,17 +32,20 @@ ShotConfig = few_shot.ShotConfig
 # Add zero-shot tasks in task_configs.TASK_CONFIGS.
 def register_zero_shot_task(zero_shot_name: str,
                             zero_shot_config: task_configs.TaskConfig,
-                            patterns: List[Tuple[str, str]]):
+                            patterns: List[Tuple[str, str]],
+                            template_type: str=None):
   if len(patterns) == 1:
     formatter = prep.get_formatter(patterns[0][0], patterns[0][1])
   else:
     # This batch formatter applies many prompts to a single task.
-    formatter = prep.get_batch_formatter(patterns)
+    formatter = prep.get_batch_formatter(patterns, shot_type)
+
+  add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
   for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
     seqio.TaskRegistry.add(
         zero_shot_name + suffix,
         source=zero_shot_config.source,
-        preprocessors=zero_shot_config.preprocessors + formatter +
+        preprocessors=zero_shot_config.preprocessors + [add_template_metadata_fn] + formatter +
         prep.FLAN_TOKENIZE,
         postprocess_fn=zero_shot_config.postprocess_fn,
         output_features=output_features,
@@ -55,17 +58,17 @@ for t_name, config in task_configs.ALL_CANDIDATE_TASK_CONFIGS.items():
 
   selected_patterns = patterns_list[0:1]
   zero_shot_task_name = f"{t_name}_template_0_zero_shot"
-  register_zero_shot_task(zero_shot_task_name, config, selected_patterns)
+  register_zero_shot_task(zero_shot_task_name, config, selected_patterns, "zsopt")
 
   selected_patterns = patterns_list
   zero_shot_task_name = f"{t_name}_template_0to10_zero_shot"
-  register_zero_shot_task(zero_shot_task_name, config, selected_patterns)
+  register_zero_shot_task(zero_shot_task_name, config, selected_patterns, "zsopt")
 
   # Add tasks that have no answer options provided in their templates at all.
   no_opt_patterns_list = templates.PATTERNS_NO_OPTIONS[flan_pattern_name]
   no_opt_selected_patterns = no_opt_patterns_list
   zero_shot_task_name = f"{t_name}_template_0to10_no_opt_zero_shot"
-  register_zero_shot_task(zero_shot_task_name, config, no_opt_selected_patterns)
+  register_zero_shot_task(zero_shot_task_name, config, no_opt_selected_patterns, "zs_noopt")
 
   # Adding tasks with non-deterministic option strings.
   # The option string in each input sequence will have a random format.
@@ -87,7 +90,7 @@ for t_name, config in task_configs.ALL_CANDIDATE_TASK_CONFIGS.items():
     selected_patterns = patterns_list
     zero_shot_task_name = f"{t_name}_template_0to10_non_deter_opt_zero_shot"
     register_zero_shot_task(zero_shot_task_name, config_non_deter_opt,
-                            selected_patterns)
+                            selected_patterns, "zsopt")
 
   # Adding tasks with non-deterministic dialog strings.
   # The dialog string in each input sequence will have a random format.
@@ -103,7 +106,7 @@ for t_name, config in task_configs.ALL_CANDIDATE_TASK_CONFIGS.items():
     selected_patterns = patterns_list
     zero_shot_task_name = f"{t_name}_template_0to10_non_deter_opt_zero_shot"
     register_zero_shot_task(zero_shot_task_name, config_non_deter_dialog,
-                            selected_patterns)
+                            selected_patterns, "zsopt")
 
 
 # ========================== #
@@ -215,11 +218,12 @@ for t_name, config in NON_NIV2_TASK_CONFIGS.items():
                            few_shot_pattern.combined_targets_wo_target_prefix))
     all_formatter = prep.get_batch_formatter(all_patterns)
 
+    add_template_metadata_fn = functools.partial(prep.add_template_info, template_type="fs_opt")
     for task_suffix, task_output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
       seqio.TaskRegistry.add(
           fewshot_base_task_name + task_suffix,
           source=config.source,
-          preprocessors=config.preprocessors + all_formatter +
+          preprocessors=config.preprocessors + [add_template_metadata_fn] + all_formatter +
           prep.FLAN_TOKENIZE,
           postprocess_fn=config.postprocess_fn,
           output_features=task_output_features,
@@ -252,7 +256,7 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
   # This is not necessarily five shot. We name it five_shot so that it matches
   # other few-shot task names. This makes it easy to use.
   register_zero_shot_task(f"{t_name}_template_mix_five_shot", config,
-                          mixed_templates)
+                          mixed_templates) # TODO.
   register_zero_shot_task(f"{t_name}_template_mix_no_opt_five_shot", config,
                           mixed_templates)
 
@@ -268,11 +272,12 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
                          few_shot_pattern.combined_targets_wo_target_prefix))
   all_formatter = prep.get_batch_formatter(all_patterns)
 
+  add_template_metadata_fn = functools.partial(prep.add_template_info, template_type="fs_opt")
   for task_suffix, task_output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
     seqio.TaskRegistry.add(
         fewshot_base_task_name + task_suffix,
         source=config.source,
-        preprocessors=config.preprocessors + all_formatter + prep.FLAN_TOKENIZE,
+        preprocessors=config.preprocessors + [add_template_metadata_fn] + all_formatter + prep.FLAN_TOKENIZE,
         postprocess_fn=config.postprocess_fn,
         output_features=task_output_features,
         metric_fns=config.metric_fns)

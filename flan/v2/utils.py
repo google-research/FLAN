@@ -20,6 +20,7 @@ import re
 from typing import Any, Callable, Dict, List, Mapping
 
 from flan.v2 import constants_t0
+from flan.v2 import preprocessors as prep
 from flan.v2 import task_configs_v1
 import numpy as np
 import seqio
@@ -300,12 +301,14 @@ def reset_split_maxes_on_flan_v0_configs(
     if test_split_idx != -1 and reserve_exs is None:
       new_split_map["test"] = new_split_map["test"][:test_split_idx]
 
+    new_prep_fn = functools.partial(prep.add_source_info,
+      task_name="Flan2021", task_source=tconfig.source._tfds_dataset.name)
     new_flan_configs[key] = TaskConfig(
         source=seqio.TfdsDataSource(
             tfds_name=tconfig.source._tfds_dataset.name,  # pylint: disable=protected-access
             splits=new_split_map,
         ),
-        preprocessors=tconfig.preprocessors,
+        preprocessors=tconfig.preprocessors + [new_prep_fn],
         postprocess_fn=tconfig.postprocess_fn,
         metric_fns=tconfig.metric_fns,
     )
