@@ -101,12 +101,13 @@ dataset = selected_mixture.get_dataset(
 # To read out the data you can do something like this:
 save_data = []
 source_counter = defaultdict(lambda: 0)
-for i, ex in enumerate(dataset):
+NUM_SAMPLES = 100
+# If you would like to take min(1 epoch, NUM_SAMPLES) then use dataset.take(NUM_SAMPLES)
+# Or if you would like to gather a full epoch, simply `enumerate(dataset)` until completion.
+for i, ex in enumerate(dataset.take(NUM_SAMPLES)):
     source_counter[ex["_task_source"].numpy()] += 1
     save_data.append((ex["inputs_pretokenized"].numpy().decode(),
                       ex["targets_pretokenized"].numpy().decode()))
-    if i == 100:
-        break
 
 print(f"Data Submixture Counts: {source_counter}")
 
