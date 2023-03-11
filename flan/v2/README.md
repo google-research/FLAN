@@ -18,7 +18,7 @@ Each of these come in multiple varieties of templates: zero-shot prompts with an
 You can import `flan/v2/mixtures.py` and directly use the mixtures, or combine all the mixtures into new mixtures. See `flan/v2/run_example.py` for examples of different mixtures you can create and run, as well as the mixture for the Flan 2022 Collection.
 
 ```
-python flan/v2/run_example.py
+PYTHONPATH=. python flan/v2/run_example.py
 ```
 
 NB: Unfortunately a couple datasets from the Flan Collection, used to train Flan-T5 and Flan-PaLM, could not be included in these generation scripts due to legal constraints. Those are Dr Repair datasets (https://github.com/michiyasunaga/DrRepair), Deepmind Code Contests (https://github.com/deepmind/code_contests), and Task Master (https://github.com/google-research-datasets/Taskmaster). As a result, we have no Program Synthesis submixture, as described in the paper. However, these datasets comprise a small minority of overall training examples and their exclusion should have negligible effect on results reported in the paper.
