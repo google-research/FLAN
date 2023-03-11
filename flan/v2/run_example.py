@@ -13,9 +13,9 @@ import tensorflow as tf
 import flan.v2.mixtures
 
 
-################################################################
-###### Instantiate the submixtures with each template style
-################################################################
+##############################################################
+##### Instantiate the submixtures with each template style
+##############################################################
 
 # ZSOPT, FSOPT, ZSNOOPT, FSNOOPT are template styles.
 # ZS means a zero-shot prompt, FS means a few-shot prompt
@@ -65,17 +65,17 @@ seqio.MixtureRegistry.add(
 seqio.MixtureRegistry.add(
     'flan2022_submix',
     tasks=[
-        ('flan2021_submix', 0.4),     # mixing weight = 40%
-        ('t0_submix', 0.32),      # mixing weight = 32%
-        # ('niv2_submix', 0.2),     # mixing weight = 20%
-        ('cot_submix', 0.05),     # mixing weight = 5%
-        ('dialog_submix', 0.03),  # mixing weight = 3%
+        ('flan2021_submix', 0.4),  # mixing weight = 40%
+        ('t0_submix', 0.32),       # mixing weight = 32%
+        ('niv2_submix', 0.2),      # mixing weight = 20%
+        ('cot_submix', 0.05),      # mixing weight = 5%
+        ('dialog_submix', 0.03),   # mixing weight = 3%
     ])
 
 
-################################################################
-###### See 3 Examples of Mixtures or Submixtures you can try
-################################################################
+##############################################################
+##### See 3 Examples of Mixtures or Submixtures you can try
+##############################################################
 # 1. Example use cases to use just the chain-of-thought zero-shot data:
 selected_mixture = seqio.get_mixture_or_task('cot_zsopt')
 
