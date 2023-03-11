@@ -78,6 +78,10 @@ for task in ['FLAN', 'T0', 'CoT', 'Dialog', 'NIv2']:
       tasks = [task]
       rates = {task: 1}
 
+    # CoT, NIv2, and Dialog do not have NoOpt versions.
+    if task in ["CoT", "Dialog", "NIv2"] and "NoOpt" in setting:
+        continue
+
     mixture_name = f'{task.lower()}_{setting.lower()}'
     mixtures_utils.generate_mixture_suites(
         submixtures=tasks,

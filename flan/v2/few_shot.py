@@ -105,9 +105,7 @@ def register_few_shot_version_of_task(
       train_preprocessors=single_ex_preprocessors,
       eval_preprocessors=single_ex_preprocessors,
       train_split='train',
-      train_feature_keys=('inputs', 'targets',
-                          '_template_idx') if prune_based_on_template_idx else
-      ('inputs', 'targets'),
+      train_feature_keys=('inputs', 'targets', '_template_idx'),
   )
   # These are the preprocessors we run *after* we have formed few-shot examples.
   # Note that we re-introduce the tokenization steps here.
