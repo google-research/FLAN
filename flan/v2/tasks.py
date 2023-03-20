@@ -16,6 +16,8 @@
 import copy
 import random
 import functools
+import json
+import os
 from typing import List, Tuple
 
 from flan.v2 import constants
@@ -28,6 +30,24 @@ import seqio
 
 # All tasks will be defined for each set of features.
 ShotConfig = few_shot.ShotConfig
+
+
+# Load all Natural Instruction V2 exemplars into memory.
+_niv2_few_shot_exemplar_file = os.path.join(
+    os.path.dirname(__file__), 'data', 'niv2_exemplars.jsonl')
+_niv2_few_shot_exemplars = [
+    json.loads(x) for x in open(_niv2_few_shot_exemplar_file, 'r').readlines()]
+_niv2_task_names = [x['task'] for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_inputs = [[y['input'] for y in x['sample']] for x in few_shot_examples]
+_niv2_exemplar_targets = [[y['output'] for y in x['sample']] for x in few_shot_examples]
+_niv2_exemplar_inputs_lookup = tf.lookup.StaticHashTable(
+    tf.lookup.KeyValueTensorInitializer(
+        tf.constant(_niv2_task_names), tf.constant(_niv2_exemplar_inputs)),
+    default_value="")
+_niv2_exemplar_targets_lookup = tf.lookup.StaticHashTable(
+    tf.lookup.KeyValueTensorInitializer(
+        tf.constant(_niv2_task_names), tf.constant(_niv2_exemplar_targets)),
+    default_value="")
 
 
 # Add zero-shot tasks in task_configs.TASK_CONFIGS.
@@ -59,12 +79,9 @@ def register_niv2_few_shot_task(
     zero_shot_config: task_configs.TaskConfig,
     patterns: List[Tuple[str, str]],
     template_type: str=None):
-  if len(patterns) == 1:
-    formatter = prep.get_formatter(patterns[0][0], patterns[0][1])
-  else:
-    # This batch formatter applies many prompts to a single task.
-    formatter = prep.get_batch_formatter(patterns)
-
+  formatter = functools.partial(prep.get_niv2_few_shot_batch_formatter,
+                                exemplar_input_lookup=_niv2_exemplar_inputs_lookup,
+                                exemplar_targets_lookup=_niv2_exemplar_targets_lookup)
   add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
   for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
     seqio.TaskRegistry.add(
