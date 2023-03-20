@@ -79,16 +79,18 @@ def register_niv2_few_shot_task(
     zero_shot_config: task_configs.TaskConfig,
     patterns: List[Tuple[str, str]],
     template_type: str=None):
-  formatter = functools.partial(prep.get_niv2_few_shot_batch_formatter,
-                                exemplar_input_lookup=_niv2_exemplar_inputs_lookup,
-                                exemplar_targets_lookup=_niv2_exemplar_targets_lookup)
+  add_exemplar_features_fn = functools.partial(
+      prep.niv2_few_shot_exemplar_lookup_fn,
+      exemplar_input_lookup=_niv2_exemplar_inputs_lookup,
+      exemplar_targets_lookup=_niv2_exemplar_targets_lookup)
   add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
   for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
     seqio.TaskRegistry.add(
         zero_shot_name + suffix,
         source=zero_shot_config.source,
-        preprocessors=zero_shot_config.preprocessors + [add_template_metadata_fn] + formatter +
-        prep.FLAN_TOKENIZE,
+        preprocessors=zero_shot_config.preprocessors +
+        [add_exemplar_features_fn, add_template_metadata_fn] +
+        prep.get_batch_formatter(patterns) + prep.FLAN_TOKENIZE,
         postprocess_fn=zero_shot_config.postprocess_fn,
         output_features=output_features,
         metric_fns=zero_shot_config.metric_fns)
