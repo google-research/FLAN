@@ -80,7 +80,7 @@ def register_zero_shot_task(zero_shot_name: str,
 def register_niv2_few_shot_task(
     few_shot_name: str,
     zero_shot_config: task_configs.TaskConfig,
-    patterns: List[Tuple[str, str]],
+    patterns: List[Tuple[str, str, str]],
     template_type: str=None):
   add_exemplar_features_fn = functools.partial(
       prep.niv2_few_shot_exemplar_lookup_fn,
@@ -312,7 +312,8 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
   few_shot_patterns = []
   for few_shot_pattern in x_shot_templates:
     few_shot_patterns.append((few_shot_pattern.combined_inputs_w_target_prefix,
-                              few_shot_pattern.combined_targets_wo_target_prefix))
+                              few_shot_pattern.combined_targets_wo_target_prefix,
+                              few_shot_pattern.example_separator))
 
   for opt_type_name, template_type in [
       ("", "fs_opt"),
