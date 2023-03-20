@@ -37,7 +37,7 @@ _niv2_few_shot_exemplars = []
 for _part_idx in range(10):
   _niv2_few_shot_exemplar_file = os.path.join(
       os.path.dirname(__file__), 'niv2_few_shot_data',
-      'niv2_exemplars.jsonl-{:05d}-of-00242'.format(_part_idx))
+      'niv2_exemplars.jsonl-{:05d}-of-00010'.format(_part_idx))
   _niv2_few_shot_exemplars.extend([
       json.loads(x) for x in open(_niv2_few_shot_exemplar_file, 'r').readlines()])
 _niv2_task_names = [x['task'] for x in _niv2_few_shot_exemplars]
