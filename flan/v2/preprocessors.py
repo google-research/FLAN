@@ -274,9 +274,18 @@ def reformat_single_example(example, patterns_list, i):
   format_strings = {"inputs": inputs_pattern, "targets": targets_pattern}
   new_example = dict(example)
   for f_name, format_str in format_strings.items():
-    if 'exemplar_inputs' in example:
+    if "exemplar_inputs" in example and f_name == "inputs":
       # TODO(Shayne Longpre): implement format_few_shot_from_feature_dictionary.
-      new_example[f_name] = format_few_shot_from_feature_dictionary(format_str, example)
+      # The format_str should be in the format of:
+      #   inputs_prefix + {inputs} + x_y_delimiter + targets_prefix
+      # But we actually want to use the following format (using 2-shot as an example):
+      #   {Definition} + "\n\n" +
+      #   inputs_prefix + {exemplar_inputs[0]} + x_y_delimiter + targets_prefix + {exemplar_targets[0]}
+      #   + {example_separator} +
+      #   inputs_prefix + {exemplar_inputs[1]} + x_y_delimiter + targets_prefix + {exemplar_targets[1]}
+      #   + {example_separator} +
+      #   inputs_prefix + {inputs} + x_y_delimiter + targets_prefix
+      new_example[f_name] = format_niv2_few_shot_from_feature_dictionary(format_str, example)
     else:
       new_example[f_name] = format_from_feature_dictionary(format_str, example)
   return new_example
