@@ -270,7 +270,11 @@ def example_list_to_batch(example_list):
 
 def reformat_single_example(example, patterns_list, i):
   """Formats an example into inputs and targets."""
-  inputs_pattern, targets_pattern = patterns_list[i]
+  if len(patterns_list[i]) == 2:
+    inputs_pattern, targets_pattern = patterns_list[i]
+  else:
+    assert len(patterns_list[i]) == 3
+    inputs_pattern, targets_pattern, example_separator = patterns_list[i]
   format_strings = {"inputs": inputs_pattern, "targets": targets_pattern}
   new_example = dict(example)
   for f_name, format_str in format_strings.items():
@@ -285,7 +289,8 @@ def reformat_single_example(example, patterns_list, i):
       #   inputs_prefix + {exemplar_inputs[1]} + x_y_delimiter + targets_prefix + {exemplar_targets[1]}
       #   + {example_separator} +
       #   inputs_prefix + {inputs} + x_y_delimiter + targets_prefix
-      new_example[f_name] = format_niv2_few_shot_from_feature_dictionary(format_str, example)
+      new_example[f_name] = format_niv2_few_shot_from_feature_dictionary(
+          format_str, example, example_separator)
     else:
       new_example[f_name] = format_from_feature_dictionary(format_str, example)
   return new_example
