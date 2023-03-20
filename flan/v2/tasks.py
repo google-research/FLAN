@@ -34,7 +34,7 @@ ShotConfig = few_shot.ShotConfig
 
 # Load all Natural Instruction V2 exemplars into memory.
 _niv2_few_shot_exemplar_file = os.path.join(
-    os.path.dirname(__file__), 'data', 'niv2_exemplars.jsonl')
+    os.path.dirname(__file__), 'niv2_few_shot_data', 'exemplars.jsonl')
 _niv2_few_shot_exemplars = [
     json.loads(x) for x in open(_niv2_few_shot_exemplar_file, 'r').readlines()]
 _niv2_task_names = [x['task'] for x in _niv2_few_shot_exemplars]
