@@ -274,7 +274,11 @@ def reformat_single_example(example, patterns_list, i):
   format_strings = {"inputs": inputs_pattern, "targets": targets_pattern}
   new_example = dict(example)
   for f_name, format_str in format_strings.items():
-    new_example[f_name] = format_from_feature_dictionary(format_str, example)
+    if 'exemplar_inputs' in example:
+      # TODO(Shayne Longpre): implement format_few_shot_from_feature_dictionary.
+      new_example[f_name] = format_few_shot_from_feature_dictionary(format_str, example)
+    else:
+      new_example[f_name] = format_from_feature_dictionary(format_str, example)
   return new_example
 
 
@@ -1449,6 +1453,29 @@ def dmcc(example: tf.Tensor) -> Mapping[str, tf.Tensor]:
       "question": ex_inputs,
       "answer": ex_targets,
   }
+
+
+@seqio.map_over_dataset
+def niv2_few_shot_exemplar_lookup_fn(
+    example,
+    exemplar_input_lookup,
+    exemplar_targets_lookup,
+):
+  """Lookup positive example fields and populate the dataset example."""
+  task_key = tf.strings.split(example["task_name"], sep=".")[0]
+  example["exemplar_inputs"] = exemplar_input_lookup.lookup(task_key)
+  example["exemplar_targets"] = exemplar_targets_lookup.lookup(task_key)
+  return example
+
+
+@seqio.map_over_dataset
+def niv2_few_shot_exemplar_lookup_fn(example):
+  # TODO(Shayne Longpre)
+  # Just keep 2 to 3 random exemplars in
+  # example["exemplar_inputs"] and example["exemplar_targets"].
+  # Note that if you pick the N-th exemplar_inputs, you also need
+  # to pick the N-th exemplar_targets.
+  return example
 
 
 @tf.function(input_signature=[tf.TensorSpec(None, tf.string)])
