@@ -280,8 +280,10 @@ def reformat_single_example(example, patterns_list, i):
   for f_name, format_str in format_strings.items():
     if "exemplar_inputs" in example and f_name == "inputs":
       # TODO(Shayne Longpre): implement format_few_shot_from_feature_dictionary.
-      # The format_str should be in the format of:
+      # The inputs_pattern should be in the format of:
       #   inputs_prefix + {inputs} + x_y_delimiter + targets_prefix
+      # for example:
+      #   "Q: {input}\nA: "
       # But we actually want to use the following format (using 2-shot as an example):
       #   {Definition} + "\n\n" +
       #   inputs_prefix + {exemplar_inputs[0]} + x_y_delimiter + targets_prefix + {exemplar_targets[0]}
