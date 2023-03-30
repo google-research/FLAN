@@ -218,7 +218,7 @@ niv2_posex_exp_lookup = tf.lookup.StaticHashTable(
 NIV2_MMLU_TASK_KEYS = tf.constant([
     k.split(".")[0]
     for k in NATINST_META_DATA.keys()
-    if int(k.split("_")[0].replace("task", "")) in list(range(685, 738))
+    if int(k.split("_")[0].replace("task", "")) in list(range(685, 738)) + [664, 665, 666, 667]
 ])
 
 
