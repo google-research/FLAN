@@ -624,6 +624,8 @@ def _process_opinion_abstracts_rotten_tomatoes(example):
   }
 
 
+oart_prep_fn = functools.partial(prep.add_source_info,
+    task_name="opinion_abstracts_rotten_tomatoes", task_source="Flan2021")
 TASK_CONFIGS['opinion_abstracts_rotten_tomatoes'] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name='opinion_abstracts/rotten_tomatoes:1.0.0',
@@ -633,6 +635,7 @@ TASK_CONFIGS['opinion_abstracts_rotten_tomatoes'] = TaskConfig(
             'test': 'train[-500:]',
         }),
     preprocessors=[
+        oart_prep_fn,
         _process_opinion_abstracts_rotten_tomatoes,
     ],
     postprocess_fn=None,
@@ -652,7 +655,8 @@ def _process_opinion_abstracts_idebate(example):
           prep.numbered_items_str(example['_argument_sentences']['value'][:10]),
   }
 
-
+oaid_prep_fn = functools.partial(prep.add_source_info,
+    task_name="opinion_abstracts_idebate", task_source="Flan2021")
 TASK_CONFIGS['opinion_abstracts_idebate'] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name='opinion_abstracts/idebate:1.0.0',
@@ -662,6 +666,7 @@ TASK_CONFIGS['opinion_abstracts_idebate'] = TaskConfig(
             'test': 'train[-500:]',
         }),
     preprocessors=[
+        oaid_prep_fn,
         _process_opinion_abstracts_idebate,
     ],
     postprocess_fn=None,
@@ -1454,10 +1459,13 @@ def _process_para_crawl_enes(example):
   }
 
 
+pc_prep_fn = functools.partial(prep.add_source_info,
+    task_name="para_crawl_enes", task_source="Flan2021")
 TASK_CONFIGS['para_crawl_enes'] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name='para_crawl/enes:1.2.0', splits=PARACRAWL_SPLITS_DICT),
     preprocessors=[
+        pc_prep_fn,
         _process_para_crawl_enes,
     ],
     postprocess_fn=None,
@@ -1754,7 +1762,8 @@ def _filter_true_case(dataset):
 
   return dataset.filter(my_fn)
 
-
+tc_prep_fn = functools.partial(prep.add_source_info,
+    task_name="true_case", task_source="Flan2021")
 true_case_val_end = NUM_TRAIN_EXAMPLES + NUM_VAL_EXAMPLES
 TASK_CONFIGS['true_case'] = TaskConfig(
     source=seqio.TfdsDataSource(
@@ -1765,6 +1774,7 @@ TASK_CONFIGS['true_case'] = TaskConfig(
             'test': 'train[-3000:]',
         }),
     preprocessors=[
+        tc_prep_fn,
         _process_true_case,
         _filter_true_case,
     ],
@@ -1790,7 +1800,8 @@ def _filter_fix_punct(dataset):
 
   return dataset.filter(my_fn)
 
-
+fp_prep_fn = functools.partial(prep.add_source_info,
+    task_name="fix_punct", task_source="Flan2021")
 fix_punct_train_end = true_case_val_end + NUM_TRAIN_EXAMPLES
 fix_punct_val_end = fix_punct_train_end + NUM_VAL_EXAMPLES
 TASK_CONFIGS['fix_punct'] = TaskConfig(
@@ -1819,7 +1830,8 @@ def _process_word_segment(example):
       'answer': text,
   }
 
-
+ws_prep_fn = functools.partial(prep.add_source_info,
+    task_name="word_segment", task_source="Flan2021")
 w_seg_train_end = fix_punct_val_end + NUM_TRAIN_EXAMPLES
 w_seg_val_end = w_seg_train_end + NUM_VAL_EXAMPLES
 TASK_CONFIGS['word_segment'] = TaskConfig(
@@ -1831,6 +1843,7 @@ TASK_CONFIGS['word_segment'] = TaskConfig(
             'test': 'train[-3000:]',
         }),
     preprocessors=[
+        ws_prep_fn,
         _process_word_segment,
     ],
     postprocess_fn=None,

@@ -84,6 +84,9 @@ selected_mixture = seqio.get_mixture_or_task('cot_zsopt')
 
 # 3. Example use cases to use the full Flan Collection:
 # selected_mixture = seqio.get_mixture_or_task('flan2022_submix')
+# This last one (the final Flan Collection mixture) may take too long to run if not
+# cached. We suggest starting by caching each of:
+# `cot_submix`, `flan2021_submix`, `dialog_submix`, `t0_submix`, `niv2_submix`.
 
 # If you're using Seqio, we suggest caching your mixture as they take a while to generate.
 # If you want to read out the post-processed examples into a file, we suggest using the

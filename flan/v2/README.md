@@ -21,7 +21,11 @@ You can import `flan/v2/mixtures.py` and directly use the mixtures, or combine a
 PYTHONPATH=. python flan/v2/run_example.py
 ```
 
-NB: Unfortunately a couple datasets from the Flan Collection, used to train Flan-T5 and Flan-PaLM, could not be included in these generation scripts due to legal constraints. Those are Dr Repair datasets (https://github.com/michiyasunaga/DrRepair), Deepmind Code Contests (https://github.com/deepmind/code_contests), and Task Master (https://github.com/google-research-datasets/Taskmaster). As a result, we have no Program Synthesis submixture, as described in the paper. However, these datasets comprise a small minority of overall training examples and their exclusion should have negligible effect on results reported in the paper.
+NB #1: These scripts download and process dozens of GBs of data, which is usually not feasible in a single run. We recommend starting with submixtures like `cot_submix`, `flan2021_submix`, `dialog_submix`, `t0_submix` and `niv2_submix`, as shown in `flan/v2/run_example.py`. If you plan to use Seqio/T5X for training then we recommend caching the datasets, following these [instructions](https://github.com/google/seqio#optional-offline-caching). If not, you can use the above script to collect the data as raw text/json.
+
+NB #2: Unfortunately a couple datasets from the Flan Collection, used to train Flan-T5 and Flan-PaLM, could not be included in these generation scripts due to legal constraints. Those are Dr Repair datasets (https://github.com/michiyasunaga/DrRepair), Deepmind Code Contests (https://github.com/deepmind/code_contests), and Task Master (https://github.com/google-research-datasets/Taskmaster). As a result, we have no Program Synthesis submixture, as described in the paper. However, these datasets comprise a small minority of overall training examples and their exclusion should have negligible effect on results reported in the paper.
+
+NB #3: If you hit checksum errors from Tensorflow Datasets (TFDS), try updating to the latest `tfds-nightly` then loading the problematic dataset directly with [tfds.load(...)](https://www.tensorflow.org/datasets/api_docs/python/tfds/load). As dataset requirements may change over time (e.g. approvals), occassionally some datasets may no longer be available or require manual download, as suggested [here](https://github.com/google-research/FLAN/issues/37#issuecomment-1479810887).
 
 ## Citation
 Please cite the following if you found The Flan Collection, our [paper](https://arxiv.org/abs/2301.13688), or these resources useful.
