@@ -635,8 +635,8 @@ TASK_CONFIGS['opinion_abstracts_rotten_tomatoes'] = TaskConfig(
             'test': 'train[-500:]',
         }),
     preprocessors=[
-        oart_prep_fn,
         _process_opinion_abstracts_rotten_tomatoes,
+        oart_prep_fn,
     ],
     postprocess_fn=None,
     metric_fns=[t5_metrics.rouge],
@@ -666,8 +666,8 @@ TASK_CONFIGS['opinion_abstracts_idebate'] = TaskConfig(
             'test': 'train[-500:]',
         }),
     preprocessors=[
-        oaid_prep_fn,
         _process_opinion_abstracts_idebate,
+        oaid_prep_fn,
     ],
     postprocess_fn=None,
     metric_fns=[t5_metrics.rouge],
@@ -1465,8 +1465,8 @@ TASK_CONFIGS['para_crawl_enes'] = TaskConfig(
     source=seqio.TfdsDataSource(
         tfds_name='para_crawl/enes:1.2.0', splits=PARACRAWL_SPLITS_DICT),
     preprocessors=[
-        pc_prep_fn,
         _process_para_crawl_enes,
+        pc_prep_fn,
     ],
     postprocess_fn=None,
     metric_fns=[t5_metrics.bleu],
@@ -1774,8 +1774,8 @@ TASK_CONFIGS['true_case'] = TaskConfig(
             'test': 'train[-3000:]',
         }),
     preprocessors=[
-        tc_prep_fn,
         _process_true_case,
+        tc_prep_fn,
         _filter_true_case,
     ],
     postprocess_fn=None,
@@ -1814,6 +1814,7 @@ TASK_CONFIGS['fix_punct'] = TaskConfig(
         }),
     preprocessors=[
         _process_fix_punct,
+        fp_prep_fn,
         _filter_fix_punct,
     ],
     postprocess_fn=None,
@@ -1843,8 +1844,8 @@ TASK_CONFIGS['word_segment'] = TaskConfig(
             'test': 'train[-3000:]',
         }),
     preprocessors=[
-        ws_prep_fn,
         _process_word_segment,
+        ws_prep_fn,
     ],
     postprocess_fn=None,
     metric_fns=[t5_metrics.edit_distance],
