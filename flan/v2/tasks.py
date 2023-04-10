@@ -16,6 +16,9 @@
 import copy
 import random
 import functools
+import json
+import os
+import tensorflow as tf
 from typing import List, Tuple
 
 from flan.v2 import constants
@@ -28,6 +31,30 @@ import seqio
 
 # All tasks will be defined for each set of features.
 ShotConfig = few_shot.ShotConfig
+
+
+# Load all Natural Instruction V2 exemplars into memory.
+_niv2_few_shot_exemplars = []
+for _part_idx in range(10):
+  _niv2_few_shot_exemplar_file = os.path.join(
+      os.path.dirname(__file__), 'niv2_few_shot_data',
+      'niv2_exemplars.jsonl-{:05d}-of-00010'.format(_part_idx))
+  _niv2_few_shot_exemplars.extend([
+      json.loads(x) for x in open(_niv2_few_shot_exemplar_file, 'r').readlines()])
+
+def _flatten(list_of_str):
+  return '\nflanv2-separator\n'.join([str(x) for x in list_of_str])
+_niv2_task_names = [x['task'].split('.')[0] for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_inputs = [_flatten([y['input'] for y in x['sample']]) for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_targets = [_flatten([y['output'] for y in x['sample']]) for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_inputs_lookup = tf.lookup.StaticHashTable(
+    tf.lookup.KeyValueTensorInitializer(
+        tf.constant(_niv2_task_names), tf.constant(_niv2_exemplar_inputs)),
+    default_value="")
+_niv2_exemplar_targets_lookup = tf.lookup.StaticHashTable(
+    tf.lookup.KeyValueTensorInitializer(
+        tf.constant(_niv2_task_names), tf.constant(_niv2_exemplar_targets)),
+    default_value="")
 
 
 # Add zero-shot tasks in task_configs.TASK_CONFIGS.
@@ -48,6 +75,29 @@ def register_zero_shot_task(zero_shot_name: str,
         source=zero_shot_config.source,
         preprocessors=zero_shot_config.preprocessors + [add_template_metadata_fn] + formatter +
         prep.FLAN_TOKENIZE,
+        postprocess_fn=zero_shot_config.postprocess_fn,
+        output_features=output_features,
+        metric_fns=zero_shot_config.metric_fns)
+
+
+# Add zero-shot tasks in task_configs.TASK_CONFIGS.
+def register_niv2_few_shot_task(
+    few_shot_name: str,
+    zero_shot_config: task_configs.TaskConfig,
+    patterns: List[Tuple[str, str, str]],
+    template_type: str=None):
+  add_exemplar_features_fn = functools.partial(
+      prep.niv2_few_shot_exemplar_lookup_fn,
+      exemplar_input_lookup=_niv2_exemplar_inputs_lookup,
+      exemplar_targets_lookup=_niv2_exemplar_targets_lookup)
+  add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
+  for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
+    seqio.TaskRegistry.add(
+        few_shot_name + suffix,
+        source=zero_shot_config.source,
+        preprocessors=zero_shot_config.preprocessors +
+        [add_template_metadata_fn, add_exemplar_features_fn] +
+        prep.get_batch_formatter(patterns) + prep.FLAN_TOKENIZE,
         postprocess_fn=zero_shot_config.postprocess_fn,
         output_features=output_features,
         metric_fns=zero_shot_config.metric_fns)
@@ -263,45 +313,16 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
   register_zero_shot_task(f"{t_name}_template_mix_no_opt_five_shot", config,
                           mixed_templates, "fs_noopt")
 
-  # Build few-shot with non-deterministic templates.
-  # The #. of shots is non-deterministic too.
-  # We have 10 templates/task. So in average 2.5 shots/task.
-  num_shots_int = 25
-  fewshot_base_task_name = f"{t_name}_template_0to10"
-
-  all_patterns = []
+  few_shot_patterns = []
   for few_shot_pattern in x_shot_templates:
-    all_patterns.append((few_shot_pattern.combined_inputs_w_target_prefix,
-                         few_shot_pattern.combined_targets_wo_target_prefix))
-  all_formatter = prep.get_batch_formatter(all_patterns)
+    few_shot_patterns.append((few_shot_pattern.combined_inputs_w_target_prefix,
+                              few_shot_pattern.combined_targets_wo_target_prefix,
+                              few_shot_pattern.input_pattern))
 
-  add_template_metadata_fn = functools.partial(prep.add_template_info, template_type="fs_opt")
-  for task_suffix, task_output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
-    seqio.TaskRegistry.add(
-        fewshot_base_task_name + task_suffix,
-        source=config.source,
-        preprocessors=config.preprocessors + [add_template_metadata_fn] + all_formatter + prep.FLAN_TOKENIZE,
-        postprocess_fn=config.postprocess_fn,
-        output_features=task_output_features,
-        metric_fns=config.metric_fns)
-    # Task names:
-    # f'{t_name}_template_0to10_x_shot{suffix}'
-    # f'{t_name}_template_0to10_no_opt_x_shot{suffix}'
-    # The `_no_opt` version is not really used.
-    for opt_type_name in ["", "_no_opt"]:
-      few_shot.register_few_shot_version_of_task(
-          base_task_name=fewshot_base_task_name + task_suffix,
-          new_task_name=(fewshot_base_task_name + opt_type_name + "_x_shot" +
-                         task_suffix),
-          num_shots=num_shots_int,
-          prune_exemplars=True,
-          max_input_length=constants.FEW_SHOT_MAX_LEN,
-          prune_based_on_template_idx=True,
-          x_y_delimiter="",
-          inputs_prefix="",
-          targets_prefix="",
-          example_separator="",
-          strip_targets=True,
-          # We always use the 0th template's final_suffix and input_pattern.
-          final_suffix=x_shot_templates[0].final_suffix,
-          input_pattern=x_shot_templates[0].input_pattern)
+  for opt_type_name, template_type in [
+      ("", "fs_opt"),
+      ("_no_opt", "fs_noopt"),
+  ]:
+    few_shot_task_name = f"{t_name}_template_0to10{opt_type_name}_x_shot"
+    register_niv2_few_shot_task(few_shot_task_name, config,
+                                few_shot_patterns, template_type)
