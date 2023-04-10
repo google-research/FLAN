@@ -6,8 +6,7 @@ The Flan Collection of datasets and data augmentation methods for instruction tu
 
 ## Setup
 ```
-pip install --upgrade pip
-pip install -r flan/v2/requirements.txt
+bash setup.sh
 ```
 
 ## List of Mixtures
