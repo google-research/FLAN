@@ -18,6 +18,7 @@ import random
 import functools
 import json
 import os
+import tensorflow as tf
 from typing import List, Tuple
 
 from flan.v2 import constants
@@ -40,9 +41,12 @@ for _part_idx in range(10):
       'niv2_exemplars.jsonl-{:05d}-of-00010'.format(_part_idx))
   _niv2_few_shot_exemplars.extend([
       json.loads(x) for x in open(_niv2_few_shot_exemplar_file, 'r').readlines()])
-_niv2_task_names = [x['task'] for x in _niv2_few_shot_exemplars]
-_niv2_exemplar_inputs = [[y['input'] for y in x['sample']] for x in few_shot_examples]
-_niv2_exemplar_targets = [[y['output'] for y in x['sample']] for x in few_shot_examples]
+
+def _flatten(list_of_str):
+  return '\nflanv2-separator\n'.join([str(x) for x in list_of_str])
+_niv2_task_names = [x['task'].split('.')[0] for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_inputs = [_flatten([y['input'] for y in x['sample']]) for x in _niv2_few_shot_exemplars]
+_niv2_exemplar_targets = [_flatten([y['output'] for y in x['sample']]) for x in _niv2_few_shot_exemplars]
 _niv2_exemplar_inputs_lookup = tf.lookup.StaticHashTable(
     tf.lookup.KeyValueTensorInitializer(
         tf.constant(_niv2_task_names), tf.constant(_niv2_exemplar_inputs)),
@@ -89,10 +93,10 @@ def register_niv2_few_shot_task(
   add_template_metadata_fn = functools.partial(prep.add_template_info, template_type=template_type)
   for suffix, output_features in constants.TRAIN_TASK_SUFFIXES_AND_FEATURES:
     seqio.TaskRegistry.add(
-        zero_shot_name + suffix,
+        few_shot_name + suffix,
         source=zero_shot_config.source,
         preprocessors=zero_shot_config.preprocessors +
-        [add_exemplar_features_fn, add_template_metadata_fn] +
+        [add_template_metadata_fn, add_exemplar_features_fn] +
         prep.get_batch_formatter(patterns) + prep.FLAN_TOKENIZE,
         postprocess_fn=zero_shot_config.postprocess_fn,
         output_features=output_features,
@@ -313,7 +317,7 @@ for t_name, config in task_configs.NIV2_TASK_CONFIGS.items():
   for few_shot_pattern in x_shot_templates:
     few_shot_patterns.append((few_shot_pattern.combined_inputs_w_target_prefix,
                               few_shot_pattern.combined_targets_wo_target_prefix,
-                              few_shot_pattern.example_separator))
+                              few_shot_pattern.input_pattern))
 
   for opt_type_name, template_type in [
       ("", "fs_opt"),
