@@ -1,9 +1,11 @@
+import functools
 import json
 import csv
 # pip install -q datasets
 import datasets
 # git clone -b tr13 https://github.com/Muennighoff/promptsource.git && cd promptsource; pip install -e .
 from promptsource.templates import DatasetTemplates
+from tqdm import tqdm
 
 
 # Set to False to use multilingual prompts e.g. 'id' for xcopa/id instead of 'en'
@@ -55,10 +57,15 @@ DS_TO_ENG_PROMPT = {
     "pasinit/xlwic": "en",
     "GEM/xlsum": "english",
     "GEM/BiSECT": "en",
-}
+  }
+
+@functools.lru_cache(maxsize=None)
+def get_dataset_info(dataset_name):
+    info = datasets.get_dataset_infos(dataset_name) # gets a lot of metadata info on the dataset
+    return info
 
 def get_dataset_splits(dataset_name, subset_name=None):
-    info = datasets.get_dataset_infos(dataset_name) # gets a lot of metadata info on the dataset
+    info = get_dataset_info(dataset_name)
     subset_name = subset_name or list(info.keys())[0] # subset name such as 'ak'
     return info[subset_name].splits # provides the relevant splits available
 
@@ -70,6 +77,7 @@ def get_tasks_splits(ds):
     ### GET DATASET & LANGUAGE ###
 
     ds_name, subset_name = ds
+    print(f'Processing {ds_name}/{subset_name}')
     dataset_splits = get_dataset_splits(ds_name, subset_name)
     if subset_name == "xlwic_en_zh":
         # Train set is en; val & test are zh
@@ -98,16 +106,21 @@ def get_tasks_splits(ds):
 
     return splits
 
+def get_train_splits(filename):
+    with open(filename, "r") as f:
+        reader = csv.reader(f)
+        num_rows = sum(1 for row in reader) # count the number of rows
 
-TRAIN_SPLITS = []
-with open("xp3_train_datasets.csv", "r") as f:
-    reader = csv.reader(f)
-    next(reader) # skip header
-    for ds in reader:
-        splits = get_tasks_splits(ds)
-        TRAIN_SPLITS = TRAIN_SPLITS + splits
+        f.seek(0) #
+        next(reader) # skip header
+        train_splits = []
+        for ds in tqdm(reader, total=num_rows):
+            train_splits = train_splits + get_tasks_splits(ds)
+        return train_splits
+
+TRAIN_SPLITS = get_train_splits("xp3_train_datasets.csv")
 
 with open("xp3_train_splits.txt", "w") as f:
-    for s in TRAIN_SPLITS:
+    for s in tqdm(TRAIN_SPLITS):
         f.write(s)
         f.write(",\n")
