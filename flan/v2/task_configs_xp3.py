@@ -47,6 +47,7 @@ XP3_TASK_CONFIGS = {}
 # Helper functions from our current xp3 script
 # Not sure if they will be needed
 
+
 def feature_to_spec(feature, length=False):
     if isinstance(feature, datasets.ClassLabel):
         return tf.TensorSpec(shape=() if not length else (None if length == -1 else length,), dtype=tf.int64)
@@ -65,12 +66,15 @@ def feature_to_spec(feature, length=False):
     else:
         raise ValueError(f"Unparseable feature type {type(feature)}")
 
+
 def hf_dataset_to_tf_dataset(dataset):
     return tf.data.Dataset.from_generator(
-        dataset.__iter__, output_signature={k: feature_to_spec(v) for k, v in dataset.features.items()}
+        dataset.__iter__, output_signature={
+            k: feature_to_spec(v) for k, v in dataset.features.items()}
     )
 
-def get_tf_dataset(split, shuffle_files, dataset_name, subset_name, split_mapping,seed):
+
+def get_tf_dataset(split, shuffle_files, dataset_name, subset_name, split_mapping, seed):
     # HF datasets does not support file-level shuffling
     del shuffle_files, seed
     print("we have reached the end of this func")
@@ -80,52 +84,56 @@ def get_tf_dataset(split, shuffle_files, dataset_name, subset_name, split_mappin
     # dataset = utils.apply_template(dataset, template)
     return hf_dataset_to_tf_dataset(dataset)
 
+
 def task_clean(text):
     # Clean the text according to allowed characters for a task name
     return re.sub(r"[^\w\d\._]+", "_", text)
 
+
 def get_task_name(dataset_name, subset_name):
     return task_clean(dataset_name + (f"_{subset_name}_" if subset_name is not None else "_"))
 
-# ========================= XP3 Training Sets ===========================
-for task_name in constants_xp3.XP3_TRAIN_TASK_SPLITS:
-  subtask_id = task_name.split(":")[-1]
-  ds_name = subtask_id.split("_")[0]
-  subset_name = subtask_id.split("_")[1]
-  if constants_t0.T0_TRAIN_TASK_METADATA[task_name]["in_flan"]:
-    continue
-#   Do not process T0 variants with negative examples.
-#   We still keep the variants of these sets in a different format.
-#   if "_score_eval" in subtask_id:
-#     continue
-#   elif constants_t0.T0_TRAIN_TASK_METADATA[task_name][
-#       "task_type"] == "t0_question_answer":
-#     preprocessors = [functools.partial(prep.t0, multiple_choice=False)]
-#     if constants_t0.T0_TRAIN_TASK_METADATA[task_name]["seq_len"]["max"] == 1:
-#       postprocessors = functools.partial(post.take_first_word)
-#     else:
-#       postprocessors = functools.partial(post.take_first_line)
-#   elif constants_t0.T0_TRAIN_TASK_METADATA[task_name]["task_type"] in [
-#       "t0_multiple_choice", "t0_multiple_choice_separated_options"
-#   ]:
-    preprocessors = [functools.partial(prep.t0, multiple_choice=True)]
-    postprocessors = None
-    # Only include non-deterministic options if they aren't already hard-coded.
-    # if constants_t0.T0_TRAIN_TASK_METADATA[task_name][
-    #     "task_type"] == "t0_multiple_choice_separated_options":
-    #   preprocessors.append(prep.format_options)
 
-  t0_metadata_prep = functools.partial(prep.add_source_info,
-    task_name=subtask_id, task_source="P3")
-  XP3_TASK_CONFIGS[task_name] = TaskConfig(
-      source=seqio.TfdsDataSource(
-          tfds_name=f"huggingface:{ds_name}/{subset_name}",
-        #   tfds_name=f"bigscience__p3/{subtask_id}",
-          splits=["train"]),
-      preprocessors=preprocessors + [t0_metadata_prep],
-      postprocess_fn=postprocessors,
-      metric_fns=[t5_metrics.accuracy],
-  )
+# ========================= XP3 Training Sets ===========================
+for task in constants_xp3.XP3_TRAIN_TASKS_SPLIT:
+    subtask_id = task.split(':')[-1]
+    subset_name = task['subset_name']
+    ds_name = task['dataset_name']
+    task_name = task['task_name']
+    if constants_t0.T0_TRAIN_TASK_METADATA[task]["in_flan"]:
+        continue
+    # Do not process T0 variants with negative examples.
+    # We still keep the variants of these sets in a different format.
+    if "_score_eval" in subtask_id:
+        continue
+    elif constants_t0.T0_TRAIN_TASK_METADATA[task_name][
+            "task_type"] == "t0_question_answer":
+        preprocessors = [functools.partial(prep.t0, multiple_choice=False)]
+        if constants_t0.T0_TRAIN_TASK_METADATA[task_name]["seq_len"]["max"] == 1:
+            postprocessors = functools.partial(post.take_first_word)
+        else:
+            postprocessors = functools.partial(post.take_first_line)
+    elif constants_t0.T0_TRAIN_TASK_METADATA[task_name]["task_type"] in [
+        "t0_multiple_choice", "t0_multiple_choice_separated_options"
+    ]:
+        preprocessors = [functools.partial(prep.t0, multiple_choice=True)]
+        postprocessors = None
+        # Only include non-deterministic options if they aren't already hard-coded.
+        if constants_t0.T0_TRAIN_TASK_METADATA[task_name][
+                "task_type"] == "t0_multiple_choice_separated_options":
+            preprocessors.append(prep.format_options)
+
+    t0_metadata_prep = functools.partial(prep.add_source_info,
+                                         task_name=subtask_id, task_source="xP3")
+    XP3_TASK_CONFIGS[task] = TaskConfig(
+        source=seqio.TfdsDataSource(
+            tfds_name=f"huggingface:{ds_name}/{subset_name}",
+            #   tfds_name=f"bigscience__p3/{subtask_id}",
+            splits=["train"]),
+        preprocessors=preprocessors + [t0_metadata_prep],
+        postprocess_fn=postprocessors,
+        metric_fns=[t5_metrics.accuracy],
+    )
 
 
 # =========== Freeze task configs ========== #
