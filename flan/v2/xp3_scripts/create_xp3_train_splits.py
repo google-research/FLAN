@@ -77,7 +77,6 @@ def get_tasks_splits(ds):
     ### GET DATASET & LANGUAGE ###
 
     ds_name, subset_name = ds
-    print(f'Processing {ds_name}/{subset_name}')
     dataset_splits = get_dataset_splits(ds_name, subset_name)
     if subset_name == "xlwic_en_zh":
         # Train set is en; val & test are zh
@@ -101,7 +100,11 @@ def get_tasks_splits(ds):
     ### PROCESS ###
     splits = []
     for t_name in prompts.all_template_names:
-        ds_json = f"\'xp3:{ds_name}_{subset_name}_{t_name}\'".replace("/", "_").replace(" ", "_") + f":{get_num_examples(dataset_splits)}"
+        split_dict = get_num_examples(dataset_splits)
+        split_dict['task_name'] = t_name
+        split_dict['dataset_name'] = ds_name
+        split_dict['subset_name'] = subset_name
+        ds_json = f"\'xp3:{ds_name}_{subset_name}_{t_name}\'".replace("/", "_").replace(" ", "_") + f":{split_dict}"
         splits.append(ds_json)
 
     return splits
@@ -114,13 +117,15 @@ def get_train_splits(filename):
         f.seek(0) #
         next(reader) # skip header
         train_splits = []
-        for ds in tqdm(reader, total=num_rows):
+        datasets_pbar = tqdm(reader, total=num_rows)
+        for ds in datasets_pbar:
+            datasets_pbar.set_description(f"Processing {ds[0]}/{ds[1]}")
             train_splits = train_splits + get_tasks_splits(ds)
         return train_splits
 
 TRAIN_SPLITS = get_train_splits("xp3_train_datasets.csv")
 
 with open("xp3_train_splits.txt", "w") as f:
-    for s in tqdm(TRAIN_SPLITS):
+    for s in tqdm(TRAIN_SPLITS, total=len(TRAIN_SPLITS), desc="Writing train splits"):
         f.write(s)
         f.write(",\n")
