@@ -140,9 +140,9 @@ def get_train_splits(filename):
         return train_splits
 
 
-
-
-# for d in [("GEM/xlsum","arabic")]:
+# for d in [("facebook/flores", "aka_Latn-asm_Beng"),
+#           ("facebook/flores", "aka_Latn-bam_Latn)",
+#            ("facebook/flores", "aka_Latn-ben_Beng"))]:
 #     get_tasks_splits(d)
 
 TRAIN_SPLITS = get_train_splits("xp3_train_datasets.csv")
