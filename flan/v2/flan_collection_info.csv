@@ -111,13 +111,13 @@ FLAN,web_nlg_en,Structured Data to Text,Structured Data to Text,English
 FLAN/T0,wic,Word Sense Disambiguation,Word Sense Disambiguation,English
 FLAN,wiki_lingua_english_en,Summarization,Summarization,English
 FLAN/T0,winogrande,Coreference Resolution,Coreference Resolution,English
-FLAN,wmt14_enfr,Translation,Translation,English
-FLAN,wmt16_translate_csen,Translation,Translation,English
-FLAN,wmt16_translate_deen,Translation,Translation,English
-FLAN,wmt16_translate_fien,Translation,Translation,English
-FLAN,wmt16_translate_roen,Translation,Translation,English
-FLAN,wmt16_translate_ruen,Translation,Translation,English
-FLAN,wmt16_translate_tren,Translation,Translation,English
+FLAN,wmt14_enfr,Translation,Translation,"['English', 'French']"
+FLAN,wmt16_translate_csen,Translation,Translation,"['English', 'Czech']"
+FLAN,wmt16_translate_deen,Translation,Translation,"['English', 'German']"
+FLAN,wmt16_translate_fien,Translation,Translation,"['English', 'Finnish']"
+FLAN,wmt16_translate_roen,Translation,Translation,"['English', 'Romanian']"
+FLAN,wmt16_translate_ruen,Translation,Translation,"['English', 'Russian']"
+FLAN,wmt16_translate_tren,Translation,Translation,"['English', 'Turkish']"
 FLAN,wnli,Coreference Resolution,Coreference Resolution,English
 FLAN,word_segment,Word Segmentation,Word Segmentation,English
 FLAN/T0,wsc,Coreference Resolution,Coreference Resolution,English
@@ -183,13 +183,13 @@ FLAN,web_nlg_en,Inverted Structured Data to Text,Inverted Structured Data to Tex
 FLAN/T0,wic,Inverted Word Sense Disambiguation,Inverted Word Sense Disambiguation,English
 FLAN,wiki_lingua_english_en,Inverted Summarization,Inverted Summarization,English
 FLAN/T0,winogrande,Inverted Coreference Resolution,Inverted Coreference Resolution,English
-FLAN,wmt14_enfr,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_csen,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_deen,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_fien,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_roen,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_ruen,Inverted Translation,Inverted Translation,English
-FLAN,wmt16_translate_tren,Inverted Translation,Inverted Translation,English
+FLAN,wmt14_enfr,Inverted Translation,Inverted Translation,"['English', 'French']"
+FLAN,wmt16_translate_csen,Inverted Translation,Inverted Translation,"['English', 'Czech']"
+FLAN,wmt16_translate_deen,Inverted Translation,Inverted Translation,"['English', 'German']"
+FLAN,wmt16_translate_fien,Inverted Translation,Inverted Translation,"['English', 'Finnish']"
+FLAN,wmt16_translate_roen,Inverted Translation,Inverted Translation,"['English', 'Romanian']"
+FLAN,wmt16_translate_ruen,Inverted Translation,Inverted Translation,"['English', 'Russian']"
+FLAN,wmt16_translate_tren,Inverted Translation,Inverted Translation,"['English', 'Turkish']"
 FLAN,wnli,Inverted Coreference Resolution,Inverted Coreference Resolution,English
 FLAN,word_segment,Inverted Word Segmentation,Inverted Word Segmentation,English
 FLAN/T0,wsc,Inverted Coreference Resolution,Inverted Coreference Resolution,English
