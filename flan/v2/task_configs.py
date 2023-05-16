@@ -184,15 +184,35 @@ for task_name in constants_t0.T0_TRAIN_TASK_SPLITS:
 
   t0_metadata_prep = functools.partial(prep.add_source_info,
     task_name=subtask_id, task_source="P3")
-  T0_TASK_CONFIGS[task_name] = TaskConfig(
-      source=seqio.TfdsDataSource(
-          tfds_name=f"huggingface:bigscience__p3/{subtask_id}",
-        #   tfds_name=f"bigscience__p3/{subtask_id}",
-          splits=["train"]),
-      preprocessors=preprocessors + [t0_metadata_prep],
+
+  if "adversarial_qa_" in subtask_id:
+    P3_DATA_PATH = os.path.join(os.path.dirname(__file__), "p3_ready_data")
+    preprocessors = [
+        prep.simple_p3_tsv, 
+        functools.partial(prep.t0, multiple_choice=False),
+        t0_metadata_prep,
+    ]
+    fpath = os.path.join(P3_DATA_PATH, f"{subtask_id}_train.tsv")
+    print(fpath)
+    T0_TASK_CONFIGS[task_name] = TaskConfig(
+      source=seqio.TextLineDataSource(
+          {"train": fpath},
+          num_input_examples={"train": 10000}),
+      preprocessors=preprocessors,
       postprocess_fn=postprocessors,
       metric_fns=[t5_metrics.accuracy],
-  )
+    )
+  else:
+    continue
+    # T0_TASK_CONFIGS[task_name] = TaskConfig(
+    #     source=seqio.TfdsDataSource(
+    #         tfds_name=f"huggingface:bigscience__p3/{subtask_id}",
+    #         #   tfds_name=f"bigscience__p3/{subtask_id}",
+    #         splits=["train"]),
+    #     preprocessors=preprocessors + [t0_metadata_prep],
+    #     postprocess_fn=postprocessors,
+    #     metric_fns=[t5_metrics.accuracy],
+    # )
 
 # ====================== Natural Instructions v2.5 ======================
 # Prepare lookup table for positive example info
