@@ -1,22 +1,28 @@
 # The Flan Collection
 
-[**Setup**](#setup) | [**Mixtures**](list-of-mixtures) | [**Run**](how-to-use) | [**Flan Collection Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
+[**Mixtures**](list-of-mixtures) | [**Download**](download) | [**Run**](how-to-use) | [**Flan Collection Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
 
 The Flan Collection of datasets and data augmentation methods for instruction tuning is generated using the code in this repository. The Flan Collection compiles datasets from Flan 2021, [P3](https://huggingface.co/datasets/bigscience/P3), [Super-Natural Instructions](https://arxiv.org/abs/2204.07705), along with dozens more datasets into one place, formats them into a mix of zero-shot, few-shot and chain-of-thought templates, then mixes these in proportions that are found to achieve strong results on held-out evaluation benchmarks, as reported for Flan-T5 and Flan-PaLM in the [Scaling Flan paper](https://arxiv.org/abs/2210.11416) and [Flan Collection paper](https://arxiv.org/abs/2301.13688).
-
-## Setup
-```
-bash setup.sh
-```
 
 ## List of Mixtures
 We've broken down the Flan Collection into several sub-mixtures. These are "flan" (Flan 2021), "t0" (P3 excluding Flan 2021), "niv2" (Super-Natural Instructions) "cot" (several Chain-of-Thought datasets), and "dialog" (a few new dialog datasets).
 Each of these come in multiple varieties of templates: zero-shot prompts with answer options (zsopt), zero-shot prompts with no answer options (zsnoopt), few-shot prompts with answer options (fsopt), and few-shot prompts with no answer options (fsnoopt). Answer options indicate whether for multiple choice classification tasks the set of answers are described in the instruction prompt or not. These submixtures are instantiated in `flan/v2/mixtures.py`.
 
+## Download
+If you'd like to directly download the final sub-mixtures, they are available here, courtesy of [Enrico Shippole](https://github.com/conceptofmind):
+* [Flan2021](https://huggingface.co/datasets/conceptofmind/flan2021_submix_original)
+* [T0](https://huggingface.co/datasets/conceptofmind/t0_submix_original)
+* [NIv2](https://huggingface.co/datasets/conceptofmind/niv2_submix_original)
+* [CoT](https://huggingface.co/datasets/conceptofmind/cot_submix_original)
+* [Dialog](https://huggingface.co/datasets/conceptofmind/dialog_submix_original)
+
+These can be further filtered by `template_type` or `task_name` fields. To create the final Flan Collection mixture, simply mix these 5 sub-mixtures according to the mixture rates shown [here](https://github.com/google-research/FLAN/blob/main/flan/v2/run_example.py#L65-L73).
+
 ## How to Use
 You can import `flan/v2/mixtures.py` and directly use the mixtures, or combine all the mixtures into new mixtures. See `flan/v2/run_example.py` for examples of different mixtures you can create and run, as well as the mixture for the Flan 2022 Collection.
 
 ```
+bash setup.sh
 PYTHONPATH=. python flan/v2/run_example.py
 ```
 
