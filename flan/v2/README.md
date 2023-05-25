@@ -15,6 +15,7 @@ If you'd like to directly download the final sub-mixtures, they are available he
 * [NIv2](https://huggingface.co/datasets/conceptofmind/niv2_submix_original)
 * [CoT](https://huggingface.co/datasets/conceptofmind/cot_submix_original)
 * [Dialog](https://huggingface.co/datasets/conceptofmind/dialog_submix_original)
+
 These can be further filtered by `template_type` or `task_name` fields. To create the final Flan Collection mixture, simply mix these 5 sub-mixtures according to the mixture rates shown [here](https://github.com/google-research/FLAN/blob/main/flan/v2/run_example.py#L65-L73).
 
 ## How to Use
