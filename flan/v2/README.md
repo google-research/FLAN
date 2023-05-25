@@ -1,6 +1,6 @@
 # The Flan Collection
 
-[**Setup**](#setup) | [**Mixtures**](list-of-mixtures) | [**Download**](download) | [**Run**](how-to-use) | [**Flan Collection Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
+[**Mixtures**](list-of-mixtures) | [**Download**](download) | [**Run**](how-to-use) | [**Flan Collection Paper**](https://arxiv.org/abs/2301.13688) | [**Citation**](#citation)
 
 The Flan Collection of datasets and data augmentation methods for instruction tuning is generated using the code in this repository. The Flan Collection compiles datasets from Flan 2021, [P3](https://huggingface.co/datasets/bigscience/P3), [Super-Natural Instructions](https://arxiv.org/abs/2204.07705), along with dozens more datasets into one place, formats them into a mix of zero-shot, few-shot and chain-of-thought templates, then mixes these in proportions that are found to achieve strong results on held-out evaluation benchmarks, as reported for Flan-T5 and Flan-PaLM in the [Scaling Flan paper](https://arxiv.org/abs/2210.11416) and [Flan Collection paper](https://arxiv.org/abs/2301.13688).
 
