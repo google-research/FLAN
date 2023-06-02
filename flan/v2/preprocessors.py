@@ -938,6 +938,18 @@ def simple_cot_tsv(example):
       "chain_of_thought": chain_of_thought,
   }
 
+@seqio.map_over_dataset
+def simple_p3_tsv(example):
+  """Processes a simple tsv file with chain of thought."""
+  question = tf.strings.split(example, sep="\t")[0]
+  question = tf.strings.regex_replace(question, r"\\n", "\n")
+  answer = tf.strings.split(example, sep="\t")[1]
+  answer = tf.strings.regex_replace(answer, r"\\n", "\n")
+  return {
+      "inputs_pretokenized": question,
+      "targets_pretokenized": answer,
+  }
+
 
 @seqio.map_over_dataset
 def simple_tsv(example):
