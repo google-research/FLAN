@@ -3,7 +3,7 @@ astunparse==1.6.3
 attrs==21.2.0
 Babel==2.9.1
 cachetools==4.2.2
-certifi==2021.5.30
+certifi==2023.7.22
 charset-normalizer==2.0.4
 clang==5.0
 click==8.0.1
