@@ -80,6 +80,6 @@ torch==1.9.0
 tqdm==4.62.1
 transformers==4.9.2
 typing-extensions==3.7.4.3
-urllib3==1.26.6
+urllib3==1.26.18
 Werkzeug==2.0.1
 wrapt==1.12.1
