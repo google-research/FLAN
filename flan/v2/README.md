@@ -9,12 +9,12 @@ We've broken down the Flan Collection into several sub-mixtures. These are "flan
 Each of these come in multiple varieties of templates: zero-shot prompts with answer options (zsopt), zero-shot prompts with no answer options (zsnoopt), few-shot prompts with answer options (fsopt), and few-shot prompts with no answer options (fsnoopt). Answer options indicate whether for multiple choice classification tasks the set of answers are described in the instruction prompt or not. These submixtures are instantiated in `flan/v2/mixtures.py`.
 
 ## Download
-If you'd like to directly download the final sub-mixtures, they are available here, courtesy of [Enrico Shippole](https://github.com/conceptofmind):
-* [Flan2021](https://huggingface.co/datasets/conceptofmind/flan2021_submix_original)
-* [T0](https://huggingface.co/datasets/conceptofmind/t0_submix_original)
-* [NIv2](https://huggingface.co/datasets/conceptofmind/niv2_submix_original)
-* [CoT](https://huggingface.co/datasets/conceptofmind/cot_submix_original)
-* [Dialog](https://huggingface.co/datasets/conceptofmind/dialog_submix_original)
+If you'd like to directly download the final sub-mixtures, they are available here (Previously host by [Enrico Shippole](https://github.com/conceptofmind):)
+* [Flan2021](https://huggingface.co/datasets/DataProvenanceInitiative/flan2021_submix_original)
+* [T0](https://huggingface.co/datasets/DataProvenanceInitiative/t0_submix_original)
+* [NIv2](https://huggingface.co/datasets/DataProvenanceInitiative/niv2_submix_original)
+* [CoT](https://huggingface.co/datasets/DataProvenanceInitiative/cot_submix_original)
+* [Dialog](https://huggingface.co/datasets/DataProvenanceInitiative/dialog_submix_original)
 
 These can be further filtered by `template_type` or `task_name` fields. To create the final Flan Collection mixture, simply mix these 5 sub-mixtures according to the mixture rates shown [here](https://github.com/google-research/FLAN/blob/main/flan/v2/run_example.py#L65-L73).
 
