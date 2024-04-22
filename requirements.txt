@@ -56,7 +56,7 @@ rsa==4.7.2
 sacrebleu==2.0.0
 sacremoses==0.0.45
 scikit-learn==0.24.2
-scipy==1.7.1
+scipy==1.11.1
 sentencepiece==0.1.96
 seqio==0.0.6
 six==1.15.0
