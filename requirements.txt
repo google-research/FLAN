@@ -12,7 +12,7 @@ dill==0.3.4
 editdistance==0.5.3
 filelock==3.0.12
 flatbuffers==1.12
-future==0.18.2
+future==1.0.0
 gast==0.4.0
 gin-config==0.4.0
 google-auth==1.35.0
