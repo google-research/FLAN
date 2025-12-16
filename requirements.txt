@@ -10,7 +10,7 @@ click==8.0.1
 colorama==0.4.4
 dill==0.3.4
 editdistance==0.5.3
-filelock==3.0.12
+filelock==3.20.1
 flatbuffers==1.12
 future==0.18.2
 gast==0.4.0
