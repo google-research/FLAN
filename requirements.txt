@@ -22,7 +22,7 @@ googleapis-common-protos==1.53.0
 grpcio==1.39.0
 h5py==3.1.0
 huggingface-hub==0.0.12
-idna==3.2
+idna==3.15
 iniconfig==1.1.1
 joblib==1.0.1
 keras==2.6.0
